@@ -10,12 +10,31 @@ overlay.style.cssText = `
   inset: 0;
   z-index: 99999;
   display: none;
-  background: transparent;
 `;
 document.body.appendChild(overlay);
 
+// ── 用 Shadow DOM 隔离，防止样式污染酒馆 ─────────────────
+const shadow = overlay.attachShadow({ mode: 'open' });
+
+// 把 App 的样式注入 Shadow DOM
+const styleEl = document.createElement('style');
+styleEl.textContent = `
+  :host {
+    all: initial;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  * { box-sizing: border-box; }
+`;
+shadow.appendChild(styleEl);
+
+const appRoot = document.createElement('div');
+appRoot.style.cssText = 'width:100%;height:100%;';
+shadow.appendChild(appRoot);
+
 // ── 挂载 React App ────────────────────────────────────────
-ReactDOM.createRoot(overlay).render(
+ReactDOM.createRoot(appRoot).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
@@ -53,7 +72,6 @@ btn.addEventListener('mouseleave', () => {
   btn.style.boxShadow = '0 4px 20px rgba(0,0,0,0.4)';
 });
 
-// ── 切换显示/隐藏 ─────────────────────────────────────────
 let isOpen = false;
 btn.addEventListener('click', () => {
   isOpen = !isOpen;
