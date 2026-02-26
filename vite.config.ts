@@ -15,18 +15,17 @@ export default defineConfig(({ mode }) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
-build: {
-  lib: {
-    entry: path.resolve(__dirname, 'src/extension.tsx'),
-    formats: ['es'],
-    fileName: () => 'index.js',
-  },
-  rollupOptions: {
-    output: {
-      assetFileNames: 'index.[ext]',
-    },
-  },
-},
+    build: {
+      lib: {
+        entry: path.resolve(__dirname, 'src/extension.tsx'),
+        formats: ['es'],
+        fileName: () => 'index.js',
+      },
+      rollupOptions: {
+        output: {
+          assetFileNames: 'index.[ext]',
+        },
+      },
     },
     server: {
       hmr: process.env.DISABLE_HMR !== 'true',
