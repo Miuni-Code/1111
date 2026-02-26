@@ -51,7 +51,7 @@ var Hd;
 function _x() {
   if (Hd) return ne;
   Hd = 1;
-  var r = Symbol.for("react.transitional.element"), x = Symbol.for("react.portal"), S = Symbol.for("react.fragment"), f = Symbol.for("react.strict_mode"), w = Symbol.for("react.profiler"), k = Symbol.for("react.consumer"), B = Symbol.for("react.context"), $ = Symbol.for("react.forward_ref"), R = Symbol.for("react.suspense"), N = Symbol.for("react.memo"), O = Symbol.for("react.lazy"), q = Symbol.for("react.activity"), Q = Symbol.iterator;
+  var r = Symbol.for("react.transitional.element"), x = Symbol.for("react.portal"), S = Symbol.for("react.fragment"), f = Symbol.for("react.strict_mode"), w = Symbol.for("react.profiler"), k = Symbol.for("react.consumer"), B = Symbol.for("react.context"), $ = Symbol.for("react.forward_ref"), R = Symbol.for("react.suspense"), N = Symbol.for("react.memo"), D = Symbol.for("react.lazy"), q = Symbol.for("react.activity"), Q = Symbol.iterator;
   function V(m) {
     return m === null || typeof m != "object" ? null : (m = Q && m[Q] || m["@@iterator"], typeof m == "function" ? m : null);
   }
@@ -157,7 +157,7 @@ function _x() {
             case x:
               P = !0;
               break;
-            case O:
+            case D:
               return P = m._init, E(
                 P(m._payload),
                 T,
@@ -340,7 +340,7 @@ function _x() {
     return { $$typeof: $, render: m };
   }, ne.isValidElement = ee, ne.lazy = function(m) {
     return {
-      $$typeof: O,
+      $$typeof: D,
       _payload: { _status: -1, _result: m },
       _init: G
     };
@@ -410,8 +410,8 @@ var kd;
 function wu() {
   return kd || (kd = 1, zu.exports = _x()), zu.exports;
 }
-var D = wu();
-const Tx = /* @__PURE__ */ Jd(D);
+var O = wu();
+const Tx = /* @__PURE__ */ Jd(O);
 var Eu = { exports: {} }, Un = {}, Mu = { exports: {} }, Au = {};
 /**
  * @license React
@@ -469,7 +469,7 @@ function Cx() {
         return B.now() - $;
       };
     }
-    var R = [], N = [], O = 1, q = null, Q = 3, V = !1, J = !1, te = !1, se = !1, ue = typeof setTimeout == "function" ? setTimeout : null, De = typeof clearTimeout == "function" ? clearTimeout : null, A = typeof setImmediate < "u" ? setImmediate : null;
+    var R = [], N = [], D = 1, q = null, Q = 3, V = !1, J = !1, te = !1, se = !1, ue = typeof setTimeout == "function" ? setTimeout : null, De = typeof clearTimeout == "function" ? clearTimeout : null, A = typeof setImmediate < "u" ? setImmediate : null;
     function ae(E) {
       for (var p = S(N); p !== null; ) {
         if (p.callback === null) f(N);
@@ -621,7 +621,7 @@ function Cx() {
           pe = 5e3;
       }
       return pe = G + pe, E = {
-        id: O++,
+        id: D++,
         callback: p,
         priorityLevel: E,
         startTime: G,
@@ -665,8 +665,8 @@ function Dx() {
     var N = "https://react.dev/errors/" + R;
     if (1 < arguments.length) {
       N += "?args[]=" + encodeURIComponent(arguments[1]);
-      for (var O = 2; O < arguments.length; O++)
-        N += "&args[]=" + encodeURIComponent(arguments[O]);
+      for (var D = 2; D < arguments.length; D++)
+        N += "&args[]=" + encodeURIComponent(arguments[D]);
     }
     return "Minified React error #" + R + "; visit " + N + " for the full message or use the non-minified dev environment for full errors and additional helpful warnings.";
   }
@@ -689,14 +689,14 @@ function Dx() {
     p: 0,
     findDOMNode: null
   }, w = Symbol.for("react.portal");
-  function k(R, N, O) {
+  function k(R, N, D) {
     var q = 3 < arguments.length && arguments[3] !== void 0 ? arguments[3] : null;
     return {
       $$typeof: w,
       key: q == null ? null : "" + q,
       children: R,
       containerInfo: N,
-      implementation: O
+      implementation: D
     };
   }
   var B = r.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
@@ -706,16 +706,16 @@ function Dx() {
       return N === "use-credentials" ? N : "";
   }
   return et.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = f, et.createPortal = function(R, N) {
-    var O = 2 < arguments.length && arguments[2] !== void 0 ? arguments[2] : null;
+    var D = 2 < arguments.length && arguments[2] !== void 0 ? arguments[2] : null;
     if (!N || N.nodeType !== 1 && N.nodeType !== 9 && N.nodeType !== 11)
       throw Error(x(299));
-    return k(R, N, null, O);
+    return k(R, N, null, D);
   }, et.flushSync = function(R) {
-    var N = B.T, O = f.p;
+    var N = B.T, D = f.p;
     try {
       if (B.T = null, f.p = 2, R) return R();
     } finally {
-      B.T = N, f.p = O, f.d.f();
+      B.T = N, f.p = D, f.d.f();
     }
   }, et.preconnect = function(R, N) {
     typeof R == "string" && (N ? (N = N.crossOrigin, N = typeof N == "string" ? N === "use-credentials" ? N : "" : void 0) : N = null, f.d.C(R, N));
@@ -723,8 +723,8 @@ function Dx() {
     typeof R == "string" && f.d.D(R);
   }, et.preinit = function(R, N) {
     if (typeof R == "string" && N && typeof N.as == "string") {
-      var O = N.as, q = $(O, N.crossOrigin), Q = typeof N.integrity == "string" ? N.integrity : void 0, V = typeof N.fetchPriority == "string" ? N.fetchPriority : void 0;
-      O === "style" ? f.d.S(
+      var D = N.as, q = $(D, N.crossOrigin), Q = typeof N.integrity == "string" ? N.integrity : void 0, V = typeof N.fetchPriority == "string" ? N.fetchPriority : void 0;
+      D === "style" ? f.d.S(
         R,
         typeof N.precedence == "string" ? N.precedence : void 0,
         {
@@ -732,7 +732,7 @@ function Dx() {
           integrity: Q,
           fetchPriority: V
         }
-      ) : O === "script" && f.d.X(R, {
+      ) : D === "script" && f.d.X(R, {
         crossOrigin: q,
         integrity: Q,
         fetchPriority: V,
@@ -743,12 +743,12 @@ function Dx() {
     if (typeof R == "string")
       if (typeof N == "object" && N !== null) {
         if (N.as == null || N.as === "script") {
-          var O = $(
+          var D = $(
             N.as,
             N.crossOrigin
           );
           f.d.M(R, {
-            crossOrigin: O,
+            crossOrigin: D,
             integrity: typeof N.integrity == "string" ? N.integrity : void 0,
             nonce: typeof N.nonce == "string" ? N.nonce : void 0
           });
@@ -756,8 +756,8 @@ function Dx() {
       } else N == null && f.d.M(R);
   }, et.preload = function(R, N) {
     if (typeof R == "string" && typeof N == "object" && N !== null && typeof N.as == "string") {
-      var O = N.as, q = $(O, N.crossOrigin);
-      f.d.L(R, O, {
+      var D = N.as, q = $(D, N.crossOrigin);
+      f.d.L(R, D, {
         crossOrigin: q,
         integrity: typeof N.integrity == "string" ? N.integrity : void 0,
         nonce: typeof N.nonce == "string" ? N.nonce : void 0,
@@ -772,10 +772,10 @@ function Dx() {
   }, et.preloadModule = function(R, N) {
     if (typeof R == "string")
       if (N) {
-        var O = $(N.as, N.crossOrigin);
+        var D = $(N.as, N.crossOrigin);
         f.d.m(R, {
           as: typeof N.as == "string" && N.as !== "script" ? N.as : void 0,
-          crossOrigin: O,
+          crossOrigin: D,
           integrity: typeof N.integrity == "string" ? N.integrity : void 0
         });
       } else f.d.m(R);
@@ -783,8 +783,8 @@ function Dx() {
     f.d.r(R);
   }, et.unstable_batchedUpdates = function(R, N) {
     return R(N);
-  }, et.useFormState = function(R, N, O) {
-    return B.H.useFormState(R, N, O);
+  }, et.useFormState = function(R, N, D) {
+    return B.H.useFormState(R, N, D);
   }, et.useFormStatus = function() {
     return B.H.useHostTransitionStatus();
   }, et.version = "19.2.4", et;
@@ -916,11 +916,11 @@ function Ux() {
     if (a.tag !== 3) throw Error(f(188));
     return a.stateNode.current === a ? e : t;
   }
-  function O(e) {
+  function D(e) {
     var t = e.tag;
     if (t === 5 || t === 26 || t === 27 || t === 6) return e;
     for (e = e.child; e !== null; ) {
-      if (t = O(e), t !== null) return t;
+      if (t = D(e), t !== null) return t;
       e = e.sibling;
     }
     return null;
@@ -10530,7 +10530,7 @@ Error generating stack: ` + l.message + `
     var t = e._reactInternals;
     if (t === void 0)
       throw typeof e.render == "function" ? Error(f(188)) : (e = Object.keys(e).join(","), Error(f(268, e)));
-    return e = N(t), e = e !== null ? O(e) : null, e = e === null ? null : e.stateNode, e;
+    return e = N(t), e = e !== null ? D(e) : null, e = e === null ? null : e.stateNode, e;
   };
   var zx = {
     bundleType: 0,
@@ -10641,7 +10641,7 @@ var Gx = {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const Lx = D.forwardRef(
+const Lx = O.forwardRef(
   ({
     color: r = "currentColor",
     size: x = 24,
@@ -10651,7 +10651,7 @@ const Lx = D.forwardRef(
     children: k,
     iconNode: B,
     ...$
-  }, R) => D.createElement(
+  }, R) => O.createElement(
     "svg",
     {
       ref: R,
@@ -10665,7 +10665,7 @@ const Lx = D.forwardRef(
       ...$
     },
     [
-      ...B.map(([N, O]) => D.createElement(N, O)),
+      ...B.map(([N, D]) => O.createElement(N, D)),
       ...Array.isArray(k) ? k : [k]
     ]
   )
@@ -10677,8 +10677,8 @@ const Lx = D.forwardRef(
  * See the LICENSE file in the root directory of this source tree.
  */
 const I = (r, x) => {
-  const S = D.forwardRef(
-    ({ className: f, ...w }, k) => D.createElement(Lx, {
+  const S = O.forwardRef(
+    ({ className: f, ...w }, k) => O.createElement(Lx, {
       ref: k,
       iconNode: x,
       className: $d(
@@ -11326,9 +11326,9 @@ const b0 = [
   ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
 ], wa = I("x", b0), y0 = ({ onUnlock: r }) => {
   var Q;
-  const [x, S] = D.useState(!1), [f, w] = D.useState(0), [k, B] = D.useState(!1), $ = D.useRef(null), R = D.useRef(null), N = () => {
+  const [x, S] = O.useState(!1), [f, w] = O.useState(0), [k, B] = O.useState(!1), $ = O.useRef(null), R = O.useRef(null), N = () => {
     k || S(!0);
-  }, O = (V) => {
+  }, D = (V) => {
     if (!x || k || !$.current || !R.current) return;
     const J = $.current.getBoundingClientRect(), te = R.current.offsetWidth, se = J.width - te - 8;
     let ue = V - J.left - te / 2;
@@ -11338,8 +11338,8 @@ const b0 = [
   }, q = () => {
     k || (S(!1), w(0));
   };
-  return D.useEffect(() => {
-    const V = (se) => O(se.clientX), J = (se) => O(se.touches[0].clientX), te = () => q();
+  return O.useEffect(() => {
+    const V = (se) => D(se.clientX), J = (se) => D(se.touches[0].clientX), te = () => q();
     return x && (window.addEventListener("mousemove", V), window.addEventListener("touchmove", J), window.addEventListener("mouseup", te), window.addEventListener("touchend", te)), () => {
       window.removeEventListener("mousemove", V), window.removeEventListener("touchmove", J), window.removeEventListener("mouseup", te), window.removeEventListener("touchend", te);
     };
@@ -11375,8 +11375,8 @@ const b0 = [
     }
   );
 }, p0 = ({ onUnlock: r }) => {
-  const [x, S] = D.useState(/* @__PURE__ */ new Date());
-  return D.useEffect(() => {
+  const [x, S] = O.useState(/* @__PURE__ */ new Date());
+  return O.useEffect(() => {
     const f = setInterval(() => S(/* @__PURE__ */ new Date()), 1e3);
     return () => clearInterval(f);
   }, []), /* @__PURE__ */ c.jsxs("div", { className: "fixed inset-0 z-50 flex flex-col items-center justify-between py-20 px-6 bg-[var(--bg-base)] transition-colors duration-500", children: [
@@ -11627,7 +11627,7 @@ async function kn(r) {
   }
 }
 const M0 = ({ contact: r, onClose: x, onUpdateContact: S }) => {
-  const [f, w] = D.useState(W.getChatPrompt()), [k, B] = D.useState(r.chatAiSettings || {
+  const [f, w] = O.useState(W.getChatPrompt()), [k, B] = O.useState(r.chatAiSettings || {
     systemPrompt: "",
     userPromptPrefix: "",
     overrideName: r.name,
@@ -11641,8 +11641,8 @@ const M0 = ({ contact: r, onClose: x, onUpdateContact: S }) => {
       userPromptPrefix: ""
     });
   }, R = () => {
-    B((O) => ({
-      ...O,
+    B((D) => ({
+      ...D,
       overrideDescription: r.description || ""
     }));
   }, N = () => {
@@ -11671,7 +11671,7 @@ const M0 = ({ contact: r, onClose: x, onUpdateContact: S }) => {
             "textarea",
             {
               value: f.systemPrompt,
-              onChange: (O) => w({ ...f, systemPrompt: O.target.value }),
+              onChange: (D) => w({ ...f, systemPrompt: D.target.value }),
               className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[80px]"
             }
           )
@@ -11682,7 +11682,7 @@ const M0 = ({ contact: r, onClose: x, onUpdateContact: S }) => {
             "textarea",
             {
               value: f.userPromptPrefix,
-              onChange: (O) => w({ ...f, userPromptPrefix: O.target.value }),
+              onChange: (D) => w({ ...f, userPromptPrefix: D.target.value }),
               placeholder: "留空则直接发送用户消息",
               className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[60px]"
             }
@@ -11716,7 +11716,7 @@ const M0 = ({ contact: r, onClose: x, onUpdateContact: S }) => {
             {
               type: "text",
               value: k.overrideName,
-              onChange: (O) => B({ ...k, overrideName: O.target.value }),
+              onChange: (D) => B({ ...k, overrideName: D.target.value }),
               className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)]"
             }
           )
@@ -11727,7 +11727,7 @@ const M0 = ({ contact: r, onClose: x, onUpdateContact: S }) => {
             "textarea",
             {
               value: k.overrideDescription,
-              onChange: (O) => B({ ...k, overrideDescription: O.target.value }),
+              onChange: (D) => B({ ...k, overrideDescription: D.target.value }),
               className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[80px]"
             }
           )
@@ -11738,7 +11738,7 @@ const M0 = ({ contact: r, onClose: x, onUpdateContact: S }) => {
             "textarea",
             {
               value: k.overridePersonality,
-              onChange: (O) => B({ ...k, overridePersonality: O.target.value }),
+              onChange: (D) => B({ ...k, overridePersonality: D.target.value }),
               placeholder: "留空则不覆盖",
               className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[60px]"
             }
@@ -11750,7 +11750,7 @@ const M0 = ({ contact: r, onClose: x, onUpdateContact: S }) => {
             "textarea",
             {
               value: k.overrideDialogueExamples,
-              onChange: (O) => B({ ...k, overrideDialogueExamples: O.target.value }),
+              onChange: (D) => B({ ...k, overrideDialogueExamples: D.target.value }),
               placeholder: "示例：\\nUser: 你好\\nAssistant: 你好，我是...",
               className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[80px]"
             }
@@ -11766,7 +11766,7 @@ const M0 = ({ contact: r, onClose: x, onUpdateContact: S }) => {
           "textarea",
           {
             value: k.worldInfoExtra,
-            onChange: (O) => B({ ...k, worldInfoExtra: O.target.value }),
+            onChange: (D) => B({ ...k, worldInfoExtra: D.target.value }),
             placeholder: "填写额外的世界观设定、场景背景等...",
             className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[80px]"
           }
@@ -11803,24 +11803,24 @@ function A0(r) {
   return [x];
 }
 const _0 = ({ contact: r, onBack: x, onUpdateContact: S, onDeleteContact: f, settings: w }) => {
-  const [k, B] = D.useState(() => {
+  const [k, B] = O.useState(() => {
     const H = W.getChats(r.id);
     return H !== null ? H : r.lastMessage ? [{ id: 1, text: r.lastMessage, sender: "them", time: r.time, read: !0 }] : [];
-  }), [$, R] = D.useState(!1), [N, O] = D.useState(null), [q, Q] = D.useState(""), [V, J] = D.useState(!1), [te, se] = D.useState(!1), [ue, De] = D.useState(r.name), [A, ae] = D.useState(null), [ze, z] = D.useState(r.avatar), [y, oe] = D.useState(null), [fe, U] = D.useState(""), [ee, de] = D.useState(!1), [Qe, Ze] = D.useState(""), Ae = D.useRef(null), E = (w == null ? void 0 : w.avatarUrl) || "https://picsum.photos/seed/me/100/100", p = ["😀", "😂", "🥰", "😎", "😭", "😡", "👍", "🙏", "🎉", "❤️"], G = D.useRef(r.id);
-  D.useEffect(() => {
+  }), [$, R] = O.useState(!1), [N, D] = O.useState(null), [q, Q] = O.useState(""), [V, J] = O.useState(!1), [te, se] = O.useState(!1), [ue, De] = O.useState(r.name), [A, ae] = O.useState(null), [ze, z] = O.useState(r.avatar), [y, oe] = O.useState(null), [fe, U] = O.useState(""), [ee, de] = O.useState(!1), [Qe, Ze] = O.useState(""), Ae = O.useRef(null), E = (w == null ? void 0 : w.avatarUrl) || "https://picsum.photos/seed/me/100/100", p = ["😀", "😂", "🥰", "😎", "😭", "😡", "👍", "🙏", "🎉", "❤️"], G = O.useRef(r.id);
+  O.useEffect(() => {
     if (r.id !== G.current) {
       G.current = r.id;
       const H = W.getChats(r.id);
       H !== null ? B(H) : r.lastMessage ? B([{ id: 1, text: r.lastMessage, sender: "them", time: r.time, read: !0 }]) : B([]);
     }
-  }, [r.id, r.lastMessage, r.time]), D.useEffect(() => {
+  }, [r.id, r.lastMessage, r.time]), O.useEffect(() => {
     G.current === r.id && W.saveChats(r.id, k);
   }, [k, r.id]);
   const re = () => {
     var H;
     (H = Ae.current) == null || H.scrollIntoView({ behavior: "smooth" });
   };
-  D.useEffect(() => {
+  O.useEffect(() => {
     re();
   }, [k]);
   const pe = () => {
@@ -11837,7 +11837,7 @@ const _0 = ({ contact: r, onBack: x, onUpdateContact: S, onDeleteContact: f, set
     }, 1e3);
   }, m = async () => {
     if (!$) {
-      R(!0), O(null);
+      R(!0), D(null);
       try {
         const H = W.getChatPrompt(), P = r.chatAiSettings || {
           systemPrompt: "",
@@ -11891,7 +11891,7 @@ ${Pa}` : Pa, Bt = await kn({
           }]);
         }
       } catch (H) {
-        console.error("AI Reply Error:", H), O("连接星网失败，请稍后重试。"), R(!1), setTimeout(() => O(null), 3e3);
+        console.error("AI Reply Error:", H), D("连接星网失败，请稍后重试。"), R(!1), setTimeout(() => D(null), 3e3);
       }
     }
   }, T = () => {
@@ -12245,7 +12245,7 @@ ${Pa}` : Pa, Bt = await kn({
     ] }) })
   ] });
 }, T0 = ({ onClose: r }) => {
-  const [x, S] = D.useState(W.getMomentPrompt()), f = () => {
+  const [x, S] = O.useState(W.getMomentPrompt()), f = () => {
     W.saveMomentPrompt(x), r();
   };
   return /* @__PURE__ */ c.jsx("div", { className: "absolute inset-0 z-[60] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4", children: /* @__PURE__ */ c.jsxs("div", { className: "glass-card w-full max-w-lg flex flex-col rounded-xl animate-in fade-in zoom-in-95 duration-200 clip-corner", children: [
@@ -12298,8 +12298,8 @@ ${Pa}` : Pa, Bt = await kn({
     ) })
   ] }) });
 }, C0 = ({ onClose: r, onPublish: x }) => {
-  const [S, f] = D.useState("custom"), [w, k] = D.useState(""), [B, $] = D.useState(""), [R, N] = D.useState("manual"), [O, q] = D.useState(""), [Q, V] = D.useState(""), [J, te] = D.useState(""), [se, ue] = D.useState(!1), [De, A] = D.useState([]);
-  D.useEffect(() => {
+  const [S, f] = O.useState("custom"), [w, k] = O.useState(""), [B, $] = O.useState(""), [R, N] = O.useState("manual"), [D, q] = O.useState(""), [Q, V] = O.useState(""), [J, te] = O.useState(""), [se, ue] = O.useState(!1), [De, A] = O.useState([]);
+  O.useEffect(() => {
     A(W.getContacts());
   }, []);
   const ae = () => {
@@ -12324,7 +12324,7 @@ ${Pa}` : Pa, Bt = await kn({
         fe = Ca(y.momentPrompt, {
           characterName: oe.userName,
           characterDescription: oe.tag || "深空观察者"
-        }), U = `请根据以下主题生成动态：${O}`;
+        }), U = `请根据以下主题生成动态：${D}`;
       else {
         if (!Q) return;
         const de = De.find((Ae) => Ae.id === Number(Q));
@@ -12422,7 +12422,7 @@ ${Pa}` : Pa, Bt = await kn({
       R === "manual" ? /* @__PURE__ */ c.jsx(
         "textarea",
         {
-          value: O,
+          value: D,
           onChange: (y) => q(y.target.value),
           placeholder: "描述你想发布的动态主题...",
           className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[80px]"
@@ -12443,7 +12443,7 @@ ${Pa}` : Pa, Bt = await kn({
         "button",
         {
           onClick: z,
-          disabled: se || (R === "manual" ? !O.trim() : !Q),
+          disabled: se || (R === "manual" ? !D.trim() : !Q),
           className: "w-full py-2 rounded border border-[var(--accent-color)] text-[var(--accent-color)] hover:bg-[var(--accent-color)]/10 transition-colors disabled:opacity-50 flex justify-center items-center gap-2",
           children: se ? /* @__PURE__ */ c.jsx(ic, { size: 16, className: "animate-spin" }) : "AI 生成预览"
         }
@@ -12475,26 +12475,26 @@ ${Pa}` : Pa, Bt = await kn({
   ] }) });
 }, w0 = ({ actionType: r, setActionType: x }) => {
   var ze;
-  const [S, f] = D.useState([]), [w, k] = D.useState(null), [B, $] = D.useState(null), [R, N] = D.useState(W.getGlobalSettings()), [O, q] = D.useState(!1), [Q, V] = D.useState(!1), [J, te] = D.useState(!1);
-  D.useEffect(() => {
+  const [S, f] = O.useState([]), [w, k] = O.useState(null), [B, $] = O.useState(null), [R, N] = O.useState(W.getGlobalSettings()), [D, q] = O.useState(!1), [Q, V] = O.useState(!1), [J, te] = O.useState(!1);
+  O.useEffect(() => {
     const z = () => {
       A();
     };
     return window.addEventListener("refreshMoments", z), () => window.removeEventListener("refreshMoments", z);
-  }, []), D.useEffect(() => {
+  }, []), O.useEffect(() => {
     const z = () => {
       N(W.getGlobalSettings());
     };
     return window.addEventListener("settingsUpdated", z), () => window.removeEventListener("settingsUpdated", z);
-  }, []), D.useEffect(() => {
+  }, []), O.useEffect(() => {
     r === "publishMoment" ? (V(!0), x(null)) : r === "momentSettings" && (q(!0), x(null));
-  }, [r, x]), D.useEffect(() => {
+  }, [r, x]), O.useEffect(() => {
     f(W.getMoments());
     const z = () => {
       f(W.getMoments());
     };
     return window.addEventListener("momentsUpdated", z), () => window.removeEventListener("momentsUpdated", z);
-  }, []), D.useEffect(() => {
+  }, []), O.useEffect(() => {
     S.length > 0 && W.saveMoments(S);
   }, [S]);
   const se = (z) => {
@@ -12680,11 +12680,11 @@ ${Pa}` : Pa, Bt = await kn({
         ] })
       ] })
     ] }, z.id)) }),
-    O && /* @__PURE__ */ c.jsx(T0, { onClose: () => q(!1) }),
+    D && /* @__PURE__ */ c.jsx(T0, { onClose: () => q(!1) }),
     Q && /* @__PURE__ */ c.jsx(C0, { onClose: () => V(!1), onPublish: ae })
   ] });
 }, D0 = ({ onClose: r, initialData: x }) => {
-  const [S, f] = D.useState((x == null ? void 0 : x.to) || ""), [w, k] = D.useState((x == null ? void 0 : x.subject) || ""), [B, $] = D.useState((x == null ? void 0 : x.body) || ""), [R, N] = D.useState(!1), O = async () => {
+  const [S, f] = O.useState((x == null ? void 0 : x.to) || ""), [w, k] = O.useState((x == null ? void 0 : x.subject) || ""), [B, $] = O.useState((x == null ? void 0 : x.body) || ""), [R, N] = O.useState(!1), D = async () => {
     if (!w && !B) {
       alert("请先输入主题或部分正文，以便 AI 了解您的意图。");
       return;
@@ -12798,7 +12798,7 @@ ${Pa}` : Pa, Bt = await kn({
       /* @__PURE__ */ c.jsx("div", { className: "flex justify-end", children: /* @__PURE__ */ c.jsxs(
         "button",
         {
-          onClick: O,
+          onClick: D,
           disabled: R,
           className: "flex items-center gap-1 text-xs text-[var(--accent-color)] hover:text-[var(--text-primary)] transition-colors px-3 py-1.5 rounded bg-[var(--accent-color)]/10 disabled:opacity-50",
           children: [
@@ -12820,7 +12820,7 @@ ${Pa}` : Pa, Bt = await kn({
     ] })
   ] });
 }, O0 = ({ onClose: r }) => {
-  const [x, S] = D.useState(W.getEmailPrompt()), f = () => {
+  const [x, S] = O.useState(W.getEmailPrompt()), f = () => {
     W.saveEmailPrompt(x), r();
   };
   return /* @__PURE__ */ c.jsx("div", { className: "absolute inset-0 z-[60] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4", children: /* @__PURE__ */ c.jsxs("div", { className: "glass-card w-full max-w-lg flex flex-col rounded-xl animate-in fade-in zoom-in-95 duration-200 clip-corner", children: [
@@ -12869,11 +12869,11 @@ ${Pa}` : Pa, Bt = await kn({
     ) })
   ] }) });
 }, U0 = ({ actionType: r, setActionType: x }) => {
-  const [S, f] = D.useState([]), [w, k] = D.useState(null), [B, $] = D.useState(!1), [R, N] = D.useState(!1), [O, q] = D.useState(null), [Q, V] = D.useState("");
-  D.useEffect(() => {
+  const [S, f] = O.useState([]), [w, k] = O.useState(null), [B, $] = O.useState(!1), [R, N] = O.useState(!1), [D, q] = O.useState(null), [Q, V] = O.useState("");
+  O.useEffect(() => {
     const z = () => f(W.getEmails());
     return z(), window.addEventListener("emailsUpdated", z), () => window.removeEventListener("emailsUpdated", z);
-  }, []), D.useEffect(() => {
+  }, []), O.useEffect(() => {
     S.length > 0 && W.saveEmails(S);
   }, [S]);
   const J = (z) => {
@@ -12975,7 +12975,7 @@ ${Pa}` : Pa, Bt = await kn({
                   ] }),
                   /* @__PURE__ */ c.jsx("p", { className: "text-[var(--text-primary)] whitespace-pre-wrap", children: y.text })
                 ] }, y.id)) }),
-                O === z.id ? /* @__PURE__ */ c.jsxs("div", { className: "space-y-2", children: [
+                D === z.id ? /* @__PURE__ */ c.jsxs("div", { className: "space-y-2", children: [
                   /* @__PURE__ */ c.jsx(
                     "textarea",
                     {
@@ -13144,16 +13144,16 @@ async function B0(r) {
   return x || lm.find((S) => S.name === r) || null;
 }
 const q0 = ({ onBack: r, settings: x }) => {
-  const [S, f] = D.useState("chat"), [w, k] = D.useState(() => W.getContacts()), [B, $] = D.useState(null), [R, N] = D.useState(!1), [O, q] = D.useState(null), [Q, V] = D.useState(""), [J, te] = D.useState(null), [se, ue] = D.useState(null), [De, A] = D.useState([]), [ae, ze] = D.useState(""), [z, y] = D.useState(() => Ia()), [oe, fe] = D.useState(!1), U = D.useRef(!1);
-  D.useEffect(() => {
+  const [S, f] = O.useState("chat"), [w, k] = O.useState(() => W.getContacts()), [B, $] = O.useState(null), [R, N] = O.useState(!1), [D, q] = O.useState(null), [Q, V] = O.useState(""), [J, te] = O.useState(null), [se, ue] = O.useState(null), [De, A] = O.useState([]), [ae, ze] = O.useState(""), [z, y] = O.useState(() => Ia()), [oe, fe] = O.useState(!1), U = O.useRef(!1);
+  O.useEffect(() => {
     U.current = !0;
-  }, []), D.useEffect(() => {
+  }, []), O.useEffect(() => {
     U.current && W.saveContacts(w);
-  }, [w]), D.useEffect(() => {
-    O === "add" && Kd().then(A), V(""), ue(null), ze("");
-  }, [O]);
-  const [ee, de] = D.useState(!1), Qe = async () => {
-    if (O === "add") {
+  }, [w]), O.useEffect(() => {
+    D === "add" && Kd().then(A), V(""), ue(null), ze("");
+  }, [D]);
+  const [ee, de] = O.useState(!1), Qe = async () => {
+    if (D === "add") {
       if (ae) {
         de(!0);
         try {
@@ -13194,16 +13194,16 @@ const q0 = ({ onBack: r, settings: x }) => {
         };
         k([p, ...w]);
       }
-    } else if (O === "delete" && se)
+    } else if (D === "delete" && se)
       k(w.filter((p) => p.id !== se));
-    else if (O === "editName" && se && Q.trim())
+    else if (D === "editName" && se && Q.trim())
       k(w.map((p) => p.id === se ? { ...p, name: Q.trim() } : p));
-    else if (O === "bg")
+    else if (D === "bg")
       $(Q.trim() || null);
-    else if (O === "momentBg") {
+    else if (D === "momentBg") {
       const p = W.getGlobalSettings();
       p.moduleBgs = { ...p.moduleBgs, 星网动态: Q.trim() || "" }, W.saveGlobalSettings(p), window.dispatchEvent(new Event("settingsUpdated"));
-    } else if (O === "clearRead") {
+    } else if (D === "clearRead") {
       const G = W.getEmails().map(
         (re) => re.status === "inbox" || !re.status ? { ...re, isRead: !0 } : re
       );
@@ -13392,8 +13392,8 @@ const q0 = ({ onBack: r, settings: x }) => {
         /* @__PURE__ */ c.jsx("p", { className: "tracking-widest", children: "暂无联系人" })
       ] })
     ] }),
-    S === "moments" && /* @__PURE__ */ c.jsx(w0, { actionType: O, setActionType: q }),
-    S === "notifications" && /* @__PURE__ */ c.jsx(U0, { actionType: O, setActionType: q }),
+    S === "moments" && /* @__PURE__ */ c.jsx(w0, { actionType: D, setActionType: q }),
+    S === "notifications" && /* @__PURE__ */ c.jsx(U0, { actionType: D, setActionType: q }),
     /* @__PURE__ */ c.jsxs("div", { className: "flex items-center justify-around py-3 border-t border-[var(--wireframe)] bg-[var(--bubble-bg)] shrink-0 pb-4 sm:pb-3 relative z-10", children: [
       /* @__PURE__ */ c.jsxs(
         "button",
@@ -13429,22 +13429,22 @@ const q0 = ({ onBack: r, settings: x }) => {
         }
       )
     ] }),
-    O && !["writeEmail", "drafts", "trash", "outbox"].includes(O) && /* @__PURE__ */ c.jsx("div", { className: "absolute inset-0 z-[60] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4", children: /* @__PURE__ */ c.jsxs("div", { className: "glass-card w-full max-w-sm p-6 rounded-xl flex flex-col gap-4 animate-in fade-in zoom-in-95 duration-200 clip-corner", children: [
+    D && !["writeEmail", "drafts", "trash", "outbox"].includes(D) && /* @__PURE__ */ c.jsx("div", { className: "absolute inset-0 z-[60] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4", children: /* @__PURE__ */ c.jsxs("div", { className: "glass-card w-full max-w-sm p-6 rounded-xl flex flex-col gap-4 animate-in fade-in zoom-in-95 duration-200 clip-corner", children: [
       /* @__PURE__ */ c.jsxs("h3", { className: "text-lg text-[var(--text-primary)] font-light tracking-widest border-b border-[var(--wireframe)] pb-2", children: [
-        O === "add" && "添加好友",
-        O === "delete" && "删除好友",
-        O === "search" && "搜索好友",
-        O === "editName" && "修改昵称",
-        O === "bg" && "设置背景",
-        O === "momentBg" && "设置动态背景",
-        O === "writeEmail" && "写邮件",
-        O === "drafts" && "草稿箱",
-        O === "trash" && "垃圾箱",
-        O === "outbox" && "发件箱",
-        O === "clearRead" && "清空所有已读"
+        D === "add" && "添加好友",
+        D === "delete" && "删除好友",
+        D === "search" && "搜索好友",
+        D === "editName" && "修改昵称",
+        D === "bg" && "设置背景",
+        D === "momentBg" && "设置动态背景",
+        D === "writeEmail" && "写邮件",
+        D === "drafts" && "草稿箱",
+        D === "trash" && "垃圾箱",
+        D === "outbox" && "发件箱",
+        D === "clearRead" && "清空所有已读"
       ] }),
       /* @__PURE__ */ c.jsxs("div", { className: "py-2 flex flex-col gap-3", children: [
-        O === "add" && /* @__PURE__ */ c.jsxs("div", { className: "flex flex-col gap-3", children: [
+        D === "add" && /* @__PURE__ */ c.jsxs("div", { className: "flex flex-col gap-3", children: [
           /* @__PURE__ */ c.jsxs("div", { className: "flex items-center justify-between mb-1", children: [
             /* @__PURE__ */ c.jsx("div", { className: "text-sm text-[var(--text-secondary)]", children: "方式一：从角色卡选择" }),
             /* @__PURE__ */ c.jsxs("label", { className: "cursor-pointer text-xs text-[var(--accent-color)] hover:text-[var(--text-primary)] transition-colors flex items-center gap-1 border border-[var(--wireframe)] rounded px-2 py-1 hover:border-[var(--accent-color)]", children: [
@@ -13506,7 +13506,7 @@ const q0 = ({ onBack: r, settings: x }) => {
             }
           )
         ] }),
-        O === "search" && /* @__PURE__ */ c.jsx(
+        D === "search" && /* @__PURE__ */ c.jsx(
           "input",
           {
             type: "text",
@@ -13517,7 +13517,7 @@ const q0 = ({ onBack: r, settings: x }) => {
             autoFocus: !0
           }
         ),
-        (O === "delete" || O === "editName") && /* @__PURE__ */ c.jsxs(
+        (D === "delete" || D === "editName") && /* @__PURE__ */ c.jsxs(
           "select",
           {
             value: se || "",
@@ -13529,7 +13529,7 @@ const q0 = ({ onBack: r, settings: x }) => {
             ]
           }
         ),
-        O === "editName" && se && /* @__PURE__ */ c.jsx(
+        D === "editName" && se && /* @__PURE__ */ c.jsx(
           "input",
           {
             type: "text",
@@ -13540,7 +13540,7 @@ const q0 = ({ onBack: r, settings: x }) => {
             autoFocus: !0
           }
         ),
-        (O === "bg" || O === "momentBg") && /* @__PURE__ */ c.jsx(
+        (D === "bg" || D === "momentBg") && /* @__PURE__ */ c.jsx(
           "input",
           {
             type: "text",
@@ -13551,7 +13551,7 @@ const q0 = ({ onBack: r, settings: x }) => {
             autoFocus: !0
           }
         ),
-        ["clearRead"].includes(O) && /* @__PURE__ */ c.jsx("p", { className: "text-[var(--text-secondary)] text-sm", children: "确认清空所有已读邮件吗？此操作不可恢复。" })
+        ["clearRead"].includes(D) && /* @__PURE__ */ c.jsx("p", { className: "text-[var(--text-secondary)] text-sm", children: "确认清空所有已读邮件吗？此操作不可恢复。" })
       ] }),
       /* @__PURE__ */ c.jsxs("div", { className: "flex justify-end gap-3 mt-2", children: [
         /* @__PURE__ */ c.jsx(
@@ -13566,7 +13566,7 @@ const q0 = ({ onBack: r, settings: x }) => {
           "button",
           {
             onClick: Qe,
-            disabled: O === "add" && !Q.trim() && !ae || (O === "delete" || O === "editName") && !se || O === "editName" && !Q.trim() || ee,
+            disabled: D === "add" && !Q.trim() && !ae || (D === "delete" || D === "editName") && !se || D === "editName" && !Q.trim() || ee,
             className: "px-4 py-2 rounded bg-[var(--accent-color)]/20 border border-[var(--accent-color)] text-[var(--accent-color)] hover:bg-[var(--accent-color)]/40 transition-colors disabled:opacity-50 disabled:cursor-not-allowed",
             children: ee ? "生成中..." : "确认"
           }
@@ -13606,20 +13606,20 @@ const q0 = ({ onBack: r, settings: x }) => {
     ] }) })
   ] });
 }, Y0 = ({ onLock: r, toggleTheme: x, isDarkMode: S }) => {
-  const [f, w] = D.useState(null), [k, B] = D.useState(/* @__PURE__ */ new Date()), [$, R] = D.useState(!1), [N, O] = D.useState(!1), [q, Q] = D.useState(!1), [V, J] = D.useState("idle"), [te, se] = D.useState([]), [ue, De] = D.useState(!1), [A, ae] = D.useState(W.getGlobalSettings()), [ze, z] = D.useState(W.getPromptTemplates());
-  D.useEffect(() => {
+  const [f, w] = O.useState(null), [k, B] = O.useState(/* @__PURE__ */ new Date()), [$, R] = O.useState(!1), [N, D] = O.useState(!1), [q, Q] = O.useState(!1), [V, J] = O.useState("idle"), [te, se] = O.useState([]), [ue, De] = O.useState(!1), [A, ae] = O.useState(W.getGlobalSettings()), [ze, z] = O.useState(W.getPromptTemplates());
+  O.useEffect(() => {
     W.saveGlobalSettings(A);
-  }, [A]), D.useEffect(() => {
+  }, [A]), O.useEffect(() => {
     W.savePromptTemplates(ze);
-  }, [ze]), D.useEffect(() => {
+  }, [ze]), O.useEffect(() => {
     const U = setInterval(() => B(/* @__PURE__ */ new Date()), 1e3);
     return () => clearInterval(U);
-  }, []), D.useEffect(() => {
+  }, []), O.useEffect(() => {
     const U = () => {
       ae(W.getGlobalSettings());
     };
     return window.addEventListener("settingsUpdated", U), () => window.removeEventListener("settingsUpdated", U);
-  }, []), D.useEffect(() => {
+  }, []), O.useEffect(() => {
     if (A.customFontUrl) {
       const U = document.createElement("style");
       U.id = "custom-font-style", U.appendChild(document.createTextNode(`
@@ -13705,7 +13705,7 @@ const q0 = ({ onBack: r, settings: x }) => {
               /* @__PURE__ */ c.jsx("span", { className: "hidden sm:inline", children: "TERMINAL ID: 1040752980" })
             ] }),
             /* @__PURE__ */ c.jsxs("div", { className: "flex items-center gap-4 text-[var(--text-secondary)]", children: [
-              /* @__PURE__ */ c.jsx("button", { onClick: () => O(!0), className: "hover:text-[var(--text-primary)] transition-colors", title: "API与模型设置", children: /* @__PURE__ */ c.jsx(Jh, { size: 18 }) }),
+              /* @__PURE__ */ c.jsx("button", { onClick: () => D(!0), className: "hover:text-[var(--text-primary)] transition-colors", title: "API与模型设置", children: /* @__PURE__ */ c.jsx(Jh, { size: 18 }) }),
               /* @__PURE__ */ c.jsx("button", { onClick: () => R(!0), className: "hover:text-[var(--text-primary)] transition-colors", title: "系统设置", children: /* @__PURE__ */ c.jsx(sc, { size: 18 }) }),
               /* @__PURE__ */ c.jsx("button", { onClick: x, className: "hover:text-[var(--text-primary)] transition-colors text-xs border border-[var(--wireframe)] px-2 py-1 rounded", children: S ? "LIGHT" : "DARK" }),
               /* @__PURE__ */ c.jsx(h0, { size: 16 }),
@@ -13986,7 +13986,7 @@ const q0 = ({ onBack: r, settings: x }) => {
           lc,
           {
             isOpen: !0,
-            onClose: () => O(!1),
+            onClose: () => D(!1),
             title: "AI与API配置",
             children: /* @__PURE__ */ c.jsx("div", { className: "flex flex-col gap-6 py-4 text-[var(--text-primary)] max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar", children: /* @__PURE__ */ c.jsxs("div", { className: "space-y-4", children: [
               /* @__PURE__ */ c.jsx("h4", { className: "text-sm font-bold tracking-widest border-b border-[var(--wireframe)] pb-2", children: "API 连接" }),
@@ -14097,19 +14097,23 @@ const q0 = ({ onBack: r, settings: x }) => {
   );
 };
 function G0() {
-  const [r, x] = D.useState(!1), [S, f] = D.useState(!0);
-  D.useEffect(() => {
-    S ? (document.documentElement.classList.add("dark"), document.documentElement.setAttribute("data-theme", "dark")) : (document.documentElement.classList.remove("dark"), document.documentElement.removeAttribute("data-theme"));
-  }, [S]);
-  const w = () => f(!S);
-  return /* @__PURE__ */ c.jsx("div", { className: "min-h-screen w-full font-sans selection:bg-[var(--accent-color)] selection:text-white", children: r ? /* @__PURE__ */ c.jsx(
-    Y0,
+  const [r, x] = O.useState(!1), [S, f] = O.useState(!0), w = () => f(!S);
+  return /* @__PURE__ */ c.jsx(
+    "div",
     {
-      onLock: () => x(!1),
-      toggleTheme: w,
-      isDarkMode: S
+      className: "min-h-screen w-full font-sans selection:bg-[var(--accent-color)] selection:text-white",
+      "data-theme": S ? "dark" : "light",
+      style: { colorScheme: S ? "dark" : "light" },
+      children: r ? /* @__PURE__ */ c.jsx(
+        Y0,
+        {
+          onLock: () => x(!1),
+          toggleTheme: w,
+          isDarkMode: S
+        }
+      ) : /* @__PURE__ */ c.jsx(p0, { onUnlock: () => x(!0) })
     }
-  ) : /* @__PURE__ */ c.jsx(p0, { onUnlock: () => x(!0) }) });
+  );
 }
 const Bn = document.createElement("div");
 Bn.id = "st-terminal-overlay";
