@@ -4,6 +4,7 @@
   "requires": [],
   "optional": [],
   "js": "dist/index.js",
+  "css": "dist/index.css",
   "author": "Miuni-Code",
   "version": "1.0.0",
   "homePage": "https://github.com/Miuni-Code/1111"

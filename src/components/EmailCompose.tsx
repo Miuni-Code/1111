@@ -37,10 +37,10 @@ export const EmailCompose: React.FC<EmailComposeProps> = ({ onClose, initialData
         emailSubject: subject || '无主题',
       });
 
-      const result = await callAI({
-        systemPrompt,
-        userInput: userPrompt
-      });
+      const result = await callAI([
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: userPrompt }
+      ]);
       
       setBody(result);
     } catch (error) {

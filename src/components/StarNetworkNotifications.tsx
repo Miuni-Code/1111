@@ -57,10 +57,10 @@ export const StarNetworkNotifications: React.FC<StarNetworkNotificationsProps> =
       });
       const userPrompt = `发件人: ${email.from}\n主题: ${email.subject}\n内容: ${email.body}\n\n请以${settings.userName}的身份生成一封回复。`;
 
-      const result = await callAI({
-        systemPrompt,
-        userInput: userPrompt
-      });
+      const result = await callAI([
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: userPrompt }
+      ]);
       
       setInlineReplyText(result);
     } catch (error) {

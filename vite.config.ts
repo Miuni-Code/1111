@@ -9,9 +9,7 @@ export default defineConfig({
     'process.env.NODE_ENV': '"production"',
   },
   resolve: {
-    alias: {
-      '@': path.resolve(__dirname, '.'),
-    },
+    alias: { '@': path.resolve(__dirname, '.') },
   },
   build: {
     lib: {
@@ -21,9 +19,7 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ['@google/genai'],
-      output: {
-        assetFileNames: 'index.[ext]',
-      },
+      output: { assetFileNames: 'index.[ext]' },
     },
   },
 });

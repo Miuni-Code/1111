@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Slider } from './Slider';
-import { Fingerprint, Lock } from 'lucide-react';
+import { Fingerprint, Scan, ShieldAlert } from 'lucide-react';
 
 interface LockScreenProps {
   onUnlock: () => void;
 }
 
-export const LockScreen: React.FC<LockScreenProps> = ({ onUnlock }) => {
+export function LockScreen({ onUnlock }: LockScreenProps) {
+  const [scanning, setScanning] = useState(false);
+  const [progress, setProgress] = useState(0);
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -14,40 +15,104 @@ export const LockScreen: React.FC<LockScreenProps> = ({ onUnlock }) => {
     return () => clearInterval(timer);
   }, []);
 
-  return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-between py-20 px-6 bg-[var(--bg-base)] transition-colors duration-500">
-      <div className="bokeh bokeh-1" />
-      <div className="bokeh bokeh-2" />
-      <div className="scanlines" />
+  const handleScan = () => {
+    setScanning(true);
+    let p = 0;
+    const interval = setInterval(() => {
+      p += 5;
+      setProgress(p);
+      if (p >= 100) {
+        clearInterval(interval);
+        setTimeout(() => {
+          onUnlock();
+        }, 500);
+      }
+    }, 50);
+  };
 
-      <div className="relative z-10 flex flex-col items-center mt-10">
-        <Lock className="text-[var(--accent-color)] mb-6 opacity-50" size={32} />
-        <h1 className="text-6xl font-light tracking-wider text-[var(--text-primary)] mb-2 font-mono">
-          {time.toLocaleTimeString('zh-CN', { hour12: false, hour: '2-digit', minute: '2-digit' })}
+  return (
+    <div className="absolute inset-0 flex flex-col items-center justify-center overflow-hidden bg-[var(--bg-base)]">
+      <div className="scanlines"></div>
+      <div className="bokeh bokeh-1"></div>
+      <div className="bokeh bokeh-2"></div>
+
+      {/* Top Status Bar */}
+      <div className="absolute top-0 w-full p-6 flex justify-between items-start z-10">
+        <div className="flex flex-col">
+          <span className="text-xs tracking-widest text-[var(--text-secondary)] font-mono">SYS.STATUS</span>
+          <span className="text-sm text-emerald-400 font-mono">SECURE</span>
+        </div>
+        <ShieldAlert className="text-[var(--text-secondary)] opacity-50" size={20} />
+      </div>
+
+      {/* Time Display */}
+      <div className="flex flex-col items-center mb-20 z-10">
+        <h1 className="text-7xl font-light tracking-tighter text-[var(--text-primary)] mb-2 font-mono">
+          {time.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' })}
         </h1>
-        <p className="text-[var(--text-secondary)] tracking-widest text-sm uppercase">
-          {time.toLocaleDateString('zh-CN', { weekday: 'long', month: 'long', day: 'numeric' })}
+        <p className="text-sm tracking-[0.3em] text-[var(--text-secondary)] uppercase">
+          {time.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
         </p>
       </div>
 
-      <div className="relative z-10 flex flex-col items-center w-full gap-12">
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-16 h-16 rounded-full border border-[var(--wireframe)] flex items-center justify-center bg-[var(--bubble-bg)] backdrop-blur-md relative overflow-hidden">
-            <Fingerprint className="text-[var(--accent-color)]" size={28} />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--accent-color)] to-transparent opacity-20 animate-[scan_2s_ease-in-out_infinite]" />
-          </div>
-          <span className="text-[var(--text-secondary)] text-xs tracking-widest font-mono">IDENTITY VERIFICATION</span>
+      {/* Fingerprint Scanner */}
+      <div className="relative z-10 flex flex-col items-center">
+        <div 
+          className={`relative w-32 h-32 rounded-full flex items-center justify-center cursor-pointer transition-all duration-500
+            ${scanning ? 'scale-95' : 'hover:scale-105'}
+          `}
+          onMouseDown={handleScan}
+          onMouseUp={() => { if(progress < 100) { setScanning(false); setProgress(0); } }}
+          onTouchStart={handleScan}
+          onTouchEnd={() => { if(progress < 100) { setScanning(false); setProgress(0); } }}
+        >
+          {/* Outer Ring */}
+          <div className={`absolute inset-0 rounded-full border border-[var(--wireframe)] transition-all duration-1000
+            ${scanning ? 'border-[var(--accent-color)] rotate-180' : ''}
+          `}></div>
+          
+          {/* Inner Ring */}
+          <div className={`absolute inset-2 rounded-full border border-[var(--wireframe)] transition-all duration-700
+            ${scanning ? 'border-[var(--accent-color)] -rotate-90' : ''}
+          `}></div>
+
+          {/* Icon */}
+          <Fingerprint 
+            size={48} 
+            className={`transition-colors duration-300 ${scanning ? 'text-[var(--accent-color)]' : 'text-[var(--text-secondary)]'}`} 
+          />
+
+          {/* Scan Effect */}
+          {scanning && (
+            <div 
+              className="absolute left-0 w-full h-1 bg-[var(--accent-color)] shadow-[0_0_10px_var(--accent-color)] opacity-50"
+              style={{
+                top: `${progress}%`,
+                transition: 'top 0.05s linear'
+              }}
+            ></div>
+          )}
         </div>
 
-        <Slider onUnlock={onUnlock} />
+        <div className="mt-8 h-4 flex items-center justify-center">
+          {scanning ? (
+            <span className="text-xs tracking-widest text-[var(--accent-color)] font-mono animate-pulse">
+              AUTHENTICATING {progress}%
+            </span>
+          ) : (
+            <span className="text-xs tracking-widest text-[var(--text-secondary)] font-mono flex items-center gap-2">
+              <Scan size={12} /> TOUCH TO UNLOCK
+            </span>
+          )}
+        </div>
       </div>
-      
-      <style>{`
-        @keyframes scan {
-          0% { transform: translateY(-100%); }
-          100% { transform: translateY(100%); }
-        }
-      `}</style>
+
+      {/* Bottom Decoration */}
+      <div className="absolute bottom-8 flex gap-1 z-10">
+        {[...Array(3)].map((_, i) => (
+          <div key={i} className="w-8 h-1 bg-[var(--wireframe)] rounded-full"></div>
+        ))}
+      </div>
     </div>
   );
-};
+}

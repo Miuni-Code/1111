@@ -126,10 +126,10 @@ export const StarNetworkMoments: React.FC<StarNetworkMomentsProps> = ({ actionTy
         characterDescription: randomContact.description || '',
       });
       
-      const content = await callAI({
-        systemPrompt,
-        userInput
-      });
+      const content = await callAI([
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: userInput }
+      ]);
       
       if (content) {
         const newMoment: Moment = {
