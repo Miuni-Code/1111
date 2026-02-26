@@ -19,7 +19,7 @@ export async function callAI(config: AiCallConfig): Promise<string> {
   const settings = dataStore.getGlobalSettings();
   
   if (settings.apiMode === 'gemini') {
-    const apiKey = typeof process !== 'undefined' ? process.env?.GEMINI_API_KEY : '';
+    const apiKey = '';
     if (!apiKey) {
       throw new Error('GEMINI_API_KEY is not set');
     }
