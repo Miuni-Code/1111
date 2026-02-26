@@ -16,22 +16,22 @@ function KE() {
   if ($2) return Tv;
   $2 = 1;
   var S = Symbol.for("react.transitional.element"), j = Symbol.for("react.fragment");
-  function J(E, I, re) {
-    var pe = null;
-    if (re !== void 0 && (pe = "" + re), I.key !== void 0 && (pe = "" + I.key), "key" in I) {
+  function k(E, F, re) {
+    var he = null;
+    if (re !== void 0 && (he = "" + re), F.key !== void 0 && (he = "" + F.key), "key" in F) {
       re = {};
-      for (var ee in I)
-        ee !== "key" && (re[ee] = I[ee]);
-    } else re = I;
-    return I = re.ref, {
+      for (var ee in F)
+        ee !== "key" && (re[ee] = F[ee]);
+    } else re = F;
+    return F = re.ref, {
       $$typeof: S,
       type: E,
-      key: pe,
-      ref: I !== void 0 ? I : null,
+      key: he,
+      ref: F !== void 0 ? F : null,
       props: re
     };
   }
-  return Tv.Fragment = j, Tv.jsx = J, Tv.jsxs = J, Tv;
+  return Tv.Fragment = j, Tv.jsx = k, Tv.jsxs = k, Tv;
 }
 var Av = {}, eb = { exports: {} }, rt = {};
 /**
@@ -47,7 +47,7 @@ var W2;
 function $E() {
   if (W2) return rt;
   W2 = 1;
-  var S = Symbol.for("react.transitional.element"), j = Symbol.for("react.portal"), J = Symbol.for("react.fragment"), E = Symbol.for("react.strict_mode"), I = Symbol.for("react.profiler"), re = Symbol.for("react.consumer"), pe = Symbol.for("react.context"), ee = Symbol.for("react.forward_ref"), ne = Symbol.for("react.suspense"), Q = Symbol.for("react.memo"), le = Symbol.for("react.lazy"), U = Symbol.for("react.activity"), M = Symbol.iterator;
+  var S = Symbol.for("react.transitional.element"), j = Symbol.for("react.portal"), k = Symbol.for("react.fragment"), E = Symbol.for("react.strict_mode"), F = Symbol.for("react.profiler"), re = Symbol.for("react.consumer"), he = Symbol.for("react.context"), ee = Symbol.for("react.forward_ref"), ne = Symbol.for("react.suspense"), Q = Symbol.for("react.memo"), le = Symbol.for("react.lazy"), U = Symbol.for("react.activity"), M = Symbol.iterator;
   function ue(x) {
     return x === null || typeof x != "object" ? null : (x = M && x[M] || x["@@iterator"], typeof x == "function" ? x : null);
   }
@@ -77,11 +77,11 @@ function $E() {
   function Tt() {
   }
   Tt.prototype = De.prototype;
-  function F(x, Y, se) {
+  function I(x, Y, se) {
     this.props = x, this.context = Y, this.refs = Ne, this.updater = se || be;
   }
-  var Ye = F.prototype = new Tt();
-  Ye.constructor = F, Be(Ye, De.prototype), Ye.isPureReactComponent = !0;
+  var Ye = I.prototype = new Tt();
+  Ye.constructor = I, Be(Ye, De.prototype), Ye.isPureReactComponent = !0;
   var nt = Array.isArray;
   function W() {
   }
@@ -136,12 +136,12 @@ function $E() {
     throw x;
   }
   function _(x, Y, se, fe, Ue) {
-    var he = typeof x;
-    (he === "undefined" || he === "boolean") && (x = null);
+    var pe = typeof x;
+    (pe === "undefined" || pe === "boolean") && (x = null);
     var Ee = !1;
     if (x === null) Ee = !0;
     else
-      switch (he) {
+      switch (pe) {
         case "bigint":
         case "string":
         case "number":
@@ -177,23 +177,23 @@ function $E() {
     var it = fe === "" ? "." : fe + ":";
     if (nt(x))
       for (var ct = 0; ct < x.length; ct++)
-        fe = x[ct], he = it + zt(fe, ct), Ee += _(
+        fe = x[ct], pe = it + zt(fe, ct), Ee += _(
           fe,
           Y,
           se,
-          he,
+          pe,
           Ue
         );
     else if (ct = ue(x), typeof ct == "function")
       for (x = ct.call(x), ct = 0; !(fe = x.next()).done; )
-        fe = fe.value, he = it + zt(fe, ct++), Ee += _(
+        fe = fe.value, pe = it + zt(fe, ct++), Ee += _(
           fe,
           Y,
           se,
-          he,
+          pe,
           Ue
         );
-    else if (he === "object") {
+    else if (pe === "object") {
       if (typeof x.then == "function")
         return _(
           ut(x),
@@ -211,8 +211,8 @@ function $E() {
   function D(x, Y, se) {
     if (x == null) return x;
     var fe = [], Ue = 0;
-    return _(x, fe, "", "", function(he) {
-      return Y.call(se, he, Ue++);
+    return _(x, fe, "", "", function(pe) {
+      return Y.call(se, pe, Ue++);
     }), fe;
   }
   function ce(x) {
@@ -274,7 +274,7 @@ function $E() {
       return x;
     }
   };
-  return rt.Activity = U, rt.Children = He, rt.Component = De, rt.Fragment = J, rt.Profiler = I, rt.PureComponent = F, rt.StrictMode = E, rt.Suspense = ne, rt.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = q, rt.__COMPILER_RUNTIME = {
+  return rt.Activity = U, rt.Children = He, rt.Component = De, rt.Fragment = k, rt.Profiler = F, rt.PureComponent = I, rt.StrictMode = E, rt.Suspense = ne, rt.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = q, rt.__COMPILER_RUNTIME = {
     __proto__: null,
     c: function(x) {
       return q.H.useMemoCache(x);
@@ -292,19 +292,19 @@ function $E() {
       );
     var fe = Be({}, x.props), Ue = x.key;
     if (Y != null)
-      for (he in Y.key !== void 0 && (Ue = "" + Y.key), Y)
-        !Me.call(Y, he) || he === "key" || he === "__self" || he === "__source" || he === "ref" && Y.ref === void 0 || (fe[he] = Y[he]);
-    var he = arguments.length - 2;
-    if (he === 1) fe.children = se;
-    else if (1 < he) {
-      for (var Ee = Array(he), it = 0; it < he; it++)
+      for (pe in Y.key !== void 0 && (Ue = "" + Y.key), Y)
+        !Me.call(Y, pe) || pe === "key" || pe === "__self" || pe === "__source" || pe === "ref" && Y.ref === void 0 || (fe[pe] = Y[pe]);
+    var pe = arguments.length - 2;
+    if (pe === 1) fe.children = se;
+    else if (1 < pe) {
+      for (var Ee = Array(pe), it = 0; it < pe; it++)
         Ee[it] = arguments[it + 2];
       fe.children = Ee;
     }
     return Ge(x.type, Ue, fe);
   }, rt.createContext = function(x) {
     return x = {
-      $$typeof: pe,
+      $$typeof: he,
       _currentValue: x,
       _currentValue2: x,
       _threadCount: 0,
@@ -315,9 +315,9 @@ function $E() {
       _context: x
     }, x;
   }, rt.createElement = function(x, Y, se) {
-    var fe, Ue = {}, he = null;
+    var fe, Ue = {}, pe = null;
     if (Y != null)
-      for (fe in Y.key !== void 0 && (he = "" + Y.key), Y)
+      for (fe in Y.key !== void 0 && (pe = "" + Y.key), Y)
         Me.call(Y, fe) && fe !== "key" && fe !== "__self" && fe !== "__source" && (Ue[fe] = Y[fe]);
     var Ee = arguments.length - 2;
     if (Ee === 1) Ue.children = se;
@@ -329,7 +329,7 @@ function $E() {
     if (x && x.defaultProps)
       for (fe in Ee = x.defaultProps, Ee)
         Ue[fe] === void 0 && (Ue[fe] = Ee[fe]);
-    return Ge(x, he, Ue);
+    return Ge(x, pe, Ue);
   }, rt.createRef = function() {
     return { current: null };
   }, rt.forwardRef = function(x) {
@@ -352,8 +352,8 @@ function $E() {
     try {
       var fe = x(), Ue = q.S;
       Ue !== null && Ue(se, fe), typeof fe == "object" && fe !== null && typeof fe.then == "function" && fe.then(W, Ae);
-    } catch (he) {
-      Ae(he);
+    } catch (pe) {
+      Ae(pe);
     } finally {
       Y !== null && se.types !== null && (Y.types = se.types), q.T = Y;
     }
@@ -417,7 +417,7 @@ var F2;
 function WE() {
   return F2 || (F2 = 1, (function(S, j) {
     process.env.NODE_ENV !== "production" && (function() {
-      function J(g, H) {
+      function k(g, H) {
         Object.defineProperty(re.prototype, g, {
           get: function() {
             console.warn(
@@ -431,7 +431,7 @@ function WE() {
       function E(g) {
         return g === null || typeof g != "object" ? null : (g = Un && g[Un] || g["@@iterator"], typeof g == "function" ? g : null);
       }
-      function I(g, H) {
+      function F(g, H) {
         g = (g = g.constructor) && (g.displayName || g.name) || "ReactClass";
         var me = g + "." + H;
         mu[me] || (console.error(
@@ -443,7 +443,7 @@ function WE() {
       function re(g, H, me) {
         this.props = g, this.context = H, this.refs = tt, this.updater = me || hl;
       }
-      function pe() {
+      function he() {
       }
       function ee(g, H, me) {
         this.props = g, this.context = H, this.refs = tt, this.updater = me || hl;
@@ -499,7 +499,7 @@ function WE() {
               return g.displayName || "Context";
             case fe:
               return (g._context.displayName || "Context") + ".Consumer";
-            case he:
+            case pe:
               var H = g.render;
               return g = g.displayName, g || (g = H.displayName || H.name || "", g = g !== "" ? "ForwardRef(" + g + ")" : "ForwardRef"), g;
             case ct:
@@ -589,7 +589,7 @@ function WE() {
           value: Ze
         }), Object.freeze && (Object.freeze(g.props), Object.freeze(g)), g;
       }
-      function F(g, H) {
+      function I(g, H) {
         return H = Tt(
           g.type,
           H,
@@ -670,7 +670,7 @@ function WE() {
           var vt = ye === "" ? "." + q(Re, 0) : ye;
           return Hn(Oe) ? (me = "", vt != null && (me = vt.replace(cd, "$&/") + "/"), Ge(Oe, H, me, "", function(nl) {
             return nl;
-          })) : Oe != null && (nt(Oe) && (Oe.key != null && (Re && Re.key === Oe.key || le(Oe.key)), me = F(
+          })) : Oe != null && (nt(Oe) && (Oe.key != null && (Re && Re.key === Oe.key || le(Oe.key)), me = I(
             Oe,
             me + (Oe.key == null || Re && Re.key === Oe.key ? "" : ("" + Oe.key).replace(
               cd,
@@ -848,18 +848,18 @@ See https://react.dev/link/invalid-hook-call for tips about how to debug and fix
         }
       }
       typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var Ae = Symbol.for("react.transitional.element"), He = Symbol.for("react.portal"), x = Symbol.for("react.fragment"), Y = Symbol.for("react.strict_mode"), se = Symbol.for("react.profiler"), fe = Symbol.for("react.consumer"), Ue = Symbol.for("react.context"), he = Symbol.for("react.forward_ref"), Ee = Symbol.for("react.suspense"), it = Symbol.for("react.suspense_list"), ct = Symbol.for("react.memo"), ml = Symbol.for("react.lazy"), Se = Symbol.for("react.activity"), Un = Symbol.iterator, mu = {}, hl = {
+      var Ae = Symbol.for("react.transitional.element"), He = Symbol.for("react.portal"), x = Symbol.for("react.fragment"), Y = Symbol.for("react.strict_mode"), se = Symbol.for("react.profiler"), fe = Symbol.for("react.consumer"), Ue = Symbol.for("react.context"), pe = Symbol.for("react.forward_ref"), Ee = Symbol.for("react.suspense"), it = Symbol.for("react.suspense_list"), ct = Symbol.for("react.memo"), ml = Symbol.for("react.lazy"), Se = Symbol.for("react.activity"), Un = Symbol.iterator, mu = {}, hl = {
         isMounted: function() {
           return !1;
         },
         enqueueForceUpdate: function(g) {
-          I(g, "forceUpdate");
+          F(g, "forceUpdate");
         },
         enqueueReplaceState: function(g) {
-          I(g, "replaceState");
+          F(g, "replaceState");
         },
         enqueueSetState: function(g) {
-          I(g, "setState");
+          F(g, "setState");
         }
       }, Rl = Object.assign, tt = {};
       Object.freeze(tt), re.prototype.isReactComponent = {}, re.prototype.setState = function(g, H) {
@@ -882,8 +882,8 @@ See https://react.dev/link/invalid-hook-call for tips about how to debug and fix
         ]
       };
       for (Ui in Ea)
-        Ea.hasOwnProperty(Ui) && J(Ui, Ea[Ui]);
-      pe.prototype = re.prototype, Ea = ee.prototype = new pe(), Ea.constructor = ee, Rl(Ea, re.prototype), Ea.isPureReactComponent = !0;
+        Ea.hasOwnProperty(Ui) && k(Ui, Ea[Ui]);
+      he.prototype = re.prototype, Ea = ee.prototype = new he(), Ea.constructor = ee, Rl(Ea, re.prototype), Ea.isPureReactComponent = !0;
       var Hn = Array.isArray, vs = Symbol.for("react.client.reference"), _e = {
         H: null,
         A: null,
@@ -1140,7 +1140,7 @@ See https://react.dev/link/invalid-hook-call for tips about how to debug and fix
         ), g != null && g.defaultProps != null && console.error(
           "forwardRef render functions do not support defaultProps. Did you accidentally pass a React component?"
         );
-        var H = { $$typeof: he, render: g }, me;
+        var H = { $$typeof: pe, render: g }, me;
         return Object.defineProperty(H, "displayName", {
           enumerable: !1,
           configurable: !0,
@@ -1306,7 +1306,7 @@ function FE() {
             return "Portal";
           case Ye:
             return x.displayName || "Context";
-          case F:
+          case I:
             return (x._context.displayName || "Context") + ".Consumer";
           case nt:
             var Y = x.render;
@@ -1325,7 +1325,7 @@ function FE() {
     function j(x) {
       return "" + x;
     }
-    function J(x) {
+    function k(x) {
       try {
         j(x);
         var Y = !1;
@@ -1353,14 +1353,14 @@ function FE() {
         return "<...>";
       }
     }
-    function I() {
+    function F() {
       var x = ve.A;
       return x === null ? null : x.getOwner();
     }
     function re() {
       return Error("react-stack-top-frame");
     }
-    function pe(x) {
+    function he(x) {
       if (qe.call(x, "key")) {
         var Y = Object.getOwnPropertyDescriptor(x, "key").get;
         if (Y && Y.isReactWarning) return !1;
@@ -1385,7 +1385,7 @@ function FE() {
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), x = this.props.ref, x !== void 0 ? x : null;
     }
-    function Q(x, Y, se, fe, Ue, he) {
+    function Q(x, Y, se, fe, Ue, pe) {
       var Ee = se.ref;
       return x = {
         $$typeof: be,
@@ -1415,10 +1415,10 @@ function FE() {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: he
+        value: pe
       }), Object.freeze && (Object.freeze(x.props), Object.freeze(x)), x;
     }
-    function le(x, Y, se, fe, Ue, he) {
+    function le(x, Y, se, fe, Ue, pe) {
       var Ee = Y.children;
       if (Ee !== void 0)
         if (fe)
@@ -1449,7 +1449,7 @@ React keys must be passed directly to JSX without using spread:
           Ee
         ), He[Ee + fe] = !0);
       }
-      if (Ee = null, se !== void 0 && (J(se), Ee = "" + se), pe(Y) && (J(Y.key), Ee = "" + Y.key), "key" in Y) {
+      if (Ee = null, se !== void 0 && (k(se), Ee = "" + se), he(Y) && (k(Y.key), Ee = "" + Y.key), "key" in Y) {
         se = {};
         for (var ct in Y)
           ct !== "key" && (se[ct] = Y[ct]);
@@ -1461,9 +1461,9 @@ React keys must be passed directly to JSX without using spread:
         x,
         Ee,
         se,
-        I(),
+        F(),
         Ue,
-        he
+        pe
       );
     }
     function U(x) {
@@ -1472,7 +1472,7 @@ React keys must be passed directly to JSX without using spread:
     function M(x) {
       return typeof x == "object" && x !== null && x.$$typeof === be;
     }
-    var ue = jh(), be = Symbol.for("react.transitional.element"), Be = Symbol.for("react.portal"), Ne = Symbol.for("react.fragment"), De = Symbol.for("react.strict_mode"), Tt = Symbol.for("react.profiler"), F = Symbol.for("react.consumer"), Ye = Symbol.for("react.context"), nt = Symbol.for("react.forward_ref"), W = Symbol.for("react.suspense"), q = Symbol.for("react.suspense_list"), Me = Symbol.for("react.memo"), Ge = Symbol.for("react.lazy"), X = Symbol.for("react.activity"), je = Symbol.for("react.client.reference"), ve = ue.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, qe = Object.prototype.hasOwnProperty, zt = Array.isArray, ut = console.createTask ? console.createTask : function() {
+    var ue = jh(), be = Symbol.for("react.transitional.element"), Be = Symbol.for("react.portal"), Ne = Symbol.for("react.fragment"), De = Symbol.for("react.strict_mode"), Tt = Symbol.for("react.profiler"), I = Symbol.for("react.consumer"), Ye = Symbol.for("react.context"), nt = Symbol.for("react.forward_ref"), W = Symbol.for("react.suspense"), q = Symbol.for("react.suspense_list"), Me = Symbol.for("react.memo"), Ge = Symbol.for("react.lazy"), X = Symbol.for("react.activity"), je = Symbol.for("react.client.reference"), ve = ue.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, qe = Object.prototype.hasOwnProperty, zt = Array.isArray, ut = console.createTask ? console.createTask : function() {
       return null;
     };
     ue = {
@@ -1531,12 +1531,12 @@ function e3() {
       _.push(D);
       e: for (; 0 < ce; ) {
         var Ae = ce - 1 >>> 1, He = _[Ae];
-        if (0 < I(He, D))
+        if (0 < F(He, D))
           _[Ae] = D, _[ce] = He, ce = Ae;
         else break e;
       }
     }
-    function J(_) {
+    function k(_) {
       return _.length === 0 ? null : _[0];
     }
     function E(_) {
@@ -1546,16 +1546,16 @@ function e3() {
         _[0] = ce;
         e: for (var Ae = 0, He = _.length, x = He >>> 1; Ae < x; ) {
           var Y = 2 * (Ae + 1) - 1, se = _[Y], fe = Y + 1, Ue = _[fe];
-          if (0 > I(se, ce))
-            fe < He && 0 > I(Ue, se) ? (_[Ae] = Ue, _[fe] = ce, Ae = fe) : (_[Ae] = se, _[Y] = ce, Ae = Y);
-          else if (fe < He && 0 > I(Ue, ce))
+          if (0 > F(se, ce))
+            fe < He && 0 > F(Ue, se) ? (_[Ae] = Ue, _[fe] = ce, Ae = fe) : (_[Ae] = se, _[Y] = ce, Ae = Y);
+          else if (fe < He && 0 > F(Ue, ce))
             _[Ae] = Ue, _[fe] = ce, Ae = fe;
           else break e;
         }
       }
       return D;
     }
-    function I(_, D) {
+    function F(_, D) {
       var ce = _.sortIndex - D.sortIndex;
       return ce !== 0 ? ce : _.id - D.id;
     }
@@ -1565,27 +1565,27 @@ function e3() {
         return re.now();
       };
     } else {
-      var pe = Date, ee = pe.now();
+      var he = Date, ee = he.now();
       S.unstable_now = function() {
-        return pe.now() - ee;
+        return he.now() - ee;
       };
     }
-    var ne = [], Q = [], le = 1, U = null, M = 3, ue = !1, be = !1, Be = !1, Ne = !1, De = typeof setTimeout == "function" ? setTimeout : null, Tt = typeof clearTimeout == "function" ? clearTimeout : null, F = typeof setImmediate < "u" ? setImmediate : null;
+    var ne = [], Q = [], le = 1, U = null, M = 3, ue = !1, be = !1, Be = !1, Ne = !1, De = typeof setTimeout == "function" ? setTimeout : null, Tt = typeof clearTimeout == "function" ? clearTimeout : null, I = typeof setImmediate < "u" ? setImmediate : null;
     function Ye(_) {
-      for (var D = J(Q); D !== null; ) {
+      for (var D = k(Q); D !== null; ) {
         if (D.callback === null) E(Q);
         else if (D.startTime <= _)
           E(Q), D.sortIndex = D.expirationTime, j(ne, D);
         else break;
-        D = J(Q);
+        D = k(Q);
       }
     }
     function nt(_) {
       if (Be = !1, Ye(_), !be)
-        if (J(ne) !== null)
+        if (k(ne) !== null)
           be = !0, W || (W = !0, ve());
         else {
-          var D = J(Q);
+          var D = k(Q);
           D !== null && ut(nt, D.startTime - _);
         }
     }
@@ -1604,7 +1604,7 @@ function e3() {
             var ce = M;
             try {
               t: {
-                for (Ye(_), U = J(ne); U !== null && !(U.expirationTime > _ && X()); ) {
+                for (Ye(_), U = k(ne); U !== null && !(U.expirationTime > _ && X()); ) {
                   var Ae = U.callback;
                   if (typeof Ae == "function") {
                     U.callback = null, M = U.priorityLevel;
@@ -1615,13 +1615,13 @@ function e3() {
                       U.callback = He, Ye(_), D = !0;
                       break t;
                     }
-                    U === J(ne) && E(ne), Ye(_);
+                    U === k(ne) && E(ne), Ye(_);
                   } else E(ne);
-                  U = J(ne);
+                  U = k(ne);
                 }
                 if (U !== null) D = !0;
                 else {
-                  var x = J(Q);
+                  var x = k(Q);
                   x !== null && ut(
                     nt,
                     x.startTime - _
@@ -1640,9 +1640,9 @@ function e3() {
       }
     }
     var ve;
-    if (typeof F == "function")
+    if (typeof I == "function")
       ve = function() {
-        F(je);
+        I(je);
       };
     else if (typeof MessageChannel < "u") {
       var qe = new MessageChannel(), zt = qe.port2;
@@ -1728,7 +1728,7 @@ function e3() {
         startTime: ce,
         expirationTime: He,
         sortIndex: -1
-      }, ce > Ae ? (_.sortIndex = ce, j(Q, _), J(ne) === null && _ === J(Q) && (Be ? (Tt(q), q = -1) : Be = !0, ut(nt, ce - Ae))) : (_.sortIndex = He, j(ne, _), be || ue || (be = !0, W || (W = !0, ve()))), _;
+      }, ce > Ae ? (_.sortIndex = ce, j(Q, _), k(ne) === null && _ === k(Q) && (Be ? (Tt(q), q = -1) : Be = !0, ut(nt, ce - Ae))) : (_.sortIndex = He, j(ne, _), be || ue || (be = !0, W || (W = !0, ve()))), _;
     }, S.unstable_shouldYield = X, S.unstable_wrapCallback = function(_) {
       var D = M;
       return function() {
@@ -1764,11 +1764,11 @@ function t3() {
           var D = !0;
           try {
             e: {
-              F = !1, Ye && (Ye = !1, q(X), X = -1), Tt = !0;
+              I = !1, Ye && (Ye = !1, q(X), X = -1), Tt = !0;
               var ce = De;
               try {
                 t: {
-                  for (pe(_), Ne = E(ue); Ne !== null && !(Ne.expirationTime > _ && ne()); ) {
+                  for (he(_), Ne = E(ue); Ne !== null && !(Ne.expirationTime > _ && ne()); ) {
                     var Ae = Ne.callback;
                     if (typeof Ae == "function") {
                       Ne.callback = null, De = Ne.priorityLevel;
@@ -1776,11 +1776,11 @@ function t3() {
                         Ne.expirationTime <= _
                       );
                       if (_ = S.unstable_now(), typeof He == "function") {
-                        Ne.callback = He, pe(_), D = !0;
+                        Ne.callback = He, he(_), D = !0;
                         break t;
                       }
-                      Ne === E(ue) && I(ue), pe(_);
-                    } else I(ue);
+                      Ne === E(ue) && F(ue), he(_);
+                    } else F(ue);
                     Ne = E(ue);
                   }
                   if (Ne !== null) D = !0;
@@ -1803,7 +1803,7 @@ function t3() {
           }
         }
       }
-      function J(_, D) {
+      function k(_, D) {
         var ce = _.length;
         _.push(D);
         e: for (; 0 < ce; ) {
@@ -1816,7 +1816,7 @@ function t3() {
       function E(_) {
         return _.length === 0 ? null : _[0];
       }
-      function I(_) {
+      function F(_) {
         if (_.length === 0) return null;
         var D = _[0], ce = _.pop();
         if (ce !== D) {
@@ -1836,19 +1836,19 @@ function t3() {
         var ce = _.sortIndex - D.sortIndex;
         return ce !== 0 ? ce : _.id - D.id;
       }
-      function pe(_) {
+      function he(_) {
         for (var D = E(be); D !== null; ) {
-          if (D.callback === null) I(be);
+          if (D.callback === null) F(be);
           else if (D.startTime <= _)
-            I(be), D.sortIndex = D.expirationTime, J(ue, D);
+            F(be), D.sortIndex = D.expirationTime, k(ue, D);
           else break;
           D = E(be);
         }
       }
       function ee(_) {
-        if (Ye = !1, pe(_), !F)
+        if (Ye = !1, he(_), !I)
           if (E(ue) !== null)
-            F = !0, Ge || (Ge = !0, qe());
+            I = !0, Ge || (Ge = !0, qe());
           else {
             var D = E(be);
             D !== null && Q(
@@ -1876,7 +1876,7 @@ function t3() {
           return U.now() - M;
         };
       }
-      var ue = [], be = [], Be = 1, Ne = null, De = 3, Tt = !1, F = !1, Ye = !1, nt = !1, W = typeof setTimeout == "function" ? setTimeout : null, q = typeof clearTimeout == "function" ? clearTimeout : null, Me = typeof setImmediate < "u" ? setImmediate : null, Ge = !1, X = -1, je = 5, ve = -1;
+      var ue = [], be = [], Be = 1, Ne = null, De = 3, Tt = !1, I = !1, Ye = !1, nt = !1, W = typeof setTimeout == "function" ? setTimeout : null, q = typeof clearTimeout == "function" ? clearTimeout : null, Me = typeof setImmediate < "u" ? setImmediate : null, Ge = !1, X = -1, je = 5, ve = -1;
       if (typeof Me == "function")
         var qe = function() {
           Me(j);
@@ -1960,7 +1960,7 @@ function t3() {
           startTime: ce,
           expirationTime: He,
           sortIndex: -1
-        }, ce > Ae ? (_.sortIndex = ce, J(be, _), E(ue) === null && _ === E(be) && (Ye ? (q(X), X = -1) : Ye = !0, Q(ee, ce - Ae))) : (_.sortIndex = He, J(ue, _), F || Tt || (F = !0, Ge || (Ge = !0, qe()))), _;
+        }, ce > Ae ? (_.sortIndex = ce, k(be, _), E(ue) === null && _ === E(be) && (Ye ? (q(X), X = -1) : Ye = !0, Q(ee, ce - Ae))) : (_.sortIndex = He, k(ue, _), I || Tt || (I = !0, Ge || (Ge = !0, qe()))), _;
       }, S.unstable_shouldYield = ne, S.unstable_wrapCallback = function(_) {
         var D = De;
         return function() {
@@ -2004,36 +2004,36 @@ function a3() {
     }
     return "Minified React error #" + ne + "; visit " + Q + " for the full message or use the non-minified dev environment for full errors and additional helpful warnings.";
   }
-  function J() {
+  function k() {
   }
   var E = {
     d: {
-      f: J,
+      f: k,
       r: function() {
         throw Error(j(522));
       },
-      D: J,
-      C: J,
-      L: J,
-      m: J,
-      X: J,
-      S: J,
-      M: J
+      D: k,
+      C: k,
+      L: k,
+      m: k,
+      X: k,
+      S: k,
+      M: k
     },
     p: 0,
     findDOMNode: null
-  }, I = Symbol.for("react.portal");
+  }, F = Symbol.for("react.portal");
   function re(ne, Q, le) {
     var U = 3 < arguments.length && arguments[3] !== void 0 ? arguments[3] : null;
     return {
-      $$typeof: I,
+      $$typeof: F,
       key: U == null ? null : "" + U,
       children: ne,
       containerInfo: Q,
       implementation: le
     };
   }
-  var pe = S.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+  var he = S.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
   function ee(ne, Q) {
     if (ne === "font") return "";
     if (typeof Q == "string")
@@ -2045,11 +2045,11 @@ function a3() {
       throw Error(j(299));
     return re(ne, Q, null, le);
   }, Xl.flushSync = function(ne) {
-    var Q = pe.T, le = E.p;
+    var Q = he.T, le = E.p;
     try {
-      if (pe.T = null, E.p = 2, ne) return ne();
+      if (he.T = null, E.p = 2, ne) return ne();
     } finally {
-      pe.T = Q, E.p = le, E.d.f();
+      he.T = Q, E.p = le, E.d.f();
     }
   }, Xl.preconnect = function(ne, Q) {
     typeof ne == "string" && (Q ? (Q = Q.crossOrigin, Q = typeof Q == "string" ? Q === "use-credentials" ? Q : "" : void 0) : Q = null, E.d.C(ne, Q));
@@ -2118,9 +2118,9 @@ function a3() {
   }, Xl.unstable_batchedUpdates = function(ne, Q) {
     return ne(Q);
   }, Xl.useFormState = function(ne, Q, le) {
-    return pe.H.useFormState(ne, Q, le);
+    return he.H.useFormState(ne, Q, le);
   }, Xl.useFormStatus = function() {
-    return pe.H.useHostTransitionStatus();
+    return he.H.useHostTransitionStatus();
   }, Xl.version = "19.2.4", Xl;
 }
 var Vl = {};
@@ -2141,7 +2141,7 @@ function l3() {
     function j(U) {
       return "" + U;
     }
-    function J(U, M, ue) {
+    function k(U, M, ue) {
       var be = 3 < arguments.length && arguments[3] !== void 0 ? arguments[3] : null;
       try {
         j(be);
@@ -2165,13 +2165,13 @@ function l3() {
       if (typeof M == "string")
         return M === "use-credentials" ? M : "";
     }
-    function I(U) {
+    function F(U) {
       return U === null ? "`null`" : U === void 0 ? "`undefined`" : U === "" ? "an empty string" : 'something with type "' + typeof U + '"';
     }
     function re(U) {
       return U === null ? "`null`" : U === void 0 ? "`undefined`" : U === "" ? "an empty string" : typeof U == "string" ? JSON.stringify(U) : typeof U == "number" ? "`" + U + "`" : 'something with type "' + typeof U + '"';
     }
-    function pe() {
+    function he() {
       var U = le.H;
       return U === null && console.error(
         `Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
@@ -2207,7 +2207,7 @@ See https://react.dev/link/invalid-hook-call for tips about how to debug and fix
       var ue = 2 < arguments.length && arguments[2] !== void 0 ? arguments[2] : null;
       if (!M || M.nodeType !== 1 && M.nodeType !== 9 && M.nodeType !== 11)
         throw Error("Target container is not a DOM element.");
-      return J(U, M, null, ue);
+      return k(U, M, null, ue);
     }, Vl.flushSync = function(U) {
       var M = le.T, ue = ne.p;
       try {
@@ -2224,16 +2224,16 @@ See https://react.dev/link/invalid-hook-call for tips about how to debug and fix
         re(M)
       ) : M != null && typeof M.crossOrigin != "string" && console.error(
         "ReactDOM.preconnect(): Expected the `crossOrigin` option (second argument) to be a string but encountered %s instead. Try removing this option or passing a string value instead.",
-        I(M.crossOrigin)
+        F(M.crossOrigin)
       ) : console.error(
         "ReactDOM.preconnect(): Expected the `href` argument (first) to be a non-empty string but encountered %s instead.",
-        I(U)
+        F(U)
       ), typeof U == "string" && (M ? (M = M.crossOrigin, M = typeof M == "string" ? M === "use-credentials" ? M : "" : void 0) : M = null, ne.d.C(U, M));
     }, Vl.prefetchDNS = function(U) {
       if (typeof U != "string" || !U)
         console.error(
           "ReactDOM.prefetchDNS(): Expected the `href` argument (first) to be a non-empty string but encountered %s instead.",
-          I(U)
+          F(U)
         );
       else if (1 < arguments.length) {
         var M = arguments[1];
@@ -2255,7 +2255,7 @@ See https://react.dev/link/invalid-hook-call for tips about how to debug and fix
         re(M.as)
       ) : console.error(
         "ReactDOM.preinit(): Expected the `href` argument (first) to be a non-empty string but encountered %s instead.",
-        I(U)
+        F(U)
       ), typeof U == "string" && M && typeof M.as == "string") {
         var ue = M.as, be = E(ue, M.crossOrigin), Be = typeof M.integrity == "string" ? M.integrity : void 0, Ne = typeof M.fetchPriority == "string" ? M.fetchPriority : void 0;
         ue === "style" ? ne.d.S(
@@ -2275,7 +2275,7 @@ See https://react.dev/link/invalid-hook-call for tips about how to debug and fix
       }
     }, Vl.preinitModule = function(U, M) {
       var ue = "";
-      if (typeof U == "string" && U || (ue += " The `href` argument encountered was " + I(U) + "."), M !== void 0 && typeof M != "object" ? ue += " The `options` argument encountered was " + I(M) + "." : M && "as" in M && M.as !== "script" && (ue += " The `as` option encountered was " + re(M.as) + "."), ue)
+      if (typeof U == "string" && U || (ue += " The `href` argument encountered was " + F(U) + "."), M !== void 0 && typeof M != "object" ? ue += " The `options` argument encountered was " + F(M) + "." : M && "as" in M && M.as !== "script" && (ue += " The `as` option encountered was " + re(M.as) + "."), ue)
         console.error(
           "ReactDOM.preinitModule(): Expected up to two arguments, a non-empty `href` string and, optionally, an `options` object with a valid `as` property.%s",
           ue
@@ -2301,7 +2301,7 @@ See https://react.dev/link/invalid-hook-call for tips about how to debug and fix
       })) : M == null && ne.d.M(U));
     }, Vl.preload = function(U, M) {
       var ue = "";
-      if (typeof U == "string" && U || (ue += " The `href` argument encountered was " + I(U) + "."), M == null || typeof M != "object" ? ue += " The `options` argument encountered was " + I(M) + "." : typeof M.as == "string" && M.as || (ue += " The `as` option encountered was " + I(M.as) + "."), ue && console.error(
+      if (typeof U == "string" && U || (ue += " The `href` argument encountered was " + F(U) + "."), M == null || typeof M != "object" ? ue += " The `options` argument encountered was " + F(M) + "." : typeof M.as == "string" && M.as || (ue += " The `as` option encountered was " + F(M.as) + "."), ue && console.error(
         'ReactDOM.preload(): Expected two arguments, a non-empty `href` string and an `options` object with an `as` property valid for a `<link rel="preload" as="..." />` tag.%s',
         ue
       ), typeof U == "string" && typeof M == "object" && M !== null && typeof M.as == "string") {
@@ -2324,7 +2324,7 @@ See https://react.dev/link/invalid-hook-call for tips about how to debug and fix
       }
     }, Vl.preloadModule = function(U, M) {
       var ue = "";
-      typeof U == "string" && U || (ue += " The `href` argument encountered was " + I(U) + "."), M !== void 0 && typeof M != "object" ? ue += " The `options` argument encountered was " + I(M) + "." : M && "as" in M && typeof M.as != "string" && (ue += " The `as` option encountered was " + I(M.as) + "."), ue && console.error(
+      typeof U == "string" && U || (ue += " The `href` argument encountered was " + F(U) + "."), M !== void 0 && typeof M != "object" ? ue += " The `options` argument encountered was " + F(M) + "." : M && "as" in M && typeof M.as != "string" && (ue += " The `as` option encountered was " + F(M.as) + "."), ue && console.error(
         'ReactDOM.preloadModule(): Expected two arguments, a non-empty `href` string and, optionally, an `options` object with an `as` property valid for a `<link rel="modulepreload" as="..." />` tag.%s',
         ue
       ), typeof U == "string" && (M ? (ue = E(
@@ -2340,9 +2340,9 @@ See https://react.dev/link/invalid-hook-call for tips about how to debug and fix
     }, Vl.unstable_batchedUpdates = function(U, M) {
       return U(M);
     }, Vl.useFormState = function(U, M, ue) {
-      return pe().useFormState(U, M, ue);
+      return he().useFormState(U, M, ue);
     }, Vl.useFormStatus = function() {
-      return pe().useHostTransitionStatus();
+      return he().useHostTransitionStatus();
     }, Vl.version = "19.2.4", typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
   })()), Vl;
 }
@@ -2376,7 +2376,7 @@ var cS;
 function n3() {
   if (cS) return zv;
   cS = 1;
-  var S = pS(), j = jh(), J = yS();
+  var S = pS(), j = jh(), k = yS();
   function E(a) {
     var n = "https://react.dev/errors/" + a;
     if (1 < arguments.length) {
@@ -2386,7 +2386,7 @@ function n3() {
     }
     return "Minified React error #" + a + "; visit " + n + " for the full message or use the non-minified dev environment for full errors and additional helpful warnings.";
   }
-  function I(a) {
+  function F(a) {
     return !(!a || a.nodeType !== 1 && a.nodeType !== 9 && a.nodeType !== 11);
   }
   function re(a) {
@@ -2400,7 +2400,7 @@ function n3() {
     }
     return n.tag === 3 ? u : null;
   }
-  function pe(a) {
+  function he(a) {
     if (a.tag === 13) {
       var n = a.memoizedState;
       if (n === null && (a = a.alternate, a !== null && (n = a.memoizedState)), n !== null) return n.dehydrated;
@@ -2485,7 +2485,7 @@ function n3() {
     }
     return null;
   }
-  var U = Object.assign, M = Symbol.for("react.element"), ue = Symbol.for("react.transitional.element"), be = Symbol.for("react.portal"), Be = Symbol.for("react.fragment"), Ne = Symbol.for("react.strict_mode"), De = Symbol.for("react.profiler"), Tt = Symbol.for("react.consumer"), F = Symbol.for("react.context"), Ye = Symbol.for("react.forward_ref"), nt = Symbol.for("react.suspense"), W = Symbol.for("react.suspense_list"), q = Symbol.for("react.memo"), Me = Symbol.for("react.lazy"), Ge = Symbol.for("react.activity"), X = Symbol.for("react.memo_cache_sentinel"), je = Symbol.iterator;
+  var U = Object.assign, M = Symbol.for("react.element"), ue = Symbol.for("react.transitional.element"), be = Symbol.for("react.portal"), Be = Symbol.for("react.fragment"), Ne = Symbol.for("react.strict_mode"), De = Symbol.for("react.profiler"), Tt = Symbol.for("react.consumer"), I = Symbol.for("react.context"), Ye = Symbol.for("react.forward_ref"), nt = Symbol.for("react.suspense"), W = Symbol.for("react.suspense_list"), q = Symbol.for("react.memo"), Me = Symbol.for("react.lazy"), Ge = Symbol.for("react.activity"), X = Symbol.for("react.memo_cache_sentinel"), je = Symbol.iterator;
   function ve(a) {
     return a === null || typeof a != "object" ? null : (a = je && a[je] || a["@@iterator"], typeof a == "function" ? a : null);
   }
@@ -2513,7 +2513,7 @@ function n3() {
       switch (a.$$typeof) {
         case be:
           return "Portal";
-        case F:
+        case I:
           return a.displayName || "Context";
         case Tt:
           return (a._context.displayName || "Context") + ".Consumer";
@@ -2531,7 +2531,7 @@ function n3() {
       }
     return null;
   }
-  var ut = Array.isArray, _ = j.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, D = J.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ce = {
+  var ut = Array.isArray, _ = j.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, D = k.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ce = {
     pending: !1,
     data: null,
     method: null,
@@ -2546,9 +2546,9 @@ function n3() {
   function se(a, n) {
     He++, Ae[He] = a.current, a.current = n;
   }
-  var fe = x(null), Ue = x(null), he = x(null), Ee = x(null);
+  var fe = x(null), Ue = x(null), pe = x(null), Ee = x(null);
   function it(a, n) {
-    switch (se(he, n), se(Ue, a), se(fe, null), n.nodeType) {
+    switch (se(pe, n), se(Ue, a), se(fe, null), n.nodeType) {
       case 9:
       case 11:
         a = (a = n.documentElement) && (a = a.namespaceURI) ? Q0(a) : 0;
@@ -2571,7 +2571,7 @@ function n3() {
     Y(fe), se(fe, a);
   }
   function ct() {
-    Y(fe), Y(Ue), Y(he);
+    Y(fe), Y(Ue), Y(pe);
   }
   function ml(a) {
     a.memoizedState !== null && se(Ee, a);
@@ -3980,7 +3980,7 @@ Error generating stack: ` + c.message + `
         default:
           if (typeof a == "object" && a !== null)
             switch (a.$$typeof) {
-              case F:
+              case I:
                 p = 10;
                 break e;
               case Tt:
@@ -4293,7 +4293,7 @@ Error generating stack: ` + c.message + `
       });
     };
   }, cp = S.unstable_scheduleCallback, op = S.unstable_NormalPriority, va = {
-    $$typeof: F,
+    $$typeof: I,
     Consumer: null,
     Provider: null,
     _currentValue: null,
@@ -4538,7 +4538,7 @@ Error generating stack: ` + c.message + `
           ), C.return = B, C;
         if (typeof C.then == "function")
           return ie(B, Qs(C), G);
-        if (C.$$typeof === F)
+        if (C.$$typeof === I)
           return ie(
             B,
             mi(B, C),
@@ -4570,7 +4570,7 @@ Error generating stack: ` + c.message + `
             Qs(G),
             ae
           );
-        if (G.$$typeof === F)
+        if (G.$$typeof === I)
           return V(
             B,
             C,
@@ -4613,7 +4613,7 @@ Error generating stack: ` + c.message + `
             Qs(ae),
             Le
           );
-        if (ae.$$typeof === F)
+        if (ae.$$typeof === I)
           return $(
             B,
             C,
@@ -4789,7 +4789,7 @@ Error generating stack: ` + c.message + `
             Qs(G),
             ae
           );
-        if (G.$$typeof === F)
+        if (G.$$typeof === I)
           return Zt(
             B,
             C,
@@ -5114,7 +5114,7 @@ Error generating stack: ` + c.message + `
   function rr(a) {
     if (a !== null && typeof a == "object") {
       if (typeof a.then == "function") return Pc(a);
-      if (a.$$typeof === F) return oe(a);
+      if (a.$$typeof === I) return oe(a);
     }
     throw Error(E(438, String(a)));
   }
@@ -6936,7 +6936,7 @@ Error generating stack: ` + c.message + `
           n.pendingProps,
           null
         )) ? n.memoizedState = u : St || (u = n.type, a = n.pendingProps, c = mc(
-          he.current
+          pe.current
         ).createElement(u), c[Lt] = n, c[pl] = a, Pa(c, u, a), Ht(c), n.stateNode = c) : n.memoizedState = Hr(
           n.type,
           a.memoizedProps,
@@ -6947,7 +6947,7 @@ Error generating stack: ` + c.message + `
         return ml(n), a === null && St && (c = n.stateNode = wr(
           n.type,
           n.pendingProps,
-          he.current
+          pe.current
         ), Ya = n, Oa = !0, s = Jt, nu(n.type) ? (Of = s, Jt = Ol(c.firstChild)) : Jt = s), It(
           a,
           n,
@@ -7145,7 +7145,7 @@ Error generating stack: ` + c.message + `
           u
         )), null;
       case 27:
-        if (Se(n), u = he.current, s = n.type, a !== null && n.stateNode != null)
+        if (Se(n), u = pe.current, s = n.type, a !== null && n.stateNode != null)
           a.memoizedProps !== c && Uu(n);
         else {
           if (!c) {
@@ -7169,7 +7169,7 @@ Error generating stack: ` + c.message + `
             Bs(n);
           else {
             var p = mc(
-              he.current
+              pe.current
             );
             switch (f) {
               case 1:
@@ -7258,7 +7258,7 @@ Error generating stack: ` + c.message + `
         else {
           if (typeof c != "string" && n.stateNode === null)
             throw Error(E(166));
-          if (a = he.current, Nu(n)) {
+          if (a = pe.current, Nu(n)) {
             if (a = n.stateNode, u = n.memoizedProps, c = null, s = Ya, s !== null)
               switch (s.tag) {
                 case 27:
@@ -11285,7 +11285,7 @@ Error generating stack: ` + c.message + `
     }
   }
   function Hr(a, n, u, c) {
-    var s = (s = he.current) ? ol(s) : null;
+    var s = (s = pe.current) ? ol(s) : null;
     if (!s) throw Error(E(446));
     switch (a) {
       case "meta":
@@ -11558,7 +11558,7 @@ Error generating stack: ` + c.message + `
     }
   }
   var Rf = {
-    $$typeof: F,
+    $$typeof: I,
     Provider: null,
     Consumer: null,
     _currentValue: ce,
@@ -11707,7 +11707,7 @@ Error generating stack: ` + c.message + `
       else {
         var u = n.tag;
         if (u === 13) {
-          if (a = pe(n), a !== null) return a;
+          if (a = he(n), a !== null) return a;
           a = null;
         } else if (u === 31) {
           if (a = ee(n), a !== null) return a;
@@ -11912,7 +11912,7 @@ Error generating stack: ` + c.message + `
       var u = re(n);
       if (u !== null) {
         if (n = u.tag, n === 13) {
-          if (n = pe(u), n !== null) {
+          if (n = he(u), n !== null) {
             a.blockedOn = n, Oh(a.priority, function() {
               yo(u);
             });
@@ -12110,7 +12110,7 @@ Error generating stack: ` + c.message + `
       }
   }
   return zv.createRoot = function(a, n) {
-    if (!I(a)) throw Error(E(299));
+    if (!F(a)) throw Error(E(299));
     var u = !1, c = "", s = im, f = Rp, p = cm;
     return n != null && (n.unstable_strictMode === !0 && (u = !0), n.identifierPrefix !== void 0 && (c = n.identifierPrefix), n.onUncaughtError !== void 0 && (s = n.onUncaughtError), n.onCaughtError !== void 0 && (f = n.onCaughtError), n.onRecoverableError !== void 0 && (p = n.onRecoverableError)), n = Zm(
       a,
@@ -12127,7 +12127,7 @@ Error generating stack: ` + c.message + `
       My
     ), a[Bi] = n.current, Dr(a), new Km(n);
   }, zv.hydrateRoot = function(a, n, u) {
-    if (!I(a)) throw Error(E(299));
+    if (!F(a)) throw Error(E(299));
     var c = !1, s = "", f = im, p = Rp, b = cm, N = null;
     return u != null && (u.unstable_strictMode === !0 && (c = !0), u.identifierPrefix !== void 0 && (s = u.identifierPrefix), u.onUncaughtError !== void 0 && (f = u.onUncaughtError), u.onCaughtError !== void 0 && (p = u.onCaughtError), u.onRecoverableError !== void 0 && (b = u.onRecoverableError), u.formState !== void 0 && (N = u.formState)), n = Zm(
       a,
@@ -12168,7 +12168,7 @@ function u3() {
       var o = t[l], r = Na(e) ? e.slice() : mt({}, e);
       return r[o] = j(e[o], t, l + 1, i), r;
     }
-    function J(e, t, l) {
+    function k(e, t, l) {
       if (t.length !== l.length)
         console.warn("copyWithRename() expects paths of the same length");
       else {
@@ -12191,14 +12191,14 @@ function u3() {
         i + 1
       ), r;
     }
-    function I(e, t, l) {
+    function F(e, t, l) {
       var i = t[l], o = Na(e) ? e.slice() : mt({}, e);
-      return l + 1 === t.length ? (Na(o) ? o.splice(i, 1) : delete o[i], o) : (o[i] = I(e[i], t, l + 1), o);
+      return l + 1 === t.length ? (Na(o) ? o.splice(i, 1) : delete o[i], o) : (o[i] = F(e[i], t, l + 1), o);
     }
     function re() {
       return !1;
     }
-    function pe() {
+    function he() {
       return null;
     }
     function ee() {
@@ -12261,7 +12261,7 @@ function u3() {
       }
       return null;
     }
-    function F(e) {
+    function I(e) {
       if (e.tag === 31) {
         var t = e.memoizedState;
         if (t === null && (e = e.alternate, e !== null && (t = e.memoizedState)), t !== null) return t.dehydrated;
@@ -12678,7 +12678,7 @@ function u3() {
       }
       return v = (v = e ? e.displayName || e.name : "") ? fe(v) : "", typeof e == "function" && zy.set(e, v), v;
     }
-    function he(e, t) {
+    function pe(e, t) {
       switch (e.tag) {
         case 26:
         case 27:
@@ -12707,7 +12707,7 @@ function u3() {
       try {
         var t = "", l = null;
         do {
-          t += he(e, l);
+          t += pe(e, l);
           var i = e._debugInfo;
           if (i)
             for (var o = i.length - 1; 0 <= o; o--) {
@@ -16815,11 +16815,11 @@ Please update the following component: %s`,
       return null;
     }
     function Ie() {
-      var e = k;
+      var e = J;
       ai === null ? ai = [e] : ai.push(e);
     }
     function oe() {
-      var e = k;
+      var e = J;
       if (ai !== null && (_o++, ai[_o] !== e)) {
         var t = X(Pe);
         if (!Bx.has(t) && (Bx.add(t), ai !== null)) {
@@ -16846,7 +16846,7 @@ Please update the following component: %s`,
     function mi(e) {
       e == null || Na(e) || console.error(
         "%s received a final argument that is not an array (instead, received `%s`). When specified, the final argument must be an array.",
-        k,
+        J,
         typeof e
       );
     }
@@ -16871,14 +16871,14 @@ See https://react.dev/link/invalid-hook-call for tips about how to debug and fix
       if (t === null)
         return console.error(
           "%s received a final argument during this render, but not during the previous render. Even though the final argument is optional, its type cannot change between renders.",
-          k
+          J
         ), !1;
       e.length !== t.length && console.error(
         `The final argument passed to %s changed size between renders. The order and size of this array must remain constant.
 
 Previous: %s
 Incoming: %s`,
-        k,
+        J,
         "[" + t.join(", ") + "]",
         "[" + e.join(", ") + "]"
       );
@@ -16919,7 +16919,7 @@ Incoming: %s`,
         _debugThenableState: jo
       }) : t.dependencies._debugThenableState = jo, K.H = uv;
       var l = Wt !== null && Wt.next !== null;
-      if (No = 0, ai = k = Ja = Wt = Pe = null, _o = -1, e !== null && (e.flags & 65011712) !== (t.flags & 65011712) && console.error(
+      if (No = 0, ai = J = Ja = Wt = Pe = null, _o = -1, e !== null && (e.flags & 65011712) !== (t.flags & 65011712) && console.error(
         "Internal React error: Expected static flag was missing. Please notify the React team."
       ), Tg = !1, lv = 0, jo = null, l)
         throw Error(
@@ -16964,7 +16964,7 @@ Incoming: %s`,
         }
         Tg = !1;
       }
-      No = 0, ai = Ja = Wt = Pe = null, _o = -1, k = null, ph = !1, lv = Ag = 0, jo = null;
+      No = 0, ai = Ja = Wt = Pe = null, _o = -1, J = null, ph = !1, lv = Ag = 0, jo = null;
     }
     function Aa() {
       var e = {
@@ -18439,7 +18439,7 @@ Visit https://react.dev/link/error-boundaries to learn more about error boundari
       ), va(e, t), i = Qc(), e !== null && !Ka ? (Ls(e, t, r), Fn(e, t, r)) : (At && i && _d(t), t.flags |= 1, Xa(e, t, l, r), t.child);
     }
     function to(e, t, l, i, o) {
-      switch (pe(t)) {
+      switch (he(t)) {
         case !1:
           var r = t.stateNode, d = new t.type(
             t.memoizedProps,
@@ -26429,7 +26429,7 @@ Check the render method of %s.`,
             if (e = Tt(t), e !== null) return e;
             e = null;
           } else if (l === 31) {
-            if (e = F(t), e !== null) return e;
+            if (e = I(t), e !== null) return e;
             e = null;
           } else if (l === 3) {
             if (t.stateNode.current.memoizedState.isDehydrated)
@@ -26635,7 +26635,7 @@ Check the render method of %s.`,
               return;
             }
           } else if (t === 31) {
-            if (t = F(l), t !== null) {
+            if (t = I(l), t !== null) {
               e.blockedOn = t, g(e.priority, function() {
                 hy(l);
               });
@@ -28135,7 +28135,7 @@ Check the top-level render call using <` + i + ">.");
         }
       }
     };
-    var kf = Ya(!0), Rx = Ya(!1), Cx = 0, wx = 1, Ux = 2, Ib = 3, es = !1, Hx = !1, Pb = null, e1 = !1, dh = je(null), Sg = je(0), ru = je(null), ei = null, mh = 1, av = 2, wa = je(0), Eg = 0, ti = 1, mn = 2, su = 4, hn = 8, hh, Bx = /* @__PURE__ */ new Set(), qx = /* @__PURE__ */ new Set(), t1 = /* @__PURE__ */ new Set(), Yx = /* @__PURE__ */ new Set(), No = 0, Pe = null, Wt = null, Ja = null, Tg = !1, ph = !1, Jf = !1, Ag = 0, lv = 0, jo = null, AE = 0, zE = 25, k = null, ai = null, _o = -1, nv = !1, uv = {
+    var kf = Ya(!0), Rx = Ya(!1), Cx = 0, wx = 1, Ux = 2, Ib = 3, es = !1, Hx = !1, Pb = null, e1 = !1, dh = je(null), Sg = je(0), ru = je(null), ei = null, mh = 1, av = 2, wa = je(0), Eg = 0, ti = 1, mn = 2, su = 4, hn = 8, hh, Bx = /* @__PURE__ */ new Set(), qx = /* @__PURE__ */ new Set(), t1 = /* @__PURE__ */ new Set(), Yx = /* @__PURE__ */ new Set(), No = 0, Pe = null, Wt = null, Ja = null, Tg = !1, ph = !1, Jf = !1, Ag = 0, lv = 0, jo = null, AE = 0, zE = 25, J = null, ai = null, _o = -1, nv = !1, uv = {
       readContext: Ct,
       use: hi,
       useCallback: da,
@@ -28168,25 +28168,25 @@ Check the top-level render call using <` + i + ">.");
       },
       use: hi,
       useCallback: function(e, t) {
-        return k = "useCallback", Ie(), mi(t), Xd(e, t);
+        return J = "useCallback", Ie(), mi(t), Xd(e, t);
       },
       useContext: function(e) {
-        return k = "useContext", Ie(), Ct(e);
+        return J = "useContext", Ie(), Ct(e);
       },
       useEffect: function(e, t) {
-        return k = "useEffect", Ie(), mi(t), $c(e, t);
+        return J = "useEffect", Ie(), mi(t), $c(e, t);
       },
       useImperativeHandle: function(e, t, l) {
-        return k = "useImperativeHandle", Ie(), mi(l), Ou(e, t, l);
+        return J = "useImperativeHandle", Ie(), mi(l), Ou(e, t, l);
       },
       useInsertionEffect: function(e, t) {
-        k = "useInsertionEffect", Ie(), mi(t), ac(4, mn, e, t);
+        J = "useInsertionEffect", Ie(), mi(t), ac(4, mn, e, t);
       },
       useLayoutEffect: function(e, t) {
-        return k = "useLayoutEffect", Ie(), mi(t), Sl(e, t);
+        return J = "useLayoutEffect", Ie(), mi(t), Sl(e, t);
       },
       useMemo: function(e, t) {
-        k = "useMemo", Ie(), mi(t);
+        J = "useMemo", Ie(), mi(t);
         var l = K.H;
         K.H = Sc;
         try {
@@ -28196,7 +28196,7 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useReducer: function(e, t, l) {
-        k = "useReducer", Ie();
+        J = "useReducer", Ie();
         var i = K.H;
         K.H = Sc;
         try {
@@ -28206,10 +28206,10 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useRef: function(e) {
-        return k = "useRef", Ie(), Ld(e);
+        return J = "useRef", Ie(), Ld(e);
       },
       useState: function(e) {
-        k = "useState", Ie();
+        J = "useState", Ie();
         var t = K.H;
         K.H = Sc;
         try {
@@ -28219,40 +28219,40 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useDebugValue: function() {
-        k = "useDebugValue", Ie();
+        J = "useDebugValue", Ie();
       },
       useDeferredValue: function(e, t) {
-        return k = "useDeferredValue", Ie(), cr(e, t);
+        return J = "useDeferredValue", Ie(), cr(e, t);
       },
       useTransition: function() {
-        return k = "useTransition", Ie(), lc();
+        return J = "useTransition", Ie(), lc();
       },
       useSyncExternalStore: function(e, t, l) {
-        return k = "useSyncExternalStore", Ie(), lr(
+        return J = "useSyncExternalStore", Ie(), lr(
           e,
           t,
           l
         );
       },
       useId: function() {
-        return k = "useId", Ie(), $s();
+        return J = "useId", Ie(), $s();
       },
       useFormState: function(e, t) {
-        return k = "useFormState", Ie(), qs(), en(e, t);
+        return J = "useFormState", Ie(), qs(), en(e, t);
       },
       useActionState: function(e, t) {
-        return k = "useActionState", Ie(), en(e, t);
+        return J = "useActionState", Ie(), en(e, t);
       },
       useOptimistic: function(e) {
-        return k = "useOptimistic", Ie(), Kc(e);
+        return J = "useOptimistic", Ie(), Kc(e);
       },
       useHostTransitionStatus: gi,
       useMemoCache: Il,
       useCacheRefresh: function() {
-        return k = "useCacheRefresh", Ie(), Vd();
+        return J = "useCacheRefresh", Ie(), Vd();
       },
       useEffectEvent: function(e) {
-        return k = "useEffectEvent", Ie(), Js(e);
+        return J = "useEffectEvent", Ie(), Js(e);
       }
     }, Gx = {
       readContext: function(e) {
@@ -28260,25 +28260,25 @@ Check the top-level render call using <` + i + ">.");
       },
       use: hi,
       useCallback: function(e, t) {
-        return k = "useCallback", oe(), Xd(e, t);
+        return J = "useCallback", oe(), Xd(e, t);
       },
       useContext: function(e) {
-        return k = "useContext", oe(), Ct(e);
+        return J = "useContext", oe(), Ct(e);
       },
       useEffect: function(e, t) {
-        return k = "useEffect", oe(), $c(e, t);
+        return J = "useEffect", oe(), $c(e, t);
       },
       useImperativeHandle: function(e, t, l) {
-        return k = "useImperativeHandle", oe(), Ou(e, t, l);
+        return J = "useImperativeHandle", oe(), Ou(e, t, l);
       },
       useInsertionEffect: function(e, t) {
-        k = "useInsertionEffect", oe(), ac(4, mn, e, t);
+        J = "useInsertionEffect", oe(), ac(4, mn, e, t);
       },
       useLayoutEffect: function(e, t) {
-        return k = "useLayoutEffect", oe(), Sl(e, t);
+        return J = "useLayoutEffect", oe(), Sl(e, t);
       },
       useMemo: function(e, t) {
-        k = "useMemo", oe();
+        J = "useMemo", oe();
         var l = K.H;
         K.H = Sc;
         try {
@@ -28288,7 +28288,7 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useReducer: function(e, t, l) {
-        k = "useReducer", oe();
+        J = "useReducer", oe();
         var i = K.H;
         K.H = Sc;
         try {
@@ -28298,10 +28298,10 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useRef: function(e) {
-        return k = "useRef", oe(), Ld(e);
+        return J = "useRef", oe(), Ld(e);
       },
       useState: function(e) {
-        k = "useState", oe();
+        J = "useState", oe();
         var t = K.H;
         K.H = Sc;
         try {
@@ -28311,40 +28311,40 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useDebugValue: function() {
-        k = "useDebugValue", oe();
+        J = "useDebugValue", oe();
       },
       useDeferredValue: function(e, t) {
-        return k = "useDeferredValue", oe(), cr(e, t);
+        return J = "useDeferredValue", oe(), cr(e, t);
       },
       useTransition: function() {
-        return k = "useTransition", oe(), lc();
+        return J = "useTransition", oe(), lc();
       },
       useSyncExternalStore: function(e, t, l) {
-        return k = "useSyncExternalStore", oe(), lr(
+        return J = "useSyncExternalStore", oe(), lr(
           e,
           t,
           l
         );
       },
       useId: function() {
-        return k = "useId", oe(), $s();
+        return J = "useId", oe(), $s();
       },
       useActionState: function(e, t) {
-        return k = "useActionState", oe(), en(e, t);
+        return J = "useActionState", oe(), en(e, t);
       },
       useFormState: function(e, t) {
-        return k = "useFormState", oe(), qs(), en(e, t);
+        return J = "useFormState", oe(), qs(), en(e, t);
       },
       useOptimistic: function(e) {
-        return k = "useOptimistic", oe(), Kc(e);
+        return J = "useOptimistic", oe(), Kc(e);
       },
       useHostTransitionStatus: gi,
       useMemoCache: Il,
       useCacheRefresh: function() {
-        return k = "useCacheRefresh", oe(), Vd();
+        return J = "useCacheRefresh", oe(), Vd();
       },
       useEffectEvent: function(e) {
-        return k = "useEffectEvent", oe(), Js(e);
+        return J = "useEffectEvent", oe(), Js(e);
       }
     }, l1 = {
       readContext: function(e) {
@@ -28352,25 +28352,25 @@ Check the top-level render call using <` + i + ">.");
       },
       use: hi,
       useCallback: function(e, t) {
-        return k = "useCallback", oe(), Wn(e, t);
+        return J = "useCallback", oe(), Wn(e, t);
       },
       useContext: function(e) {
-        return k = "useContext", oe(), Ct(e);
+        return J = "useContext", oe(), Ct(e);
       },
       useEffect: function(e, t) {
-        k = "useEffect", oe(), Ma(2048, hn, e, t);
+        J = "useEffect", oe(), Ma(2048, hn, e, t);
       },
       useImperativeHandle: function(e, t, l) {
-        return k = "useImperativeHandle", oe(), ir(e, t, l);
+        return J = "useImperativeHandle", oe(), ir(e, t, l);
       },
       useInsertionEffect: function(e, t) {
-        return k = "useInsertionEffect", oe(), Ma(4, mn, e, t);
+        return J = "useInsertionEffect", oe(), Ma(4, mn, e, t);
       },
       useLayoutEffect: function(e, t) {
-        return k = "useLayoutEffect", oe(), Ma(4, su, e, t);
+        return J = "useLayoutEffect", oe(), Ma(4, su, e, t);
       },
       useMemo: function(e, t) {
-        k = "useMemo", oe();
+        J = "useMemo", oe();
         var l = K.H;
         K.H = Mi;
         try {
@@ -28380,7 +28380,7 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useReducer: function(e, t, l) {
-        k = "useReducer", oe();
+        J = "useReducer", oe();
         var i = K.H;
         K.H = Mi;
         try {
@@ -28390,10 +28390,10 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useRef: function() {
-        return k = "useRef", oe(), Bt().memoizedState;
+        return J = "useRef", oe(), Bt().memoizedState;
       },
       useState: function() {
-        k = "useState", oe();
+        J = "useState", oe();
         var e = K.H;
         K.H = Mi;
         try {
@@ -28403,40 +28403,40 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useDebugValue: function() {
-        k = "useDebugValue", oe();
+        J = "useDebugValue", oe();
       },
       useDeferredValue: function(e, t) {
-        return k = "useDeferredValue", oe(), Mu(e, t);
+        return J = "useDeferredValue", oe(), Mu(e, t);
       },
       useTransition: function() {
-        return k = "useTransition", oe(), e0();
+        return J = "useTransition", oe(), e0();
       },
       useSyncExternalStore: function(e, t, l) {
-        return k = "useSyncExternalStore", oe(), Jc(
+        return J = "useSyncExternalStore", oe(), Jc(
           e,
           t,
           l
         );
       },
       useId: function() {
-        return k = "useId", oe(), Bt().memoizedState;
+        return J = "useId", oe(), Bt().memoizedState;
       },
       useFormState: function(e) {
-        return k = "useFormState", oe(), qs(), ec(e);
+        return J = "useFormState", oe(), qs(), ec(e);
       },
       useActionState: function(e) {
-        return k = "useActionState", oe(), ec(e);
+        return J = "useActionState", oe(), ec(e);
       },
       useOptimistic: function(e, t) {
-        return k = "useOptimistic", oe(), Qs(e, t);
+        return J = "useOptimistic", oe(), Qs(e, t);
       },
       useHostTransitionStatus: gi,
       useMemoCache: Il,
       useCacheRefresh: function() {
-        return k = "useCacheRefresh", oe(), Bt().memoizedState;
+        return J = "useCacheRefresh", oe(), Bt().memoizedState;
       },
       useEffectEvent: function(e) {
-        return k = "useEffectEvent", oe(), ur(e);
+        return J = "useEffectEvent", oe(), ur(e);
       }
     }, Lx = {
       readContext: function(e) {
@@ -28444,25 +28444,25 @@ Check the top-level render call using <` + i + ">.");
       },
       use: hi,
       useCallback: function(e, t) {
-        return k = "useCallback", oe(), Wn(e, t);
+        return J = "useCallback", oe(), Wn(e, t);
       },
       useContext: function(e) {
-        return k = "useContext", oe(), Ct(e);
+        return J = "useContext", oe(), Ct(e);
       },
       useEffect: function(e, t) {
-        k = "useEffect", oe(), Ma(2048, hn, e, t);
+        J = "useEffect", oe(), Ma(2048, hn, e, t);
       },
       useImperativeHandle: function(e, t, l) {
-        return k = "useImperativeHandle", oe(), ir(e, t, l);
+        return J = "useImperativeHandle", oe(), ir(e, t, l);
       },
       useInsertionEffect: function(e, t) {
-        return k = "useInsertionEffect", oe(), Ma(4, mn, e, t);
+        return J = "useInsertionEffect", oe(), Ma(4, mn, e, t);
       },
       useLayoutEffect: function(e, t) {
-        return k = "useLayoutEffect", oe(), Ma(4, su, e, t);
+        return J = "useLayoutEffect", oe(), Ma(4, su, e, t);
       },
       useMemo: function(e, t) {
-        k = "useMemo", oe();
+        J = "useMemo", oe();
         var l = K.H;
         K.H = zg;
         try {
@@ -28472,7 +28472,7 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useReducer: function(e, t, l) {
-        k = "useReducer", oe();
+        J = "useReducer", oe();
         var i = K.H;
         K.H = zg;
         try {
@@ -28482,10 +28482,10 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useRef: function() {
-        return k = "useRef", oe(), Bt().memoizedState;
+        return J = "useRef", oe(), Bt().memoizedState;
       },
       useState: function() {
-        k = "useState", oe();
+        J = "useState", oe();
         var e = K.H;
         K.H = zg;
         try {
@@ -28495,40 +28495,40 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useDebugValue: function() {
-        k = "useDebugValue", oe();
+        J = "useDebugValue", oe();
       },
       useDeferredValue: function(e, t) {
-        return k = "useDeferredValue", oe(), ot(e, t);
+        return J = "useDeferredValue", oe(), ot(e, t);
       },
       useTransition: function() {
-        return k = "useTransition", oe(), ca();
+        return J = "useTransition", oe(), ca();
       },
       useSyncExternalStore: function(e, t, l) {
-        return k = "useSyncExternalStore", oe(), Jc(
+        return J = "useSyncExternalStore", oe(), Jc(
           e,
           t,
           l
         );
       },
       useId: function() {
-        return k = "useId", oe(), Bt().memoizedState;
+        return J = "useId", oe(), Bt().memoizedState;
       },
       useFormState: function(e) {
-        return k = "useFormState", oe(), qs(), tc(e);
+        return J = "useFormState", oe(), qs(), tc(e);
       },
       useActionState: function(e) {
-        return k = "useActionState", oe(), tc(e);
+        return J = "useActionState", oe(), tc(e);
       },
       useOptimistic: function(e, t) {
-        return k = "useOptimistic", oe(), Zs(e, t);
+        return J = "useOptimistic", oe(), Zs(e, t);
       },
       useHostTransitionStatus: gi,
       useMemoCache: Il,
       useCacheRefresh: function() {
-        return k = "useCacheRefresh", oe(), Bt().memoizedState;
+        return J = "useCacheRefresh", oe(), Bt().memoizedState;
       },
       useEffectEvent: function(e) {
-        return k = "useEffectEvent", oe(), ur(e);
+        return J = "useEffectEvent", oe(), ur(e);
       }
     }, Sc = {
       readContext: function(e) {
@@ -28538,25 +28538,25 @@ Check the top-level render call using <` + i + ">.");
         return ee(), hi(e);
       },
       useCallback: function(e, t) {
-        return k = "useCallback", ee(), Ie(), Xd(e, t);
+        return J = "useCallback", ee(), Ie(), Xd(e, t);
       },
       useContext: function(e) {
-        return k = "useContext", ee(), Ie(), Ct(e);
+        return J = "useContext", ee(), Ie(), Ct(e);
       },
       useEffect: function(e, t) {
-        return k = "useEffect", ee(), Ie(), $c(e, t);
+        return J = "useEffect", ee(), Ie(), $c(e, t);
       },
       useImperativeHandle: function(e, t, l) {
-        return k = "useImperativeHandle", ee(), Ie(), Ou(e, t, l);
+        return J = "useImperativeHandle", ee(), Ie(), Ou(e, t, l);
       },
       useInsertionEffect: function(e, t) {
-        k = "useInsertionEffect", ee(), Ie(), ac(4, mn, e, t);
+        J = "useInsertionEffect", ee(), Ie(), ac(4, mn, e, t);
       },
       useLayoutEffect: function(e, t) {
-        return k = "useLayoutEffect", ee(), Ie(), Sl(e, t);
+        return J = "useLayoutEffect", ee(), Ie(), Sl(e, t);
       },
       useMemo: function(e, t) {
-        k = "useMemo", ee(), Ie();
+        J = "useMemo", ee(), Ie();
         var l = K.H;
         K.H = Sc;
         try {
@@ -28566,7 +28566,7 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useReducer: function(e, t, l) {
-        k = "useReducer", ee(), Ie();
+        J = "useReducer", ee(), Ie();
         var i = K.H;
         K.H = Sc;
         try {
@@ -28576,10 +28576,10 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useRef: function(e) {
-        return k = "useRef", ee(), Ie(), Ld(e);
+        return J = "useRef", ee(), Ie(), Ld(e);
       },
       useState: function(e) {
-        k = "useState", ee(), Ie();
+        J = "useState", ee(), Ie();
         var t = K.H;
         K.H = Sc;
         try {
@@ -28589,42 +28589,42 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useDebugValue: function() {
-        k = "useDebugValue", ee(), Ie();
+        J = "useDebugValue", ee(), Ie();
       },
       useDeferredValue: function(e, t) {
-        return k = "useDeferredValue", ee(), Ie(), cr(e, t);
+        return J = "useDeferredValue", ee(), Ie(), cr(e, t);
       },
       useTransition: function() {
-        return k = "useTransition", ee(), Ie(), lc();
+        return J = "useTransition", ee(), Ie(), lc();
       },
       useSyncExternalStore: function(e, t, l) {
-        return k = "useSyncExternalStore", ee(), Ie(), lr(
+        return J = "useSyncExternalStore", ee(), Ie(), lr(
           e,
           t,
           l
         );
       },
       useId: function() {
-        return k = "useId", ee(), Ie(), $s();
+        return J = "useId", ee(), Ie(), $s();
       },
       useFormState: function(e, t) {
-        return k = "useFormState", ee(), Ie(), en(e, t);
+        return J = "useFormState", ee(), Ie(), en(e, t);
       },
       useActionState: function(e, t) {
-        return k = "useActionState", ee(), Ie(), en(e, t);
+        return J = "useActionState", ee(), Ie(), en(e, t);
       },
       useOptimistic: function(e) {
-        return k = "useOptimistic", ee(), Ie(), Kc(e);
+        return J = "useOptimistic", ee(), Ie(), Kc(e);
       },
       useMemoCache: function(e) {
         return ee(), Il(e);
       },
       useHostTransitionStatus: gi,
       useCacheRefresh: function() {
-        return k = "useCacheRefresh", Ie(), Vd();
+        return J = "useCacheRefresh", Ie(), Vd();
       },
       useEffectEvent: function(e) {
-        return k = "useEffectEvent", ee(), Ie(), Js(e);
+        return J = "useEffectEvent", ee(), Ie(), Js(e);
       }
     }, Mi = {
       readContext: function(e) {
@@ -28634,25 +28634,25 @@ Check the top-level render call using <` + i + ">.");
         return ee(), hi(e);
       },
       useCallback: function(e, t) {
-        return k = "useCallback", ee(), oe(), Wn(e, t);
+        return J = "useCallback", ee(), oe(), Wn(e, t);
       },
       useContext: function(e) {
-        return k = "useContext", ee(), oe(), Ct(e);
+        return J = "useContext", ee(), oe(), Ct(e);
       },
       useEffect: function(e, t) {
-        k = "useEffect", ee(), oe(), Ma(2048, hn, e, t);
+        J = "useEffect", ee(), oe(), Ma(2048, hn, e, t);
       },
       useImperativeHandle: function(e, t, l) {
-        return k = "useImperativeHandle", ee(), oe(), ir(e, t, l);
+        return J = "useImperativeHandle", ee(), oe(), ir(e, t, l);
       },
       useInsertionEffect: function(e, t) {
-        return k = "useInsertionEffect", ee(), oe(), Ma(4, mn, e, t);
+        return J = "useInsertionEffect", ee(), oe(), Ma(4, mn, e, t);
       },
       useLayoutEffect: function(e, t) {
-        return k = "useLayoutEffect", ee(), oe(), Ma(4, su, e, t);
+        return J = "useLayoutEffect", ee(), oe(), Ma(4, su, e, t);
       },
       useMemo: function(e, t) {
-        k = "useMemo", ee(), oe();
+        J = "useMemo", ee(), oe();
         var l = K.H;
         K.H = Mi;
         try {
@@ -28662,7 +28662,7 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useReducer: function(e, t, l) {
-        k = "useReducer", ee(), oe();
+        J = "useReducer", ee(), oe();
         var i = K.H;
         K.H = Mi;
         try {
@@ -28672,10 +28672,10 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useRef: function() {
-        return k = "useRef", ee(), oe(), Bt().memoizedState;
+        return J = "useRef", ee(), oe(), Bt().memoizedState;
       },
       useState: function() {
-        k = "useState", ee(), oe();
+        J = "useState", ee(), oe();
         var e = K.H;
         K.H = Mi;
         try {
@@ -28685,42 +28685,42 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useDebugValue: function() {
-        k = "useDebugValue", ee(), oe();
+        J = "useDebugValue", ee(), oe();
       },
       useDeferredValue: function(e, t) {
-        return k = "useDeferredValue", ee(), oe(), Mu(e, t);
+        return J = "useDeferredValue", ee(), oe(), Mu(e, t);
       },
       useTransition: function() {
-        return k = "useTransition", ee(), oe(), e0();
+        return J = "useTransition", ee(), oe(), e0();
       },
       useSyncExternalStore: function(e, t, l) {
-        return k = "useSyncExternalStore", ee(), oe(), Jc(
+        return J = "useSyncExternalStore", ee(), oe(), Jc(
           e,
           t,
           l
         );
       },
       useId: function() {
-        return k = "useId", ee(), oe(), Bt().memoizedState;
+        return J = "useId", ee(), oe(), Bt().memoizedState;
       },
       useFormState: function(e) {
-        return k = "useFormState", ee(), oe(), ec(e);
+        return J = "useFormState", ee(), oe(), ec(e);
       },
       useActionState: function(e) {
-        return k = "useActionState", ee(), oe(), ec(e);
+        return J = "useActionState", ee(), oe(), ec(e);
       },
       useOptimistic: function(e, t) {
-        return k = "useOptimistic", ee(), oe(), Qs(e, t);
+        return J = "useOptimistic", ee(), oe(), Qs(e, t);
       },
       useMemoCache: function(e) {
         return ee(), Il(e);
       },
       useHostTransitionStatus: gi,
       useCacheRefresh: function() {
-        return k = "useCacheRefresh", oe(), Bt().memoizedState;
+        return J = "useCacheRefresh", oe(), Bt().memoizedState;
       },
       useEffectEvent: function(e) {
-        return k = "useEffectEvent", ee(), oe(), ur(e);
+        return J = "useEffectEvent", ee(), oe(), ur(e);
       }
     }, zg = {
       readContext: function(e) {
@@ -28730,25 +28730,25 @@ Check the top-level render call using <` + i + ">.");
         return ee(), hi(e);
       },
       useCallback: function(e, t) {
-        return k = "useCallback", ee(), oe(), Wn(e, t);
+        return J = "useCallback", ee(), oe(), Wn(e, t);
       },
       useContext: function(e) {
-        return k = "useContext", ee(), oe(), Ct(e);
+        return J = "useContext", ee(), oe(), Ct(e);
       },
       useEffect: function(e, t) {
-        k = "useEffect", ee(), oe(), Ma(2048, hn, e, t);
+        J = "useEffect", ee(), oe(), Ma(2048, hn, e, t);
       },
       useImperativeHandle: function(e, t, l) {
-        return k = "useImperativeHandle", ee(), oe(), ir(e, t, l);
+        return J = "useImperativeHandle", ee(), oe(), ir(e, t, l);
       },
       useInsertionEffect: function(e, t) {
-        return k = "useInsertionEffect", ee(), oe(), Ma(4, mn, e, t);
+        return J = "useInsertionEffect", ee(), oe(), Ma(4, mn, e, t);
       },
       useLayoutEffect: function(e, t) {
-        return k = "useLayoutEffect", ee(), oe(), Ma(4, su, e, t);
+        return J = "useLayoutEffect", ee(), oe(), Ma(4, su, e, t);
       },
       useMemo: function(e, t) {
-        k = "useMemo", ee(), oe();
+        J = "useMemo", ee(), oe();
         var l = K.H;
         K.H = Mi;
         try {
@@ -28758,7 +28758,7 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useReducer: function(e, t, l) {
-        k = "useReducer", ee(), oe();
+        J = "useReducer", ee(), oe();
         var i = K.H;
         K.H = Mi;
         try {
@@ -28768,10 +28768,10 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useRef: function() {
-        return k = "useRef", ee(), oe(), Bt().memoizedState;
+        return J = "useRef", ee(), oe(), Bt().memoizedState;
       },
       useState: function() {
-        k = "useState", ee(), oe();
+        J = "useState", ee(), oe();
         var e = K.H;
         K.H = Mi;
         try {
@@ -28781,42 +28781,42 @@ Check the top-level render call using <` + i + ">.");
         }
       },
       useDebugValue: function() {
-        k = "useDebugValue", ee(), oe();
+        J = "useDebugValue", ee(), oe();
       },
       useDeferredValue: function(e, t) {
-        return k = "useDeferredValue", ee(), oe(), ot(e, t);
+        return J = "useDeferredValue", ee(), oe(), ot(e, t);
       },
       useTransition: function() {
-        return k = "useTransition", ee(), oe(), ca();
+        return J = "useTransition", ee(), oe(), ca();
       },
       useSyncExternalStore: function(e, t, l) {
-        return k = "useSyncExternalStore", ee(), oe(), Jc(
+        return J = "useSyncExternalStore", ee(), oe(), Jc(
           e,
           t,
           l
         );
       },
       useId: function() {
-        return k = "useId", ee(), oe(), Bt().memoizedState;
+        return J = "useId", ee(), oe(), Bt().memoizedState;
       },
       useFormState: function(e) {
-        return k = "useFormState", ee(), oe(), tc(e);
+        return J = "useFormState", ee(), oe(), tc(e);
       },
       useActionState: function(e) {
-        return k = "useActionState", ee(), oe(), tc(e);
+        return J = "useActionState", ee(), oe(), tc(e);
       },
       useOptimistic: function(e, t) {
-        return k = "useOptimistic", ee(), oe(), Zs(e, t);
+        return J = "useOptimistic", ee(), oe(), Zs(e, t);
       },
       useMemoCache: function(e) {
         return ee(), Il(e);
       },
       useHostTransitionStatus: gi,
       useCacheRefresh: function() {
-        return k = "useCacheRefresh", oe(), Bt().memoizedState;
+        return J = "useCacheRefresh", oe(), Bt().memoizedState;
       },
       useEffectEvent: function(e) {
-        return k = "useEffectEvent", ee(), oe(), ur(e);
+        return J = "useEffectEvent", ee(), oe(), ur(e);
       }
     };
     var Xx = {}, Vx = /* @__PURE__ */ new Set(), Qx = /* @__PURE__ */ new Set(), Zx = /* @__PURE__ */ new Set(), kx = /* @__PURE__ */ new Set(), Jx = /* @__PURE__ */ new Set(), Kx = /* @__PURE__ */ new Set(), $x = /* @__PURE__ */ new Set(), Wx = /* @__PURE__ */ new Set(), Fx = /* @__PURE__ */ new Set(), Ix = /* @__PURE__ */ new Set();
@@ -29057,15 +29057,15 @@ Check the top-level render call using <` + i + ">.");
     q2 = function(e, t, l, i) {
       t = S(e, t), t !== null && (l = j(t.memoizedState, l, 0, i), t.memoizedState = l, t.baseState = l, e.memoizedProps = mt({}, e.memoizedProps), l = ul(e, 2), l !== null && Fe(l, e, 2));
     }, Y2 = function(e, t, l) {
-      t = S(e, t), t !== null && (l = I(t.memoizedState, l, 0), t.memoizedState = l, t.baseState = l, e.memoizedProps = mt({}, e.memoizedProps), l = ul(e, 2), l !== null && Fe(l, e, 2));
+      t = S(e, t), t !== null && (l = F(t.memoizedState, l, 0), t.memoizedState = l, t.baseState = l, e.memoizedProps = mt({}, e.memoizedProps), l = ul(e, 2), l !== null && Fe(l, e, 2));
     }, G2 = function(e, t, l, i) {
-      t = S(e, t), t !== null && (l = J(t.memoizedState, l, i), t.memoizedState = l, t.baseState = l, e.memoizedProps = mt({}, e.memoizedProps), l = ul(e, 2), l !== null && Fe(l, e, 2));
+      t = S(e, t), t !== null && (l = k(t.memoizedState, l, i), t.memoizedState = l, t.baseState = l, e.memoizedProps = mt({}, e.memoizedProps), l = ul(e, 2), l !== null && Fe(l, e, 2));
     }, L2 = function(e, t, l) {
       e.pendingProps = j(e.memoizedProps, t, 0, l), e.alternate && (e.alternate.pendingProps = e.pendingProps), t = ul(e, 2), t !== null && Fe(t, e, 2);
     }, X2 = function(e, t) {
-      e.pendingProps = I(e.memoizedProps, t, 0), e.alternate && (e.alternate.pendingProps = e.pendingProps), t = ul(e, 2), t !== null && Fe(t, e, 2);
+      e.pendingProps = F(e.memoizedProps, t, 0), e.alternate && (e.alternate.pendingProps = e.pendingProps), t = ul(e, 2), t !== null && Fe(t, e, 2);
     }, V2 = function(e, t, l) {
-      e.pendingProps = J(
+      e.pendingProps = k(
         e.memoizedProps,
         t,
         l
@@ -29077,7 +29077,7 @@ Check the top-level render call using <` + i + ">.");
       var t = wo(), l = ul(e, t);
       l !== null && Fe(l, e, t);
     }, k2 = function(e) {
-      pe = e;
+      he = e;
     }, J2 = function(e) {
       re = e;
     };
@@ -29227,11 +29227,11 @@ const o3 = /* @__PURE__ */ hS(c3);
  */
 const r3 = (S) => S.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase(), s3 = (S) => S.replace(
   /^([A-Z])|[\s-_]+(\w)/g,
-  (j, J, E) => E ? E.toUpperCase() : J.toLowerCase()
+  (j, k, E) => E ? E.toUpperCase() : k.toLowerCase()
 ), sS = (S) => {
   const j = s3(S);
   return j.charAt(0).toUpperCase() + j.slice(1);
-}, vS = (...S) => S.filter((j, J, E) => !!j && j.trim() !== "" && E.indexOf(j) === J).join(" ").trim(), f3 = (S) => {
+}, vS = (...S) => S.filter((j, k, E) => !!j && j.trim() !== "" && E.indexOf(j) === k).join(" ").trim(), f3 = (S) => {
   for (const j in S)
     if (j.startsWith("aria-") || j === "role" || j === "title")
       return !0;
@@ -29263,11 +29263,11 @@ const m3 = de.forwardRef(
   ({
     color: S = "currentColor",
     size: j = 24,
-    strokeWidth: J = 2,
+    strokeWidth: k = 2,
     absoluteStrokeWidth: E,
-    className: I = "",
+    className: F = "",
     children: re,
-    iconNode: pe,
+    iconNode: he,
     ...ee
   }, ne) => de.createElement(
     "svg",
@@ -29277,13 +29277,13 @@ const m3 = de.forwardRef(
       width: j,
       height: j,
       stroke: S,
-      strokeWidth: E ? Number(J) * 24 / Number(j) : J,
-      className: vS("lucide", I),
+      strokeWidth: E ? Number(k) * 24 / Number(j) : k,
+      className: vS("lucide", F),
       ...!re && !f3(ee) && { "aria-hidden": "true" },
       ...ee
     },
     [
-      ...pe.map(([Q, le]) => de.createElement(Q, le)),
+      ...he.map(([Q, le]) => de.createElement(Q, le)),
       ...Array.isArray(re) ? re : [re]
     ]
   )
@@ -29295,8 +29295,8 @@ const m3 = de.forwardRef(
  * See the LICENSE file in the root directory of this source tree.
  */
 const $e = (S, j) => {
-  const J = de.forwardRef(
-    ({ className: E, ...I }, re) => de.createElement(m3, {
+  const k = de.forwardRef(
+    ({ className: E, ...F }, re) => de.createElement(m3, {
       ref: re,
       iconNode: j,
       className: vS(
@@ -29304,10 +29304,10 @@ const $e = (S, j) => {
         `lucide-${S}`,
         E
       ),
-      ...I
+      ...F
     })
   );
-  return J.displayName = sS(S), J;
+  return k.displayName = sS(S), k;
 };
 /**
  * @license lucide-react v0.546.0 - ISC
@@ -29944,17 +29944,17 @@ const XT = [
   ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
 ], ys = $e("x", XT), VT = ({ onUnlock: S }) => {
   var M;
-  const [j, J] = de.useState(!1), [E, I] = de.useState(0), [re, pe] = de.useState(!1), ee = de.useRef(null), ne = de.useRef(null), Q = () => {
-    re || J(!0);
+  const [j, k] = de.useState(!1), [E, F] = de.useState(0), [re, he] = de.useState(!1), ee = de.useRef(null), ne = de.useRef(null), Q = () => {
+    re || k(!0);
   }, le = (ue) => {
     if (!j || re || !ee.current || !ne.current) return;
     const be = ee.current.getBoundingClientRect(), Be = ne.current.offsetWidth, Ne = be.width - Be - 8;
     let De = ue - be.left - Be / 2;
-    De = Math.max(0, Math.min(De, Ne)), I(De), De >= Ne * 0.95 && (pe(!0), J(!1), I(Ne), setTimeout(() => {
+    De = Math.max(0, Math.min(De, Ne)), F(De), De >= Ne * 0.95 && (he(!0), k(!1), F(Ne), setTimeout(() => {
       S();
     }, 300));
   }, U = () => {
-    re || (J(!1), I(0));
+    re || (k(!1), F(0));
   };
   return de.useEffect(() => {
     const ue = (Ne) => le(Ne.clientX), be = (Ne) => le(Ne.touches[0].clientX), Be = () => U();
@@ -29993,9 +29993,9 @@ const XT = [
     }
   );
 }, QT = ({ onUnlock: S }) => {
-  const [j, J] = de.useState(/* @__PURE__ */ new Date());
+  const [j, k] = de.useState(/* @__PURE__ */ new Date());
   return de.useEffect(() => {
-    const E = setInterval(() => J(/* @__PURE__ */ new Date()), 1e3);
+    const E = setInterval(() => k(/* @__PURE__ */ new Date()), 1e3);
     return () => clearInterval(E);
   }, []), /* @__PURE__ */ h.jsxs("div", { className: "fixed inset-0 z-50 flex flex-col items-center justify-between py-20 px-6 bg-[var(--bg-base)] transition-colors duration-500", children: [
     /* @__PURE__ */ h.jsx("div", { className: "bokeh bokeh-1" }),
@@ -30023,7 +30023,7 @@ const XT = [
         }
       ` })
   ] });
-}, nb = ({ isOpen: S, onClose: j, title: J, children: E }) => S ? /* @__PURE__ */ h.jsxs("div", { className: "fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6", children: [
+}, nb = ({ isOpen: S, onClose: j, title: k, children: E }) => S ? /* @__PURE__ */ h.jsxs("div", { className: "fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6", children: [
   /* @__PURE__ */ h.jsx(
     "div",
     {
@@ -30032,8 +30032,8 @@ const XT = [
     }
   ),
   /* @__PURE__ */ h.jsxs("div", { className: "glass-card relative w-full max-w-2xl max-h-[85vh] flex flex-col animate-in fade-in zoom-in-95 duration-200 clip-corner overflow-hidden", children: [
-    J && /* @__PURE__ */ h.jsxs("div", { className: "flex items-center justify-between p-4 border-b border-[var(--wireframe)] bg-[var(--bubble-bg)] shrink-0", children: [
-      /* @__PURE__ */ h.jsx("h2", { className: "text-lg font-light tracking-widest text-[var(--text-primary)]", children: J }),
+    k && /* @__PURE__ */ h.jsxs("div", { className: "flex items-center justify-between p-4 border-b border-[var(--wireframe)] bg-[var(--bubble-bg)] shrink-0", children: [
+      /* @__PURE__ */ h.jsx("h2", { className: "text-lg font-light tracking-widest text-[var(--text-primary)]", children: k }),
       /* @__PURE__ */ h.jsx(
         "button",
         {
@@ -30043,7 +30043,7 @@ const XT = [
         }
       )
     ] }),
-    /* @__PURE__ */ h.jsx("div", { className: `overflow-y-auto flex-1 bg-[var(--card-bg)] ${J ? "p-6" : "p-0"}`, children: E })
+    /* @__PURE__ */ h.jsx("div", { className: `overflow-y-auto flex-1 bg-[var(--card-bg)] ${k ? "p-6" : "p-0"}`, children: E })
   ] })
 ] }) : null, ZT = {
   chatReply: {
@@ -30101,10 +30101,10 @@ const XT = [
   }
 };
 function ps(S, j) {
-  let J = S;
-  for (const [E, I] of Object.entries(j))
-    J = J.replace(new RegExp(`{{${E}}}`, "g"), I);
-  return J;
+  let k = S;
+  for (const [E, F] of Object.entries(j))
+    k = k.replace(new RegExp(`{{${E}}}`, "g"), F);
+  return k;
 }
 const kT = [
   { id: 5, name: "Kaelen (领航员)", lastMessage: "明天几点跃迁？", time: "昨天", unread: !1, type: "user", avatar: "https://picsum.photos/seed/k/100/100", online: !0, description: "一位经验丰富的星际领航员，性格沉稳，总是能在复杂的星域中找到最安全的航线。" },
@@ -30199,38 +30199,53 @@ const kT = [
   },
   saveGlobalSettings: (S) => localStorage.setItem("st_global_settings", JSON.stringify(S))
 };
-async function Mv(S) {
-  var J, E, I;
-  const j = Je.getGlobalSettings();
-  if (j.apiMode === "gemini")
-    throw new Error("Gemini 模式在酒馆扩展中不可用，请在设置中切换为自定义 API");
-  if (j.apiMode === "custom" && j.customApiUrl) {
-    const re = await fetch(`${j.customApiUrl}/chat/completions`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${j.customApiKey}`
-      },
-      body: JSON.stringify({
-        model: j.customApiModel || "gpt-3.5-turbo",
-        messages: [
-          { role: "system", content: S.systemPrompt },
-          ...(S.chatHistory || []).map((ee) => ({
-            role: ee.role,
-            content: ee.content
-          })),
-          { role: "user", content: S.userInput }
-        ]
-      })
-    });
-    if (!re.ok)
-      throw new Error(`API 错误: ${re.statusText}`);
-    return ((I = (E = (J = (await re.json()).choices) == null ? void 0 : J[0]) == null ? void 0 : E.message) == null ? void 0 : I.content) || "";
-  } else
-    throw new Error("请先在设置中配置 API");
+async function $T(S) {
+  var F, re;
+  const j = (re = (F = window.SillyTavern) == null ? void 0 : F.getContext) == null ? void 0 : re.call(F);
+  if (!j) throw new Error("无法获取酒馆上下文");
+  const k = [
+    { role: "system", content: S.systemPrompt },
+    ...(S.chatHistory || []).map((he) => ({ role: he.role, content: he.content })),
+    { role: "user", content: S.userInput }
+  ], E = j.generateRaw ?? window.generateRaw;
+  if (E) {
+    const he = await E(k, "", !1, !1);
+    return typeof he == "string" ? he : (he == null ? void 0 : he.text) ?? "";
+  }
+  throw new Error("酒馆 generateRaw 不可用");
 }
-const $T = ({ contact: S, onClose: j, onUpdateContact: J }) => {
-  const [E, I] = de.useState(Je.getChatPrompt()), [re, pe] = de.useState(S.chatAiSettings || {
+async function WT(S, j) {
+  var F, re, he;
+  const k = await fetch(`${j.customApiUrl}/chat/completions`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${j.customApiKey || ""}`
+    },
+    body: JSON.stringify({
+      model: j.customApiModel || "gpt-3.5-turbo",
+      messages: [
+        { role: "system", content: S.systemPrompt },
+        ...(S.chatHistory || []).map((ee) => ({ role: ee.role, content: ee.content })),
+        { role: "user", content: S.userInput }
+      ]
+    })
+  });
+  if (!k.ok) throw new Error(`API 错误: ${k.status} ${k.statusText}`);
+  return ((he = (re = (F = (await k.json()).choices) == null ? void 0 : F[0]) == null ? void 0 : re.message) == null ? void 0 : he.content) ?? "";
+}
+async function Mv(S) {
+  const j = Je.getGlobalSettings();
+  if (j.apiMode === "custom" && j.customApiUrl)
+    return WT(S, j);
+  try {
+    return await $T(S);
+  } catch {
+    throw new Error("请在星际终端设置中配置自定义 API，或确保酒馆已连接 AI 模型。");
+  }
+}
+const FT = ({ contact: S, onClose: j, onUpdateContact: k }) => {
+  const [E, F] = de.useState(Je.getChatPrompt()), [re, he] = de.useState(S.chatAiSettings || {
     systemPrompt: "",
     userPromptPrefix: "",
     overrideName: S.name,
@@ -30239,17 +30254,17 @@ const $T = ({ contact: S, onClose: j, onUpdateContact: J }) => {
     overrideDialogueExamples: "",
     worldInfoExtra: ""
   }), ee = () => {
-    I({
+    F({
       systemPrompt: "你扮演{{characterName}}，{{characterDescription}}。请保持角色，用第一人称回复，回复风格自然简短。",
       userPromptPrefix: ""
     });
   }, ne = () => {
-    pe((le) => ({
+    he((le) => ({
       ...le,
       overrideDescription: S.description || ""
     }));
   }, Q = () => {
-    Je.saveChatPrompt(E), J({
+    Je.saveChatPrompt(E), k({
       ...S,
       chatAiSettings: re
     }), j();
@@ -30274,7 +30289,7 @@ const $T = ({ contact: S, onClose: j, onUpdateContact: J }) => {
             "textarea",
             {
               value: E.systemPrompt,
-              onChange: (le) => I({ ...E, systemPrompt: le.target.value }),
+              onChange: (le) => F({ ...E, systemPrompt: le.target.value }),
               className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[80px]"
             }
           )
@@ -30285,7 +30300,7 @@ const $T = ({ contact: S, onClose: j, onUpdateContact: J }) => {
             "textarea",
             {
               value: E.userPromptPrefix,
-              onChange: (le) => I({ ...E, userPromptPrefix: le.target.value }),
+              onChange: (le) => F({ ...E, userPromptPrefix: le.target.value }),
               placeholder: "留空则直接发送用户消息",
               className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[60px]"
             }
@@ -30319,7 +30334,7 @@ const $T = ({ contact: S, onClose: j, onUpdateContact: J }) => {
             {
               type: "text",
               value: re.overrideName,
-              onChange: (le) => pe({ ...re, overrideName: le.target.value }),
+              onChange: (le) => he({ ...re, overrideName: le.target.value }),
               className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)]"
             }
           )
@@ -30330,7 +30345,7 @@ const $T = ({ contact: S, onClose: j, onUpdateContact: J }) => {
             "textarea",
             {
               value: re.overrideDescription,
-              onChange: (le) => pe({ ...re, overrideDescription: le.target.value }),
+              onChange: (le) => he({ ...re, overrideDescription: le.target.value }),
               className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[80px]"
             }
           )
@@ -30341,7 +30356,7 @@ const $T = ({ contact: S, onClose: j, onUpdateContact: J }) => {
             "textarea",
             {
               value: re.overridePersonality,
-              onChange: (le) => pe({ ...re, overridePersonality: le.target.value }),
+              onChange: (le) => he({ ...re, overridePersonality: le.target.value }),
               placeholder: "留空则不覆盖",
               className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[60px]"
             }
@@ -30353,7 +30368,7 @@ const $T = ({ contact: S, onClose: j, onUpdateContact: J }) => {
             "textarea",
             {
               value: re.overrideDialogueExamples,
-              onChange: (le) => pe({ ...re, overrideDialogueExamples: le.target.value }),
+              onChange: (le) => he({ ...re, overrideDialogueExamples: le.target.value }),
               placeholder: "示例：\\nUser: 你好\\nAssistant: 你好，我是...",
               className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[80px]"
             }
@@ -30369,7 +30384,7 @@ const $T = ({ contact: S, onClose: j, onUpdateContact: J }) => {
           "textarea",
           {
             value: re.worldInfoExtra,
-            onChange: (le) => pe({ ...re, worldInfoExtra: le.target.value }),
+            onChange: (le) => he({ ...re, worldInfoExtra: le.target.value }),
             placeholder: "填写额外的世界观设定、场景背景等...",
             className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[80px]"
           }
@@ -30389,60 +30404,60 @@ const $T = ({ contact: S, onClose: j, onUpdateContact: J }) => {
     ) })
   ] }) });
 };
-function WT(S) {
-  const j = S.trim(), J = j.split(/\n{2,}/).map((pe) => pe.trim()).filter((pe) => pe.length >= 4);
-  if (J.length >= 2) return J.slice(0, 4);
-  const E = j.split(new RegExp("(?<=[。！？…～」』])\\n|(?<=[！？。])\\s{2,}")).map((pe) => pe.trim()).filter((pe) => pe.length >= 4);
+function IT(S) {
+  const j = S.trim(), k = j.split(/\n{2,}/).map((he) => he.trim()).filter((he) => he.length >= 4);
+  if (k.length >= 2) return k.slice(0, 4);
+  const E = j.split(new RegExp("(?<=[。！？…～」』])\\n|(?<=[！？。])\\s{2,}")).map((he) => he.trim()).filter((he) => he.length >= 4);
   if (E.length >= 2) return E.slice(0, 4);
   if (j.length < 60) return [j];
-  const I = Math.floor(j.length / 2), re = ["。", "！", "？", "～", `
+  const F = Math.floor(j.length / 2), re = ["。", "！", "？", "～", `
 `];
-  for (let pe = 0; pe < 30; pe++)
+  for (let he = 0; he < 30; he++)
     for (const ee of re) {
-      const ne = j.indexOf(ee, I - pe);
+      const ne = j.indexOf(ee, F - he);
       if (ne !== -1 && ne < j.length - 4)
         return [j.slice(0, ne + 1).trim(), j.slice(ne + 1).trim()].filter((Q) => Q.length >= 4);
     }
   return [j];
 }
-const FT = ({ contact: S, onBack: j, onUpdateContact: J, onDeleteContact: E, settings: I }) => {
-  const [re, pe] = de.useState(() => {
-    const he = Je.getChats(S.id);
-    return he !== null ? he : S.lastMessage ? [{ id: 1, text: S.lastMessage, sender: "them", time: S.time, read: !0 }] : [];
-  }), [ee, ne] = de.useState(!1), [Q, le] = de.useState(null), [U, M] = de.useState(""), [ue, be] = de.useState(!1), [Be, Ne] = de.useState(!1), [De, Tt] = de.useState(S.name), [F, Ye] = de.useState(null), [nt, W] = de.useState(S.avatar), [q, Me] = de.useState(null), [Ge, X] = de.useState(""), [je, ve] = de.useState(!1), [qe, zt] = de.useState(""), ut = de.useRef(null), _ = (I == null ? void 0 : I.avatarUrl) || "https://picsum.photos/seed/me/100/100", D = ["😀", "😂", "🥰", "😎", "😭", "😡", "👍", "🙏", "🎉", "❤️"], ce = de.useRef(S.id);
+const PT = ({ contact: S, onBack: j, onUpdateContact: k, onDeleteContact: E, settings: F }) => {
+  const [re, he] = de.useState(() => {
+    const pe = Je.getChats(S.id);
+    return pe !== null ? pe : S.lastMessage ? [{ id: 1, text: S.lastMessage, sender: "them", time: S.time, read: !0 }] : [];
+  }), [ee, ne] = de.useState(!1), [Q, le] = de.useState(null), [U, M] = de.useState(""), [ue, be] = de.useState(!1), [Be, Ne] = de.useState(!1), [De, Tt] = de.useState(S.name), [I, Ye] = de.useState(null), [nt, W] = de.useState(S.avatar), [q, Me] = de.useState(null), [Ge, X] = de.useState(""), [je, ve] = de.useState(!1), [qe, zt] = de.useState(""), ut = de.useRef(null), _ = (F == null ? void 0 : F.avatarUrl) || "https://picsum.photos/seed/me/100/100", D = ["😀", "😂", "🥰", "😎", "😭", "😡", "👍", "🙏", "🎉", "❤️"], ce = de.useRef(S.id);
   de.useEffect(() => {
     if (S.id !== ce.current) {
       ce.current = S.id;
-      const he = Je.getChats(S.id);
-      he !== null ? pe(he) : S.lastMessage ? pe([{ id: 1, text: S.lastMessage, sender: "them", time: S.time, read: !0 }]) : pe([]);
+      const pe = Je.getChats(S.id);
+      pe !== null ? he(pe) : S.lastMessage ? he([{ id: 1, text: S.lastMessage, sender: "them", time: S.time, read: !0 }]) : he([]);
     }
   }, [S.id, S.lastMessage, S.time]), de.useEffect(() => {
     ce.current === S.id && Je.saveChats(S.id, re);
   }, [re, S.id]);
   const Ae = () => {
-    var he;
-    (he = ut.current) == null || he.scrollIntoView({ behavior: "smooth" });
+    var pe;
+    (pe = ut.current) == null || pe.scrollIntoView({ behavior: "smooth" });
   };
   de.useEffect(() => {
     Ae();
   }, [re]);
   const He = () => {
     if (!U.trim()) return;
-    const he = {
+    const pe = {
       id: Date.now(),
       text: U.trim(),
       sender: "me",
       time: (/* @__PURE__ */ new Date()).toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }),
       read: !1
     };
-    pe([...re, he]), M(""), setTimeout(() => {
-      pe((Ee) => Ee.map((it) => it.id === he.id ? { ...it, read: !0 } : it));
+    he([...re, pe]), M(""), setTimeout(() => {
+      he((Ee) => Ee.map((it) => it.id === pe.id ? { ...it, read: !0 } : it));
     }, 1e3);
   }, x = async () => {
     if (!ee) {
       ne(!0), le(null);
       try {
-        const he = Je.getChatPrompt(), Ee = S.chatAiSettings || {
+        const pe = Je.getChatPrompt(), Ee = S.chatAiSettings || {
           systemPrompt: "",
           userPromptPrefix: "",
           overrideName: S.name,
@@ -30451,7 +30466,7 @@ const FT = ({ contact: S, onBack: j, onUpdateContact: J, onDeleteContact: E, set
           overrideDialogueExamples: "",
           worldInfoExtra: ""
         }, it = Je.getGlobalSettings();
-        let ct = ps(he.systemPrompt, {
+        let ct = ps(pe.systemPrompt, {
           characterName: Ee.overrideName || S.name,
           characterDescription: Ee.overrideDescription || S.description || "一个神秘的星际联系人",
           userName: it.userName || "指挥官",
@@ -30472,12 +30487,12 @@ ${Ee.worldInfoExtra}`), ct += `
         const ml = re.slice(-12).map((tt) => ({
           role: tt.sender === "me" ? "user" : "assistant",
           content: tt.text
-        })), Se = [...re].reverse().find((tt) => tt.sender === "me"), Un = (Se == null ? void 0 : Se.text) || "你好", mu = he.userPromptPrefix ? `${he.userPromptPrefix}
+        })), Se = [...re].reverse().find((tt) => tt.sender === "me"), Un = (Se == null ? void 0 : Se.text) || "你好", mu = pe.userPromptPrefix ? `${pe.userPromptPrefix}
 ${Un}` : Un, hl = await Mv({
           systemPrompt: ct,
           chatHistory: ml,
           userInput: mu
-        }), Rl = WT(hl);
+        }), Rl = IT(hl);
         ne(!1);
         for (let tt = 0; tt < Rl.length; tt++) {
           if (tt > 0) {
@@ -30485,7 +30500,7 @@ ${Un}` : Un, hl = await Mv({
             const Ea = 500 + Rl[tt].length * 25 + Math.random() * 300;
             await new Promise((Hn) => setTimeout(Hn, Ea)), ne(!1), await new Promise((Hn) => setTimeout(Hn, 80));
           }
-          pe((Ea) => [...Ea, {
+          he((Ea) => [...Ea, {
             id: Date.now() + tt,
             text: Rl[tt],
             sender: "them",
@@ -30493,13 +30508,13 @@ ${Un}` : Un, hl = await Mv({
             read: !0
           }]);
         }
-      } catch (he) {
-        console.error("AI Reply Error:", he), le("连接星网失败，请稍后重试。"), ne(!1), setTimeout(() => le(null), 3e3);
+      } catch (pe) {
+        console.error("AI Reply Error:", pe), le("连接星网失败，请稍后重试。"), ne(!1), setTimeout(() => le(null), 3e3);
       }
     }
   }, Y = () => {
     if (!qe.trim()) return;
-    const he = {
+    const pe = {
       id: Date.now(),
       text: "[自定义表情]",
       sender: "me",
@@ -30507,8 +30522,8 @@ ${Un}` : Un, hl = await Mv({
       read: !1,
       image: qe.trim()
     };
-    pe([...re, he]), zt(""), ve(!1), setTimeout(() => {
-      pe((Ee) => Ee.map((it) => it.id === he.id ? { ...it, read: !0 } : it));
+    he([...re, pe]), zt(""), ve(!1), setTimeout(() => {
+      he((Ee) => Ee.map((it) => it.id === pe.id ? { ...it, read: !0 } : it));
     }, 1e3);
   }, se = () => {
     if (q === "bg")
@@ -30518,7 +30533,7 @@ ${Un}` : Un, hl = await Mv({
     else if (q === "block")
       E(S.id), j();
     else if (q === "sendImage" && Ge.trim()) {
-      const he = {
+      const pe = {
         id: Date.now(),
         text: `[图片] ${Ge.trim()}`,
         sender: "me",
@@ -30526,22 +30541,22 @@ ${Un}` : Un, hl = await Mv({
         read: !1,
         image: Ge.trim()
       };
-      pe([...re, he]), setTimeout(() => {
-        pe((Ee) => Ee.map((it) => it.id === he.id ? { ...it, read: !0 } : it));
+      he([...re, pe]), setTimeout(() => {
+        he((Ee) => Ee.map((it) => it.id === pe.id ? { ...it, read: !0 } : it));
       }, 1e3);
     }
     Me(null), X("");
   }, fe = () => {
-    De.trim() && De !== S.name && J({ ...S, name: De.trim() }), Ne(!1), be(!1);
+    De.trim() && De !== S.name && k({ ...S, name: De.trim() }), Ne(!1), be(!1);
   }, Ue = () => {
     E(S.id), j();
   };
   return /* @__PURE__ */ h.jsxs("div", { className: "flex flex-col h-full w-full bg-[var(--bg-base)] relative overflow-hidden animate-in slide-in-from-right-full duration-300", children: [
-    F && /* @__PURE__ */ h.jsx(
+    I && /* @__PURE__ */ h.jsx(
       "div",
       {
         className: "absolute inset-0 z-0 opacity-30",
-        style: { backgroundImage: `url(${F})`, backgroundSize: "cover", backgroundPosition: "center" }
+        style: { backgroundImage: `url(${I})`, backgroundSize: "cover", backgroundPosition: "center" }
       }
     ),
     /* @__PURE__ */ h.jsxs("div", { className: "flex items-center justify-between px-3 sm:px-4 py-3 sm:py-4 border-b border-[var(--wireframe)] bg-[var(--bubble-bg)] shrink-0 relative z-20", children: [
@@ -30557,11 +30572,11 @@ ${Un}` : Un, hl = await Mv({
             {
               type: "text",
               value: De,
-              onChange: (he) => Tt(he.target.value),
+              onChange: (pe) => Tt(pe.target.value),
               className: "bg-[var(--bg-base)] border border-[var(--accent-color)] rounded px-2 py-1 text-sm text-[var(--text-primary)] w-full outline-none",
               autoFocus: !0,
               onBlur: fe,
-              onKeyDown: (he) => he.key === "Enter" && fe()
+              onKeyDown: (pe) => pe.key === "Enter" && fe()
             }
           ) }) : /* @__PURE__ */ h.jsx("h2", { className: "text-lg font-medium tracking-wide text-[var(--text-primary)] truncate", children: S.name })
         ] })
@@ -30623,7 +30638,7 @@ ${Un}` : Un, hl = await Mv({
                 "button",
                 {
                   onClick: () => {
-                    pe([]), Je.saveChats(S.id, []), be(!1);
+                    he([]), Je.saveChats(S.id, []), be(!1);
                   },
                   className: "flex items-center gap-3 px-4 py-3 hover:bg-[var(--bubble-bg)] text-[var(--text-primary)] text-[15px] text-left transition-colors",
                   children: [
@@ -30677,18 +30692,18 @@ ${Un}` : Un, hl = await Mv({
       ] })
     ] }),
     /* @__PURE__ */ h.jsxs("div", { className: "flex-1 overflow-y-auto p-4 space-y-6 relative z-10 flex flex-col", children: [
-      re.map((he, Ee) => {
-        const it = re[Ee - 1], ct = it && it.sender === he.sender;
-        return /* @__PURE__ */ h.jsx("div", { className: `flex w-full ${he.sender === "me" ? "justify-end" : "justify-start"}`, children: he.sender === "me" ? /* @__PURE__ */ h.jsxs("div", { className: `flex items-end gap-3 max-w-[85%] ${ct ? "pr-[52px]" : ""}`, children: [
+      re.map((pe, Ee) => {
+        const it = re[Ee - 1], ct = it && it.sender === pe.sender;
+        return /* @__PURE__ */ h.jsx("div", { className: `flex w-full ${pe.sender === "me" ? "justify-end" : "justify-start"}`, children: pe.sender === "me" ? /* @__PURE__ */ h.jsxs("div", { className: `flex items-end gap-3 max-w-[85%] ${ct ? "pr-[52px]" : ""}`, children: [
           /* @__PURE__ */ h.jsx("div", { className: "flex flex-col items-end gap-1", children: /* @__PURE__ */ h.jsxs("div", { className: "flex items-center gap-2", children: [
-            he.read && /* @__PURE__ */ h.jsx("span", { className: "text-[11px] text-[var(--text-secondary)]", children: "已读" }),
-            /* @__PURE__ */ h.jsx("div", { className: "bg-[var(--bubble-bg)] text-[var(--text-primary)] rounded-2xl rounded-tr-sm px-4 py-3 shadow-sm border border-[var(--wireframe)]", children: he.image ? /* @__PURE__ */ h.jsx("img", { src: he.image || void 0, alt: "Sent image", className: "max-w-full rounded-lg max-h-48 object-cover" }) : /* @__PURE__ */ h.jsx("p", { className: "text-[15px] leading-relaxed break-words whitespace-pre-wrap", children: he.text.replace("[图片] ", "") }) })
+            pe.read && /* @__PURE__ */ h.jsx("span", { className: "text-[11px] text-[var(--text-secondary)]", children: "已读" }),
+            /* @__PURE__ */ h.jsx("div", { className: "bg-[var(--bubble-bg)] text-[var(--text-primary)] rounded-2xl rounded-tr-sm px-4 py-3 shadow-sm border border-[var(--wireframe)]", children: pe.image ? /* @__PURE__ */ h.jsx("img", { src: pe.image || void 0, alt: "Sent image", className: "max-w-full rounded-lg max-h-48 object-cover" }) : /* @__PURE__ */ h.jsx("p", { className: "text-[15px] leading-relaxed break-words whitespace-pre-wrap", children: pe.text.replace("[图片] ", "") }) })
           ] }) }),
           !ct && /* @__PURE__ */ h.jsx("img", { src: _, alt: "Me", className: "w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover shrink-0 shadow-sm border border-[var(--wireframe)]", referrerPolicy: "no-referrer" })
         ] }) : /* @__PURE__ */ h.jsxs("div", { className: `flex items-end gap-2 sm:gap-3 max-w-[85%] ${ct ? "pl-[52px]" : ""}`, children: [
           !ct && /* @__PURE__ */ h.jsx("img", { src: nt || void 0, alt: S.name, className: "w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover shrink-0 shadow-sm border border-[var(--wireframe)]", referrerPolicy: "no-referrer" }),
-          /* @__PURE__ */ h.jsx("div", { className: "flex flex-col items-start gap-1", children: /* @__PURE__ */ h.jsx("div", { className: "bg-[var(--accent-color)] text-white rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm", children: he.image ? /* @__PURE__ */ h.jsx("img", { src: he.image || void 0, alt: "Received image", className: "max-w-full rounded-lg max-h-48 object-cover" }) : /* @__PURE__ */ h.jsx("p", { className: "text-[15px] leading-relaxed break-words whitespace-pre-wrap", children: he.text }) }) })
-        ] }) }, he.id);
+          /* @__PURE__ */ h.jsx("div", { className: "flex flex-col items-start gap-1", children: /* @__PURE__ */ h.jsx("div", { className: "bg-[var(--accent-color)] text-white rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm", children: pe.image ? /* @__PURE__ */ h.jsx("img", { src: pe.image || void 0, alt: "Received image", className: "max-w-full rounded-lg max-h-48 object-cover" }) : /* @__PURE__ */ h.jsx("p", { className: "text-[15px] leading-relaxed break-words whitespace-pre-wrap", children: pe.text }) }) })
+        ] }) }, pe.id);
       }),
       ee && /* @__PURE__ */ h.jsx("div", { className: "flex w-full justify-start", children: /* @__PURE__ */ h.jsxs("div", { className: "flex items-end gap-2 sm:gap-3 max-w-[85%]", children: [
         /* @__PURE__ */ h.jsx("img", { src: nt, alt: S.name, className: "w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover shrink-0 shadow-sm border border-[var(--wireframe)]", referrerPolicy: "no-referrer" }),
@@ -30708,9 +30723,9 @@ ${Un}` : Un, hl = await Mv({
           {
             type: "text",
             value: U,
-            onChange: (he) => M(he.target.value),
-            onKeyDown: (he) => {
-              he.key === "Enter" && !he.shiftKey && (he.preventDefault(), He());
+            onChange: (pe) => M(pe.target.value),
+            onKeyDown: (pe) => {
+              pe.key === "Enter" && !pe.shiftKey && (pe.preventDefault(), He());
             },
             placeholder: "",
             className: "flex-1 bg-transparent text-[15px] text-[var(--text-primary)] outline-none h-8 min-w-0"
@@ -30740,16 +30755,16 @@ ${Un}` : Un, hl = await Mv({
           /* @__PURE__ */ h.jsx("div", { className: "fixed inset-0 z-40", onClick: () => ve(!1) }),
           /* @__PURE__ */ h.jsxs("div", { className: "absolute bottom-full right-0 mb-2 w-64 bg-[var(--bg-base)] rounded-xl z-50 flex flex-col shadow-2xl border border-[var(--wireframe)] animate-in fade-in zoom-in-95 duration-200 p-3", children: [
             /* @__PURE__ */ h.jsx("h4", { className: "text-xs text-[var(--text-secondary)] mb-2", children: "常用表情" }),
-            /* @__PURE__ */ h.jsx("div", { className: "grid grid-cols-5 gap-2 mb-3", children: D.map((he) => /* @__PURE__ */ h.jsx(
+            /* @__PURE__ */ h.jsx("div", { className: "grid grid-cols-5 gap-2 mb-3", children: D.map((pe) => /* @__PURE__ */ h.jsx(
               "button",
               {
                 onClick: () => {
-                  M((Ee) => Ee + he), ve(!1);
+                  M((Ee) => Ee + pe), ve(!1);
                 },
                 className: "text-2xl hover:bg-[var(--bubble-bg)] rounded p-1 transition-colors",
-                children: he
+                children: pe
               },
-              he
+              pe
             )) }),
             /* @__PURE__ */ h.jsx("div", { className: "h-px bg-[var(--wireframe)] mb-3" }),
             /* @__PURE__ */ h.jsx("h4", { className: "text-xs text-[var(--text-secondary)] mb-2", children: "自定义表情 (URL)" }),
@@ -30759,7 +30774,7 @@ ${Un}` : Un, hl = await Mv({
                 {
                   type: "text",
                   value: qe,
-                  onChange: (he) => zt(he.target.value),
+                  onChange: (pe) => zt(pe.target.value),
                   placeholder: "图片URL",
                   className: "flex-1 bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-2 py-1 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)]"
                 }
@@ -30798,11 +30813,11 @@ ${Un}` : Un, hl = await Mv({
       )
     ] }) }),
     q === "aiSettings" ? /* @__PURE__ */ h.jsx(
-      $T,
+      FT,
       {
         contact: S,
         onClose: () => Me(null),
-        onUpdateContact: J
+        onUpdateContact: k
       }
     ) : q && /* @__PURE__ */ h.jsx("div", { className: "absolute inset-0 z-[60] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4", children: /* @__PURE__ */ h.jsxs("div", { className: "glass-card w-full max-w-sm p-6 rounded-xl flex flex-col gap-4 animate-in fade-in zoom-in-95 duration-200 clip-corner", children: [
       /* @__PURE__ */ h.jsxs("h3", { className: "text-lg text-[var(--text-primary)] font-light tracking-widest border-b border-[var(--wireframe)] pb-2", children: [
@@ -30817,7 +30832,7 @@ ${Un}` : Un, hl = await Mv({
           {
             type: "text",
             value: Ge,
-            onChange: (he) => X(he.target.value),
+            onChange: (pe) => X(pe.target.value),
             placeholder: q === "sendImage" ? "输入图片URL" : "输入图片URL (留空清除/恢复默认)",
             className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded p-3 text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] transition-colors placeholder:text-[var(--text-secondary)]",
             autoFocus: !0
@@ -30847,8 +30862,8 @@ ${Un}` : Un, hl = await Mv({
       ] })
     ] }) })
   ] });
-}, IT = ({ onClose: S }) => {
-  const [j, J] = de.useState(Je.getMomentPrompt()), E = () => {
+}, e4 = ({ onClose: S }) => {
+  const [j, k] = de.useState(Je.getMomentPrompt()), E = () => {
     Je.saveMomentPrompt(j), S();
   };
   return /* @__PURE__ */ h.jsx("div", { className: "absolute inset-0 z-[60] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4", children: /* @__PURE__ */ h.jsxs("div", { className: "glass-card w-full max-w-lg flex flex-col rounded-xl animate-in fade-in zoom-in-95 duration-200 clip-corner", children: [
@@ -30863,7 +30878,7 @@ ${Un}` : Un, hl = await Mv({
           "textarea",
           {
             value: j.momentPrompt,
-            onChange: (I) => J({ ...j, momentPrompt: I.target.value }),
+            onChange: (F) => k({ ...j, momentPrompt: F.target.value }),
             className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[100px]"
           }
         )
@@ -30874,7 +30889,7 @@ ${Un}` : Un, hl = await Mv({
           "textarea",
           {
             value: j.momentFromChatPrompt,
-            onChange: (I) => J({ ...j, momentFromChatPrompt: I.target.value }),
+            onChange: (F) => k({ ...j, momentFromChatPrompt: F.target.value }),
             className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[100px]"
           }
         )
@@ -30900,17 +30915,17 @@ ${Un}` : Un, hl = await Mv({
       }
     ) })
   ] }) });
-}, PT = ({ onClose: S, onPublish: j }) => {
-  const [J, E] = de.useState("custom"), [I, re] = de.useState(""), [pe, ee] = de.useState(""), [ne, Q] = de.useState("manual"), [le, U] = de.useState(""), [M, ue] = de.useState(""), [be, Be] = de.useState(""), [Ne, De] = de.useState(!1), [Tt, F] = de.useState([]);
+}, t4 = ({ onClose: S, onPublish: j }) => {
+  const [k, E] = de.useState("custom"), [F, re] = de.useState(""), [he, ee] = de.useState(""), [ne, Q] = de.useState("manual"), [le, U] = de.useState(""), [M, ue] = de.useState(""), [be, Be] = de.useState(""), [Ne, De] = de.useState(!1), [Tt, I] = de.useState([]);
   de.useEffect(() => {
-    F(Je.getContacts());
+    I(Je.getContacts());
   }, []);
   const Ye = () => {
-    I.trim() && (j({
+    F.trim() && (j({
       author: "我",
       avatar: Je.getGlobalSettings().avatarUrl,
-      content: I.trim(),
-      image: pe.trim() || void 0
+      content: F.trim(),
+      image: he.trim() || void 0
     }), S());
   }, nt = () => {
     be.trim() && (j({
@@ -30960,7 +30975,7 @@ ${Un}` : Un, hl = await Mv({
       /* @__PURE__ */ h.jsx(
         "button",
         {
-          className: `flex-1 py-3 text-sm font-medium transition-colors ${J === "custom" ? "text-[var(--accent-color)] border-b-2 border-[var(--accent-color)]" : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"}`,
+          className: `flex-1 py-3 text-sm font-medium transition-colors ${k === "custom" ? "text-[var(--accent-color)] border-b-2 border-[var(--accent-color)]" : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"}`,
           onClick: () => E("custom"),
           children: "自定义发布"
         }
@@ -30968,17 +30983,17 @@ ${Un}` : Un, hl = await Mv({
       /* @__PURE__ */ h.jsx(
         "button",
         {
-          className: `flex-1 py-3 text-sm font-medium transition-colors ${J === "ai" ? "text-[var(--accent-color)] border-b-2 border-[var(--accent-color)]" : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"}`,
+          className: `flex-1 py-3 text-sm font-medium transition-colors ${k === "ai" ? "text-[var(--accent-color)] border-b-2 border-[var(--accent-color)]" : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"}`,
           onClick: () => E("ai"),
           children: "AI 生成"
         }
       )
     ] }),
-    /* @__PURE__ */ h.jsx("div", { className: "p-6 space-y-4", children: J === "custom" ? /* @__PURE__ */ h.jsxs(h.Fragment, { children: [
+    /* @__PURE__ */ h.jsx("div", { className: "p-6 space-y-4", children: k === "custom" ? /* @__PURE__ */ h.jsxs(h.Fragment, { children: [
       /* @__PURE__ */ h.jsx(
         "textarea",
         {
-          value: I,
+          value: F,
           onChange: (q) => re(q.target.value),
           placeholder: "分享你的星际动态...",
           className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[120px]"
@@ -30988,7 +31003,7 @@ ${Un}` : Un, hl = await Mv({
         "input",
         {
           type: "text",
-          value: pe,
+          value: he,
           onChange: (q) => ee(q.target.value),
           placeholder: "配图 URL (可选，留空则无图)",
           className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)]"
@@ -30998,7 +31013,7 @@ ${Un}` : Un, hl = await Mv({
         "button",
         {
           onClick: Ye,
-          disabled: !I.trim(),
+          disabled: !F.trim(),
           className: "flex items-center gap-2 px-6 py-2 rounded bg-[var(--accent-color)] text-white hover:bg-[var(--accent-color)]/90 transition-colors disabled:opacity-50",
           children: [
             /* @__PURE__ */ h.jsx(hs, { size: 16 }),
@@ -31076,12 +31091,12 @@ ${Un}` : Un, hl = await Mv({
       ] })
     ] }) }) })
   ] }) });
-}, e4 = ({ actionType: S, setActionType: j }) => {
+}, a4 = ({ actionType: S, setActionType: j }) => {
   var nt;
-  const [J, E] = de.useState([]), [I, re] = de.useState(null), [pe, ee] = de.useState(null), [ne, Q] = de.useState(Je.getGlobalSettings()), [le, U] = de.useState(!1), [M, ue] = de.useState(!1), [be, Be] = de.useState(!1);
+  const [k, E] = de.useState([]), [F, re] = de.useState(null), [he, ee] = de.useState(null), [ne, Q] = de.useState(Je.getGlobalSettings()), [le, U] = de.useState(!1), [M, ue] = de.useState(!1), [be, Be] = de.useState(!1);
   de.useEffect(() => {
     const W = () => {
-      F();
+      I();
     };
     return window.addEventListener("refreshMoments", W), () => window.removeEventListener("refreshMoments", W);
   }, []), de.useEffect(() => {
@@ -31098,22 +31113,22 @@ ${Un}` : Un, hl = await Mv({
     };
     return window.addEventListener("momentsUpdated", W), () => window.removeEventListener("momentsUpdated", W);
   }, []), de.useEffect(() => {
-    J.length > 0 && Je.saveMoments(J);
-  }, [J]);
+    k.length > 0 && Je.saveMoments(k);
+  }, [k]);
   const Ne = (W) => {
-    E(J.map((q) => q.id === W ? {
+    E(k.map((q) => q.id === W ? {
       ...q,
       likes: q.isLiked ? q.likes - 1 : q.likes + 1,
       isLiked: !q.isLiked
     } : q));
   }, De = (W) => {
-    E(J.filter((q) => q.id !== W)), ee(null);
+    E(k.filter((q) => q.id !== W)), ee(null);
   }, Tt = (W) => {
-    !I || !I.text.trim() || (E(J.map((q) => q.id === W ? {
+    !F || !F.text.trim() || (E(k.map((q) => q.id === W ? {
       ...q,
-      comments: [...q.comments, { id: Date.now(), author: "我", text: I.text.trim() }]
+      comments: [...q.comments, { id: Date.now(), author: "我", text: F.text.trim() }]
     } : q)), re(null));
-  }, F = async () => {
+  }, I = async () => {
     Be(!0);
     try {
       const W = Je.getContacts().filter((ut) => ut.type === "user");
@@ -31170,7 +31185,7 @@ ${Un}` : Un, hl = await Mv({
       likes: 0,
       comments: []
     };
-    E([q, ...J]);
+    E([q, ...k]);
   };
   return /* @__PURE__ */ h.jsxs("div", { className: "flex-1 overflow-y-auto relative z-10 pb-20", children: [
     /* @__PURE__ */ h.jsxs("div", { className: "relative h-48 mb-16", children: [
@@ -31196,7 +31211,7 @@ ${Un}` : Un, hl = await Mv({
         ) })
       ] })
     ] }),
-    /* @__PURE__ */ h.jsx("div", { className: "px-4 space-y-6", children: be ? /* @__PURE__ */ h.jsx("div", { className: "flex justify-center py-10", children: /* @__PURE__ */ h.jsx(ib, { className: "animate-spin text-[var(--accent-color)]", size: 24 }) }) : J.map((W) => /* @__PURE__ */ h.jsxs("div", { className: "flex gap-3 border-b border-[var(--wireframe)] pb-6 last:border-0", children: [
+    /* @__PURE__ */ h.jsx("div", { className: "px-4 space-y-6", children: be ? /* @__PURE__ */ h.jsx("div", { className: "flex justify-center py-10", children: /* @__PURE__ */ h.jsx(ib, { className: "animate-spin text-[var(--accent-color)]", size: 24 }) }) : k.map((W) => /* @__PURE__ */ h.jsxs("div", { className: "flex gap-3 border-b border-[var(--wireframe)] pb-6 last:border-0", children: [
       /* @__PURE__ */ h.jsx("div", { className: "w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-[var(--wireframe)]", children: /* @__PURE__ */ h.jsx("img", { src: W.avatar || void 0, alt: W.author, className: "w-full h-full object-cover", referrerPolicy: "no-referrer" }) }),
       /* @__PURE__ */ h.jsxs("div", { className: "flex-1 min-w-0", children: [
         /* @__PURE__ */ h.jsx("h3", { className: "text-[var(--accent-color)] font-medium text-sm mb-1", children: W.author }),
@@ -31228,12 +31243,12 @@ ${Un}` : Un, hl = await Mv({
               W.author === "我" && /* @__PURE__ */ h.jsx(
                 "button",
                 {
-                  onClick: () => ee(pe === W.id ? null : W.id),
+                  onClick: () => ee(he === W.id ? null : W.id),
                   className: "flex items-center gap-1 text-xs hover:text-[var(--accent-color)] transition-colors",
                   children: /* @__PURE__ */ h.jsx(J3, { size: 14 })
                 }
               ),
-              pe === W.id && W.author === "我" && /* @__PURE__ */ h.jsxs(h.Fragment, { children: [
+              he === W.id && W.author === "我" && /* @__PURE__ */ h.jsxs(h.Fragment, { children: [
                 /* @__PURE__ */ h.jsx("div", { className: "fixed inset-0 z-40", onClick: () => ee(null) }),
                 /* @__PURE__ */ h.jsxs("div", { className: "absolute right-0 top-full mt-1 w-28 bg-[var(--bg-base)] rounded-lg z-50 flex flex-col shadow-xl border border-[var(--wireframe)] overflow-hidden", children: [
                   /* @__PURE__ */ h.jsxs("button", { onClick: () => ee(null), className: "flex items-center gap-2 px-3 py-2 text-xs text-left hover:bg-[var(--bubble-bg)] text-[var(--text-primary)]", children: [
@@ -31256,13 +31271,13 @@ ${Un}` : Un, hl = await Mv({
           ] }),
           /* @__PURE__ */ h.jsx("span", { className: "text-[var(--text-primary)]", children: q.text })
         ] }, q.id)) }),
-        (I == null ? void 0 : I.momentId) === W.id && /* @__PURE__ */ h.jsxs("div", { className: "mt-2 flex items-center gap-2", children: [
+        (F == null ? void 0 : F.momentId) === W.id && /* @__PURE__ */ h.jsxs("div", { className: "mt-2 flex items-center gap-2", children: [
           /* @__PURE__ */ h.jsx(
             "input",
             {
               type: "text",
-              value: I.text,
-              onChange: (q) => re({ ...I, text: q.target.value }),
+              value: F.text,
+              onChange: (q) => re({ ...F, text: q.target.value }),
               placeholder: "评论...",
               className: "flex-1 bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-1.5 text-xs text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] transition-colors",
               autoFocus: !0,
@@ -31275,7 +31290,7 @@ ${Un}` : Un, hl = await Mv({
             "button",
             {
               onClick: () => Tt(W.id),
-              disabled: !I.text.trim(),
+              disabled: !F.text.trim(),
               className: "p-1.5 rounded bg-[var(--accent-color)]/20 text-[var(--accent-color)] disabled:opacity-50",
               children: /* @__PURE__ */ h.jsx(hs, { size: 14 })
             }
@@ -31283,12 +31298,12 @@ ${Un}` : Un, hl = await Mv({
         ] })
       ] })
     ] }, W.id)) }),
-    le && /* @__PURE__ */ h.jsx(IT, { onClose: () => U(!1) }),
-    M && /* @__PURE__ */ h.jsx(PT, { onClose: () => ue(!1), onPublish: Ye })
+    le && /* @__PURE__ */ h.jsx(e4, { onClose: () => U(!1) }),
+    M && /* @__PURE__ */ h.jsx(t4, { onClose: () => ue(!1), onPublish: Ye })
   ] });
-}, t4 = ({ onClose: S, initialData: j }) => {
-  const [J, E] = de.useState((j == null ? void 0 : j.to) || ""), [I, re] = de.useState((j == null ? void 0 : j.subject) || ""), [pe, ee] = de.useState((j == null ? void 0 : j.body) || ""), [ne, Q] = de.useState(!1), le = async () => {
-    if (!I && !pe) {
+}, l4 = ({ onClose: S, initialData: j }) => {
+  const [k, E] = de.useState((j == null ? void 0 : j.to) || ""), [F, re] = de.useState((j == null ? void 0 : j.subject) || ""), [he, ee] = de.useState((j == null ? void 0 : j.body) || ""), [ne, Q] = de.useState(!1), le = async () => {
+    if (!F && !he) {
       alert("请先输入主题或部分正文，以便 AI 了解您的意图。");
       return;
     }
@@ -31298,8 +31313,8 @@ ${Un}` : Un, hl = await Mv({
         userName: ue.userName
       }), De = ps(Be.userPrompt, {
         userName: ue.userName,
-        recipientName: J || "未知收件人",
-        emailSubject: I || "无主题"
+        recipientName: k || "未知收件人",
+        emailSubject: F || "无主题"
       }), Tt = await Mv({
         systemPrompt: Ne,
         userInput: De
@@ -31314,10 +31329,10 @@ ${Un}` : Un, hl = await Mv({
     const ue = {
       id: Date.now(),
       from: Je.getGlobalSettings().userName,
-      to: J,
-      subject: I,
-      body: pe,
-      snippet: pe.substring(0, 50) + "...",
+      to: k,
+      subject: F,
+      body: he,
+      snippet: he.substring(0, 50) + "...",
       time: (/* @__PURE__ */ new Date()).toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }),
       isRead: !0,
       status: "draft",
@@ -31328,10 +31343,10 @@ ${Un}` : Un, hl = await Mv({
     const ue = {
       id: Date.now(),
       from: Je.getGlobalSettings().userName,
-      to: J,
-      subject: I,
-      body: pe,
-      snippet: pe.substring(0, 50) + "...",
+      to: k,
+      subject: F,
+      body: he,
+      snippet: he.substring(0, 50) + "...",
       time: (/* @__PURE__ */ new Date()).toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" }),
       isRead: !0,
       status: "sent",
@@ -31361,7 +31376,7 @@ ${Un}` : Un, hl = await Mv({
           "button",
           {
             onClick: M,
-            disabled: !J || !I || !pe,
+            disabled: !k || !F || !he,
             className: "flex items-center gap-1 text-xs text-[var(--bg-base)] bg-[var(--accent-color)] hover:opacity-90 transition-opacity px-3 py-1.5 rounded disabled:opacity-50",
             children: [
               /* @__PURE__ */ h.jsx(hs, { size: 14 }),
@@ -31378,7 +31393,7 @@ ${Un}` : Un, hl = await Mv({
           "input",
           {
             type: "text",
-            value: J,
+            value: k,
             onChange: (ue) => E(ue.target.value),
             className: "flex-1 bg-transparent text-[var(--text-primary)] outline-none text-sm",
             placeholder: "输入收件人..."
@@ -31391,7 +31406,7 @@ ${Un}` : Un, hl = await Mv({
           "input",
           {
             type: "text",
-            value: I,
+            value: F,
             onChange: (ue) => re(ue.target.value),
             className: "flex-1 bg-transparent text-[var(--text-primary)] outline-none text-sm",
             placeholder: "输入主题..."
@@ -31414,7 +31429,7 @@ ${Un}` : Un, hl = await Mv({
       /* @__PURE__ */ h.jsx(
         "textarea",
         {
-          value: pe,
+          value: he,
           onChange: (ue) => ee(ue.target.value),
           className: "flex-1 bg-transparent text-[var(--text-primary)] outline-none text-sm resize-none",
           placeholder: "在此输入正文..."
@@ -31422,8 +31437,8 @@ ${Un}` : Un, hl = await Mv({
       )
     ] })
   ] });
-}, a4 = ({ onClose: S }) => {
-  const [j, J] = de.useState(Je.getEmailPrompt()), E = () => {
+}, n4 = ({ onClose: S }) => {
+  const [j, k] = de.useState(Je.getEmailPrompt()), E = () => {
     Je.saveEmailPrompt(j), S();
   };
   return /* @__PURE__ */ h.jsx("div", { className: "absolute inset-0 z-[60] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4", children: /* @__PURE__ */ h.jsxs("div", { className: "glass-card w-full max-w-lg flex flex-col rounded-xl animate-in fade-in zoom-in-95 duration-200 clip-corner", children: [
@@ -31438,7 +31453,7 @@ ${Un}` : Un, hl = await Mv({
           "textarea",
           {
             value: j.emailComposePrompt,
-            onChange: (I) => J({ ...j, emailComposePrompt: I.target.value }),
+            onChange: (F) => k({ ...j, emailComposePrompt: F.target.value }),
             className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[100px]"
           }
         )
@@ -31449,7 +31464,7 @@ ${Un}` : Un, hl = await Mv({
           "textarea",
           {
             value: j.emailReplyPrompt,
-            onChange: (I) => J({ ...j, emailReplyPrompt: I.target.value }),
+            onChange: (F) => k({ ...j, emailReplyPrompt: F.target.value }),
             className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] resize-none min-h-[100px]"
           }
         )
@@ -31471,18 +31486,18 @@ ${Un}` : Un, hl = await Mv({
       }
     ) })
   ] }) });
-}, l4 = ({ actionType: S, setActionType: j }) => {
-  const [J, E] = de.useState([]), [I, re] = de.useState(null), [pe, ee] = de.useState(!1), [ne, Q] = de.useState(!1), [le, U] = de.useState(null), [M, ue] = de.useState("");
+}, u4 = ({ actionType: S, setActionType: j }) => {
+  const [k, E] = de.useState([]), [F, re] = de.useState(null), [he, ee] = de.useState(!1), [ne, Q] = de.useState(!1), [le, U] = de.useState(null), [M, ue] = de.useState("");
   de.useEffect(() => {
     const W = () => E(Je.getEmails());
     return W(), window.addEventListener("emailsUpdated", W), () => window.removeEventListener("emailsUpdated", W);
   }, []), de.useEffect(() => {
-    J.length > 0 && Je.saveEmails(J);
-  }, [J]);
+    k.length > 0 && Je.saveEmails(k);
+  }, [k]);
   const be = (W) => {
-    E(J.map((q) => q.id === W ? { ...q, isRead: !0 } : q));
+    E(k.map((q) => q.id === W ? { ...q, isRead: !0 } : q));
   }, Be = (W) => {
-    E(J.filter((q) => q.id !== W)), I === W && re(null);
+    E(k.filter((q) => q.id !== W)), F === W && re(null);
   }, Ne = async (W) => {
     ee(!0), U(W.id);
     try {
@@ -31504,7 +31519,7 @@ ${Un}` : Un, hl = await Mv({
       ee(!1);
     }
   }, De = (W) => {
-    M.trim() && (E(J.map((q) => q.id === W ? {
+    M.trim() && (E(k.map((q) => q.id === W ? {
       ...q,
       isReplied: !0,
       replies: [
@@ -31516,10 +31531,10 @@ ${Un}` : Un, hl = await Mv({
         }
       ]
     } : q)), U(null), ue(""));
-  }, Tt = (W, q) => W === "alert" ? /* @__PURE__ */ h.jsx(bS, { size: 20, className: "text-rose-400" }) : W === "update" ? /* @__PURE__ */ h.jsx(B3, { size: 20, className: "text-emerald-400" }) : q ? /* @__PURE__ */ h.jsx(fS, { size: 20, className: "text-[var(--text-secondary)]" }) : /* @__PURE__ */ h.jsx(dS, { size: 20, className: "text-[var(--accent-color)]" }), F = S || "inbox", Ye = J.filter((W) => F === "drafts" ? W.status === "draft" : F === "trash" ? W.status === "trash" : F === "outbox" ? W.status === "sent" : W.status === "inbox" || !W.status), nt = () => F === "drafts" ? "草稿箱" : F === "trash" ? "垃圾箱" : F === "outbox" ? "发件箱" : "收件箱";
+  }, Tt = (W, q) => W === "alert" ? /* @__PURE__ */ h.jsx(bS, { size: 20, className: "text-rose-400" }) : W === "update" ? /* @__PURE__ */ h.jsx(B3, { size: 20, className: "text-emerald-400" }) : q ? /* @__PURE__ */ h.jsx(fS, { size: 20, className: "text-[var(--text-secondary)]" }) : /* @__PURE__ */ h.jsx(dS, { size: 20, className: "text-[var(--accent-color)]" }), I = S || "inbox", Ye = k.filter((W) => I === "drafts" ? W.status === "draft" : I === "trash" ? W.status === "trash" : I === "outbox" ? W.status === "sent" : W.status === "inbox" || !W.status), nt = () => I === "drafts" ? "草稿箱" : I === "trash" ? "垃圾箱" : I === "outbox" ? "发件箱" : "收件箱";
   return /* @__PURE__ */ h.jsxs("div", { className: "flex-1 flex flex-col overflow-hidden relative z-10", children: [
     S === "writeEmail" && /* @__PURE__ */ h.jsx(
-      t4,
+      l4,
       {
         onClose: () => {
           j(null), E(Je.getEmails());
@@ -31528,14 +31543,14 @@ ${Un}` : Un, hl = await Mv({
     ),
     /* @__PURE__ */ h.jsxs("div", { className: "flex justify-between items-center px-4 py-3 border-b border-[var(--wireframe)] bg-[var(--bubble-bg)] shrink-0", children: [
       /* @__PURE__ */ h.jsxs("div", { className: "flex items-center gap-2", children: [
-        F !== "inbox" && F !== "writeEmail" && /* @__PURE__ */ h.jsx("button", { onClick: () => j(null), className: "text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors", children: /* @__PURE__ */ h.jsx(p3, { size: 18 }) }),
+        I !== "inbox" && I !== "writeEmail" && /* @__PURE__ */ h.jsx("button", { onClick: () => j(null), className: "text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors", children: /* @__PURE__ */ h.jsx(p3, { size: 18 }) }),
         /* @__PURE__ */ h.jsx("h3", { className: "text-[var(--text-primary)] font-medium tracking-widest text-sm", children: nt() })
       ] }),
       /* @__PURE__ */ h.jsxs("div", { className: "flex items-center gap-3", children: [
-        F === "inbox" && /* @__PURE__ */ h.jsx(
+        I === "inbox" && /* @__PURE__ */ h.jsx(
           "button",
           {
-            onClick: () => E(J.map((W) => W.status === "inbox" || !W.status ? { ...W, isRead: !0 } : W)),
+            onClick: () => E(k.map((W) => W.status === "inbox" || !W.status ? { ...W, isRead: !0 } : W)),
             className: "text-xs text-[var(--accent-color)] hover:text-[var(--text-primary)] transition-colors",
             children: "全部标为已读"
           }
@@ -31555,22 +31570,22 @@ ${Un}` : Un, hl = await Mv({
         "div",
         {
           onClick: () => {
-            re(I === W.id ? null : W.id), W.isRead || be(W.id);
+            re(F === W.id ? null : W.id), W.isRead || be(W.id);
           },
-          className: `p-3 rounded-xl border transition-all cursor-pointer group ${I === W.id ? "bg-[var(--card-bg)] border-[var(--accent-color)] shadow-md" : "bg-[var(--bubble-bg)] border-[var(--wireframe)] hover:border-[var(--accent-color)]/50"} ${W.isRead ? "" : "border-l-4 border-l-[var(--accent-color)]"}`,
+          className: `p-3 rounded-xl border transition-all cursor-pointer group ${F === W.id ? "bg-[var(--card-bg)] border-[var(--accent-color)] shadow-md" : "bg-[var(--bubble-bg)] border-[var(--wireframe)] hover:border-[var(--accent-color)]/50"} ${W.isRead ? "" : "border-l-4 border-l-[var(--accent-color)]"}`,
           children: /* @__PURE__ */ h.jsxs("div", { className: "flex gap-3 items-start", children: [
             /* @__PURE__ */ h.jsx("div", { className: "shrink-0 mt-1", children: Tt(W.type, W.isRead) }),
             /* @__PURE__ */ h.jsxs("div", { className: "flex-1 min-w-0", children: [
               /* @__PURE__ */ h.jsxs("div", { className: "flex justify-between items-baseline mb-1", children: [
-                /* @__PURE__ */ h.jsx("span", { className: `text-sm truncate pr-2 ${W.isRead ? "text-[var(--text-secondary)]" : "text-[var(--text-primary)] font-medium"}`, children: F === "outbox" || F === "drafts" ? `To: ${W.to}` : W.from }),
+                /* @__PURE__ */ h.jsx("span", { className: `text-sm truncate pr-2 ${W.isRead ? "text-[var(--text-secondary)]" : "text-[var(--text-primary)] font-medium"}`, children: I === "outbox" || I === "drafts" ? `To: ${W.to}` : W.from }),
                 /* @__PURE__ */ h.jsxs("span", { className: "text-[10px] text-[var(--text-secondary)] font-mono shrink-0 flex items-center gap-1", children: [
                   /* @__PURE__ */ h.jsx(L3, { size: 10 }),
                   W.time
                 ] })
               ] }),
               /* @__PURE__ */ h.jsx("h4", { className: `text-sm truncate mb-1 ${W.isRead ? "text-[var(--text-secondary)]" : "text-[var(--text-primary)]"}`, children: W.subject }),
-              /* @__PURE__ */ h.jsx("p", { className: `text-xs leading-relaxed ${I === W.id ? "text-[var(--text-primary)]" : "text-[var(--text-secondary)] line-clamp-2"}`, children: I === W.id ? W.body : W.snippet }),
-              I === W.id && /* @__PURE__ */ h.jsxs("div", { className: "mt-4 pt-3 border-t border-[var(--wireframe)] animate-in fade-in slide-in-from-top-2 duration-200", children: [
+              /* @__PURE__ */ h.jsx("p", { className: `text-xs leading-relaxed ${F === W.id ? "text-[var(--text-primary)]" : "text-[var(--text-secondary)] line-clamp-2"}`, children: F === W.id ? W.body : W.snippet }),
+              F === W.id && /* @__PURE__ */ h.jsxs("div", { className: "mt-4 pt-3 border-t border-[var(--wireframe)] animate-in fade-in slide-in-from-top-2 duration-200", children: [
                 W.replies && W.replies.length > 0 && /* @__PURE__ */ h.jsx("div", { className: "mb-4 space-y-2", children: W.replies.map((q) => /* @__PURE__ */ h.jsxs("div", { className: "bg-[var(--bg-base)] rounded p-2 text-xs border border-[var(--wireframe)]", children: [
                   /* @__PURE__ */ h.jsxs("div", { className: "flex justify-between text-[var(--text-secondary)] mb-1", children: [
                     /* @__PURE__ */ h.jsx("span", { children: "我" }),
@@ -31648,11 +31663,11 @@ ${Un}` : Un, hl = await Mv({
                       onClick: (q) => {
                         q.stopPropagation(), Ne(W);
                       },
-                      disabled: pe,
+                      disabled: he,
                       className: "flex items-center gap-1 text-xs text-[var(--accent-color)] hover:text-white transition-colors px-3 py-1.5 rounded bg-[var(--accent-color)]/20 disabled:opacity-50",
                       children: [
-                        pe ? /* @__PURE__ */ h.jsx(ib, { size: 14, className: "animate-spin" }) : /* @__PURE__ */ h.jsx(dS, { size: 14 }),
-                        pe ? "生成中..." : "AI 生成回复"
+                        he ? /* @__PURE__ */ h.jsx(ib, { size: 14, className: "animate-spin" }) : /* @__PURE__ */ h.jsx(dS, { size: 14 }),
+                        he ? "生成中..." : "AI 生成回复"
                       ]
                     }
                   )
@@ -31664,17 +31679,17 @@ ${Un}` : Un, hl = await Mv({
         W.id
       )),
       Ye.length === 0 && /* @__PURE__ */ h.jsxs("div", { className: "flex flex-col items-center justify-center h-40 text-[var(--text-secondary)] opacity-50", children: [
-        F === "drafts" ? /* @__PURE__ */ h.jsx(xS, { size: 48, className: "mb-4" }) : F === "trash" ? /* @__PURE__ */ h.jsx(Ov, { size: 48, className: "mb-4" }) : F === "outbox" ? /* @__PURE__ */ h.jsx(hs, { size: 48, className: "mb-4" }) : /* @__PURE__ */ h.jsx(fS, { size: 48, className: "mb-4" }),
+        I === "drafts" ? /* @__PURE__ */ h.jsx(xS, { size: 48, className: "mb-4" }) : I === "trash" ? /* @__PURE__ */ h.jsx(Ov, { size: 48, className: "mb-4" }) : I === "outbox" ? /* @__PURE__ */ h.jsx(hs, { size: 48, className: "mb-4" }) : /* @__PURE__ */ h.jsx(fS, { size: 48, className: "mb-4" }),
         /* @__PURE__ */ h.jsxs("p", { className: "tracking-widest", children: [
           nt(),
           "为空"
         ] })
       ] })
     ] }),
-    ne && /* @__PURE__ */ h.jsx(a4, { onClose: () => Q(!1) })
+    ne && /* @__PURE__ */ h.jsx(n4, { onClose: () => Q(!1) })
   ] });
 };
-function n4(S) {
+function i4(S) {
   try {
     const j = S.data || S;
     return j.name ? {
@@ -31701,12 +31716,12 @@ function ud() {
     return [];
   }
 }
-function u4(S) {
-  const j = ud(), J = j.findIndex((E) => E.name === S.name);
-  J >= 0 ? j[J] = S : j.push(S), localStorage.setItem("st_imported_characters", JSON.stringify(j));
+function c4(S) {
+  const j = ud(), k = j.findIndex((E) => E.name === S.name);
+  k >= 0 ? j[k] = S : j.push(S), localStorage.setItem("st_imported_characters", JSON.stringify(j));
 }
-function i4(S) {
-  const j = ud().filter((J) => J.name !== S);
+function o4(S) {
+  const j = ud().filter((k) => k.name !== S);
   localStorage.setItem("st_imported_characters", JSON.stringify(j));
 }
 const zS = [
@@ -31737,30 +31752,30 @@ const zS = [
 ];
 async function mS() {
   const S = ud(), j = [...zS];
-  return S.forEach((J) => {
-    const E = j.findIndex((I) => I.name === J.name);
-    E >= 0 ? j[E] = J : j.push(J);
-  }), j.map((J) => ({ name: J.name, avatar: J.avatar, description: J.description }));
+  return S.forEach((k) => {
+    const E = j.findIndex((F) => F.name === k.name);
+    E >= 0 ? j[E] = k : j.push(k);
+  }), j.map((k) => ({ name: k.name, avatar: k.avatar, description: k.description }));
 }
-async function c4(S) {
-  const j = ud().find((J) => J.name === S);
-  return j || zS.find((J) => J.name === S) || null;
+async function r4(S) {
+  const j = ud().find((k) => k.name === S);
+  return j || zS.find((k) => k.name === S) || null;
 }
-const o4 = ({ onBack: S, settings: j }) => {
-  const [J, E] = de.useState("chat"), [I, re] = de.useState(() => Je.getContacts()), [pe, ee] = de.useState(null), [ne, Q] = de.useState(!1), [le, U] = de.useState(null), [M, ue] = de.useState(""), [be, Be] = de.useState(null), [Ne, De] = de.useState(null), [Tt, F] = de.useState([]), [Ye, nt] = de.useState(""), [W, q] = de.useState(() => ud()), [Me, Ge] = de.useState(!1), X = de.useRef(!1);
+const s4 = ({ onBack: S, settings: j }) => {
+  const [k, E] = de.useState("chat"), [F, re] = de.useState(() => Je.getContacts()), [he, ee] = de.useState(null), [ne, Q] = de.useState(!1), [le, U] = de.useState(null), [M, ue] = de.useState(""), [be, Be] = de.useState(null), [Ne, De] = de.useState(null), [Tt, I] = de.useState([]), [Ye, nt] = de.useState(""), [W, q] = de.useState(() => ud()), [Me, Ge] = de.useState(!1), X = de.useRef(!1);
   de.useEffect(() => {
     X.current = !0;
   }, []), de.useEffect(() => {
-    X.current && Je.saveContacts(I);
-  }, [I]), de.useEffect(() => {
-    le === "add" && mS().then(F), ue(""), De(null), nt("");
+    X.current && Je.saveContacts(F);
+  }, [F]), de.useEffect(() => {
+    le === "add" && mS().then(I), ue(""), De(null), nt("");
   }, [le]);
   const [je, ve] = de.useState(!1), qe = async () => {
     if (le === "add") {
       if (Ye) {
         ve(!0);
         try {
-          const D = await c4(Ye);
+          const D = await r4(Ye);
           if (D) {
             const ce = {
               id: Date.now(),
@@ -31773,7 +31788,7 @@ const o4 = ({ onBack: S, settings: j }) => {
               online: !0,
               description: D.description
             };
-            re([ce, ...I]), D.firstMessage && Je.saveChats(ce.id, [{
+            re([ce, ...F]), D.firstMessage && Je.saveChats(ce.id, [{
               id: Date.now(),
               text: D.firstMessage,
               sender: "them",
@@ -31795,12 +31810,12 @@ const o4 = ({ onBack: S, settings: j }) => {
           avatar: `https://picsum.photos/seed/${Date.now()}/100/100`,
           online: !0
         };
-        re([D, ...I]);
+        re([D, ...F]);
       }
     } else if (le === "delete" && Ne)
-      re(I.filter((D) => D.id !== Ne));
+      re(F.filter((D) => D.id !== Ne));
     else if (le === "editName" && Ne && M.trim())
-      re(I.map((D) => D.id === Ne ? { ...D, name: M.trim() } : D));
+      re(F.map((D) => D.id === Ne ? { ...D, name: M.trim() } : D));
     else if (le === "bg")
       ee(M.trim() || null);
     else if (le === "momentBg") {
@@ -31814,12 +31829,12 @@ const o4 = ({ onBack: S, settings: j }) => {
     }
     U(null);
   }, zt = (D) => {
-    re(I.map((ce) => ce.id === D.id ? D : ce));
+    re(F.map((ce) => ce.id === D.id ? D : ce));
   }, ut = (D) => {
-    re(I.filter((ce) => ce.id !== D));
-  }, _ = I.find((D) => D.id === be);
+    re(F.filter((ce) => ce.id !== D));
+  }, _ = F.find((D) => D.id === be);
   return be && _ ? /* @__PURE__ */ h.jsx(
-    FT,
+    PT,
     {
       contact: _,
       onBack: () => Be(null),
@@ -31828,10 +31843,10 @@ const o4 = ({ onBack: S, settings: j }) => {
       settings: j
     }
   ) : /* @__PURE__ */ h.jsxs("div", { className: "flex flex-col h-full w-full bg-[var(--card-bg)] backdrop-blur-md relative overflow-hidden", children: [
-    pe && /* @__PURE__ */ h.jsx(
+    he && /* @__PURE__ */ h.jsx(
       "img",
       {
-        src: pe,
+        src: he,
         alt: "Background",
         className: "absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none mix-blend-luminosity",
         referrerPolicy: "no-referrer"
@@ -31844,7 +31859,7 @@ const o4 = ({ onBack: S, settings: j }) => {
           "星网回路 ",
           /* @__PURE__ */ h.jsxs("span", { className: "text-sm text-[var(--accent-color)] ml-1", children: [
             "(",
-            I.length,
+            F.length,
             ")"
           ] })
         ] })
@@ -31863,7 +31878,7 @@ const o4 = ({ onBack: S, settings: j }) => {
           /* @__PURE__ */ h.jsxs("div", { className: "absolute right-0 top-full mt-3 w-44 bg-[var(--bg-base)] rounded-xl z-50 flex flex-col shadow-2xl border border-[var(--wireframe)] animate-in fade-in zoom-in-95 duration-200", children: [
             /* @__PURE__ */ h.jsx("div", { className: "absolute -top-2 right-3 w-4 h-4 bg-[var(--bg-base)] border-t border-l border-[var(--wireframe)] transform rotate-45" }),
             /* @__PURE__ */ h.jsxs("div", { className: "relative z-10 flex flex-col py-2", children: [
-              J === "chat" && /* @__PURE__ */ h.jsxs(h.Fragment, { children: [
+              k === "chat" && /* @__PURE__ */ h.jsxs(h.Fragment, { children: [
                 /* @__PURE__ */ h.jsxs("button", { onClick: () => {
                   U("add"), Q(!1);
                 }, className: "flex items-center gap-3 px-4 py-3 hover:bg-[var(--bubble-bg)] text-[var(--text-primary)] text-[15px] text-left transition-colors", children: [
@@ -31902,7 +31917,7 @@ const o4 = ({ onBack: S, settings: j }) => {
                   " 设置背景"
                 ] })
               ] }),
-              J === "moments" && /* @__PURE__ */ h.jsxs(h.Fragment, { children: [
+              k === "moments" && /* @__PURE__ */ h.jsxs(h.Fragment, { children: [
                 /* @__PURE__ */ h.jsxs("button", { onClick: () => {
                   U("publishMoment"), Q(!1);
                 }, className: "flex items-center gap-3 px-4 py-3 hover:bg-[var(--bubble-bg)] text-[var(--text-primary)] text-[15px] text-left transition-colors", children: [
@@ -31929,7 +31944,7 @@ const o4 = ({ onBack: S, settings: j }) => {
                   " 动态设置"
                 ] })
               ] }),
-              J === "notifications" && /* @__PURE__ */ h.jsxs(h.Fragment, { children: [
+              k === "notifications" && /* @__PURE__ */ h.jsxs(h.Fragment, { children: [
                 /* @__PURE__ */ h.jsxs("button", { onClick: () => {
                   U("writeEmail"), Q(!1);
                 }, className: "flex items-center gap-3 px-4 py-3 hover:bg-[var(--bubble-bg)] text-[var(--text-primary)] text-[15px] text-left transition-colors", children: [
@@ -31967,8 +31982,8 @@ const o4 = ({ onBack: S, settings: j }) => {
         ] })
       ] })
     ] }),
-    J === "chat" && /* @__PURE__ */ h.jsxs("div", { className: "flex-1 overflow-y-auto p-2 space-y-1 relative z-10", children: [
-      I.map((D) => /* @__PURE__ */ h.jsxs(
+    k === "chat" && /* @__PURE__ */ h.jsxs("div", { className: "flex-1 overflow-y-auto p-2 space-y-1 relative z-10", children: [
+      F.map((D) => /* @__PURE__ */ h.jsxs(
         "div",
         {
           onClick: () => Be(D.id),
@@ -31990,21 +32005,21 @@ const o4 = ({ onBack: S, settings: j }) => {
         },
         D.id
       )),
-      I.length === 0 && /* @__PURE__ */ h.jsxs("div", { className: "flex flex-col items-center justify-center h-full text-[var(--text-secondary)] opacity-50", children: [
+      F.length === 0 && /* @__PURE__ */ h.jsxs("div", { className: "flex flex-col items-center justify-center h-full text-[var(--text-secondary)] opacity-50", children: [
         /* @__PURE__ */ h.jsx(B1, { size: 48, className: "mb-4" }),
         /* @__PURE__ */ h.jsx("p", { className: "tracking-widest", children: "暂无联系人" })
       ] })
     ] }),
-    J === "moments" && /* @__PURE__ */ h.jsx(e4, { actionType: le, setActionType: U }),
-    J === "notifications" && /* @__PURE__ */ h.jsx(l4, { actionType: le, setActionType: U }),
+    k === "moments" && /* @__PURE__ */ h.jsx(a4, { actionType: le, setActionType: U }),
+    k === "notifications" && /* @__PURE__ */ h.jsx(u4, { actionType: le, setActionType: U }),
     /* @__PURE__ */ h.jsxs("div", { className: "flex items-center justify-around py-3 border-t border-[var(--wireframe)] bg-[var(--bubble-bg)] shrink-0 pb-4 sm:pb-3 relative z-10", children: [
       /* @__PURE__ */ h.jsxs(
         "button",
         {
           onClick: () => E("chat"),
-          className: `flex flex-col items-center gap-1 flex-1 transition-colors ${J === "chat" ? "text-[var(--accent-color)]" : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"}`,
+          className: `flex flex-col items-center gap-1 flex-1 transition-colors ${k === "chat" ? "text-[var(--accent-color)]" : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"}`,
           children: [
-            /* @__PURE__ */ h.jsx(B1, { size: 22, className: J === "chat" ? "fill-[var(--accent-color)]/20" : "" }),
+            /* @__PURE__ */ h.jsx(B1, { size: 22, className: k === "chat" ? "fill-[var(--accent-color)]/20" : "" }),
             /* @__PURE__ */ h.jsx("span", { className: "text-[10px] tracking-widest", children: "私聊" })
           ]
         }
@@ -32013,9 +32028,9 @@ const o4 = ({ onBack: S, settings: j }) => {
         "button",
         {
           onClick: () => E("moments"),
-          className: `flex flex-col items-center gap-1 flex-1 transition-colors ${J === "moments" ? "text-[var(--accent-color)]" : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"}`,
+          className: `flex flex-col items-center gap-1 flex-1 transition-colors ${k === "moments" ? "text-[var(--accent-color)]" : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"}`,
           children: [
-            /* @__PURE__ */ h.jsx(I3, { size: 22, className: J === "moments" ? "fill-[var(--accent-color)]/20" : "" }),
+            /* @__PURE__ */ h.jsx(I3, { size: 22, className: k === "moments" ? "fill-[var(--accent-color)]/20" : "" }),
             /* @__PURE__ */ h.jsx("span", { className: "text-[10px] tracking-widest", children: "星网动态" })
           ]
         }
@@ -32024,9 +32039,9 @@ const o4 = ({ onBack: S, settings: j }) => {
         "button",
         {
           onClick: () => E("notifications"),
-          className: `flex flex-col items-center gap-1 flex-1 transition-colors ${J === "notifications" ? "text-[var(--accent-color)]" : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"}`,
+          className: `flex flex-col items-center gap-1 flex-1 transition-colors ${k === "notifications" ? "text-[var(--accent-color)]" : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"}`,
           children: [
-            /* @__PURE__ */ h.jsx(S3, { size: 22, className: J === "notifications" ? "fill-[var(--accent-color)]/20" : "" }),
+            /* @__PURE__ */ h.jsx(S3, { size: 22, className: k === "notifications" ? "fill-[var(--accent-color)]/20" : "" }),
             /* @__PURE__ */ h.jsx("span", { className: "text-[10px] tracking-widest", children: "通知" })
           ]
         }
@@ -32064,11 +32079,11 @@ const o4 = ({ onBack: S, settings: j }) => {
                     const ce = (Ae = D.target.files) == null ? void 0 : Ae[0];
                     if (ce) {
                       try {
-                        const He = await ce.text(), x = JSON.parse(He), Y = n4(x);
+                        const He = await ce.text(), x = JSON.parse(He), Y = i4(x);
                         if (Y) {
-                          u4(Y), q(ud());
+                          c4(Y), q(ud());
                           const se = await mS();
-                          F(se), nt(Y.name), alert(`✓ 成功导入角色：${Y.name}`);
+                          I(se), nt(Y.name), alert(`✓ 成功导入角色：${Y.name}`);
                         } else
                           alert("无法识别此文件，请确认是 SillyTavern 格式的角色卡 JSON。");
                       } catch {
@@ -32128,7 +32143,7 @@ const o4 = ({ onBack: S, settings: j }) => {
             className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded p-3 text-[var(--text-primary)] outline-none focus:border-[var(--accent-color)] transition-colors [&>option]:bg-[var(--bg-base)]",
             children: [
               /* @__PURE__ */ h.jsx("option", { value: "", disabled: !0, children: "选择一个好友" }),
-              I.filter((D) => D.type === "user").map((D) => /* @__PURE__ */ h.jsx("option", { value: D.id, children: D.name }, D.id))
+              F.filter((D) => D.type === "user").map((D) => /* @__PURE__ */ h.jsx("option", { value: D.id, children: D.name }, D.id))
             ]
           }
         ),
@@ -32197,7 +32212,7 @@ const o4 = ({ onBack: S, settings: j }) => {
             "button",
             {
               onClick: () => {
-                i4(D.name), q(ud());
+                o4(D.name), q(ud());
               },
               className: "text-rose-400 hover:text-rose-300 shrink-0 p-1",
               children: /* @__PURE__ */ h.jsx(Ov, { size: 16 })
@@ -32208,14 +32223,14 @@ const o4 = ({ onBack: S, settings: j }) => {
       /* @__PURE__ */ h.jsx("p", { className: "text-[10px] text-[var(--text-secondary)] text-center", children: "删除角色卡不影响已添加的联系人" })
     ] }) })
   ] });
-}, r4 = ({ onLock: S, toggleTheme: j, isDarkMode: J }) => {
-  const [E, I] = de.useState(null), [re, pe] = de.useState(/* @__PURE__ */ new Date()), [ee, ne] = de.useState(!1), [Q, le] = de.useState(!1), [U, M] = de.useState(!1), [ue, be] = de.useState("idle"), [Be, Ne] = de.useState([]), [De, Tt] = de.useState(!1), [F, Ye] = de.useState(Je.getGlobalSettings()), [nt, W] = de.useState(Je.getPromptTemplates());
+}, f4 = ({ onLock: S, toggleTheme: j, isDarkMode: k }) => {
+  const [E, F] = de.useState(null), [re, he] = de.useState(/* @__PURE__ */ new Date()), [ee, ne] = de.useState(!1), [Q, le] = de.useState(!1), [U, M] = de.useState(!1), [ue, be] = de.useState("idle"), [Be, Ne] = de.useState([]), [De, Tt] = de.useState(!1), [I, Ye] = de.useState(Je.getGlobalSettings()), [nt, W] = de.useState(Je.getPromptTemplates());
   de.useEffect(() => {
-    Je.saveGlobalSettings(F);
-  }, [F]), de.useEffect(() => {
+    Je.saveGlobalSettings(I);
+  }, [I]), de.useEffect(() => {
     Je.savePromptTemplates(nt);
   }, [nt]), de.useEffect(() => {
-    const X = setInterval(() => pe(/* @__PURE__ */ new Date()), 1e3);
+    const X = setInterval(() => he(/* @__PURE__ */ new Date()), 1e3);
     return () => clearInterval(X);
   }, []), de.useEffect(() => {
     const X = () => {
@@ -32223,12 +32238,12 @@ const o4 = ({ onBack: S, settings: j }) => {
     };
     return window.addEventListener("settingsUpdated", X), () => window.removeEventListener("settingsUpdated", X);
   }, []), de.useEffect(() => {
-    if (F.customFontUrl) {
+    if (I.customFontUrl) {
       const X = document.createElement("style");
       X.id = "custom-font-style", X.appendChild(document.createTextNode(`
         @font-face {
           font-family: 'CustomFont';
-          src: url('${F.customFontUrl}');
+          src: url('${I.customFontUrl}');
         }
         :root {
           --custom-font: 'CustomFont', "PingFang SC", "Microsoft YaHei", "Outfit", "Noto Sans SC", sans-serif;
@@ -32240,16 +32255,16 @@ const o4 = ({ onBack: S, settings: j }) => {
       const X = document.getElementById("custom-font-style");
       X && document.head.removeChild(X);
     }
-  }, [F.customFontUrl]);
+  }, [I.customFontUrl]);
   const q = (X, je) => {
-    I({ title: X, desc: je });
+    F({ title: X, desc: je });
   }, Me = async () => {
     be("testing");
     try {
-      if (F.apiMode === "custom" && F.customApiUrl) {
-        const X = await fetch(`${F.customApiUrl}/models`, {
+      if (I.apiMode === "custom" && I.customApiUrl) {
+        const X = await fetch(`${I.customApiUrl}/models`, {
           headers: {
-            Authorization: `Bearer ${F.customApiKey}`
+            Authorization: `Bearer ${I.customApiKey}`
           }
         });
         if (X.ok) {
@@ -32266,10 +32281,10 @@ const o4 = ({ onBack: S, settings: j }) => {
   }, Ge = async () => {
     Tt(!0);
     try {
-      if (F.apiMode === "custom" && F.customApiUrl) {
-        const X = await fetch(`${F.customApiUrl}/models`, {
+      if (I.apiMode === "custom" && I.customApiUrl) {
+        const X = await fetch(`${I.customApiUrl}/models`, {
           headers: {
-            Authorization: `Bearer ${F.customApiKey}`
+            Authorization: `Bearer ${I.customApiKey}`
           }
         });
         if (X.ok) {
@@ -32287,12 +32302,12 @@ const o4 = ({ onBack: S, settings: j }) => {
     "div",
     {
       className: "relative w-full h-screen flex items-center justify-center p-4 sm:p-8 overflow-hidden",
-      style: { fontSize: `${F.fontSizeScale}rem` },
+      style: { fontSize: `${I.fontSizeScale}rem` },
       children: [
         /* @__PURE__ */ h.jsx("div", { className: "bokeh bokeh-1" }),
         /* @__PURE__ */ h.jsx("div", { className: "bokeh bokeh-2" }),
         /* @__PURE__ */ h.jsx("div", { className: "scanlines" }),
-        (E == null ? void 0 : E.title) === "星网回路" ? /* @__PURE__ */ h.jsx("div", { className: "absolute inset-0 z-50 w-full h-full bg-[var(--bg-base)] animate-in slide-in-from-right duration-300", children: /* @__PURE__ */ h.jsx(o4, { onBack: () => I(null), settings: F }) }) : /* @__PURE__ */ h.jsxs("div", { className: "relative z-10 w-full max-w-6xl h-full max-h-[800px] glass-card rounded-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-500", children: [
+        (E == null ? void 0 : E.title) === "星网回路" ? /* @__PURE__ */ h.jsx("div", { className: "absolute inset-0 z-50 w-full h-full bg-[var(--bg-base)] animate-in slide-in-from-right duration-300", children: /* @__PURE__ */ h.jsx(s4, { onBack: () => F(null), settings: I }) }) : /* @__PURE__ */ h.jsxs("div", { className: "relative z-10 w-full max-w-6xl h-full max-h-[800px] glass-card rounded-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-500", children: [
           /* @__PURE__ */ h.jsxs("div", { className: "flex justify-between items-center p-4 border-b border-[var(--wireframe)] bg-[var(--bubble-bg)] shrink-0", children: [
             /* @__PURE__ */ h.jsxs("div", { className: "flex items-center gap-4 text-[var(--text-secondary)] font-mono text-sm", children: [
               /* @__PURE__ */ h.jsxs("span", { children: [
@@ -32310,7 +32325,7 @@ const o4 = ({ onBack: S, settings: j }) => {
             /* @__PURE__ */ h.jsxs("div", { className: "flex items-center gap-4 text-[var(--text-secondary)]", children: [
               /* @__PURE__ */ h.jsx("button", { onClick: () => le(!0), className: "hover:text-[var(--text-primary)] transition-colors", title: "API与模型设置", children: /* @__PURE__ */ h.jsx(bT, { size: 18 }) }),
               /* @__PURE__ */ h.jsx("button", { onClick: () => ne(!0), className: "hover:text-[var(--text-primary)] transition-colors", title: "系统设置", children: /* @__PURE__ */ h.jsx(ob, { size: 18 }) }),
-              /* @__PURE__ */ h.jsx("button", { onClick: j, className: "hover:text-[var(--text-primary)] transition-colors text-xs border border-[var(--wireframe)] px-2 py-1 rounded", children: J ? "LIGHT" : "DARK" }),
+              /* @__PURE__ */ h.jsx("button", { onClick: j, className: "hover:text-[var(--text-primary)] transition-colors text-xs border border-[var(--wireframe)] px-2 py-1 rounded", children: k ? "LIGHT" : "DARK" }),
               /* @__PURE__ */ h.jsx(LT, { size: 16 }),
               /* @__PURE__ */ h.jsx(b3, { size: 16 }),
               /* @__PURE__ */ h.jsx("button", { onClick: S, className: "hover:text-[var(--accent-color)] transition-colors ml-2", children: /* @__PURE__ */ h.jsx(ys, { size: 20 }) })
@@ -32319,10 +32334,10 @@ const o4 = ({ onBack: S, settings: j }) => {
           /* @__PURE__ */ h.jsx("div", { className: "flex-1 p-6 overflow-y-auto", children: /* @__PURE__ */ h.jsxs("div", { className: "grid grid-cols-1 md:grid-cols-12 gap-6 min-h-full", children: [
             /* @__PURE__ */ h.jsxs("div", { className: "md:col-span-3 flex flex-col gap-6", children: [
               /* @__PURE__ */ h.jsxs("div", { className: "glass-card p-6 flex flex-col items-center text-center clip-corner shrink-0 relative overflow-hidden", children: [
-                F.profileBgUrl && /* @__PURE__ */ h.jsx(
+                I.profileBgUrl && /* @__PURE__ */ h.jsx(
                   "img",
                   {
-                    src: F.profileBgUrl,
+                    src: I.profileBgUrl,
                     alt: "Profile Background",
                     className: "absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-luminosity pointer-events-none",
                     referrerPolicy: "no-referrer"
@@ -32332,7 +32347,7 @@ const o4 = ({ onBack: S, settings: j }) => {
                   /* @__PURE__ */ h.jsx(
                     "img",
                     {
-                      src: F.avatarUrl || void 0,
+                      src: I.avatarUrl || void 0,
                       alt: "Avatar",
                       className: "w-full h-full rounded-full object-cover",
                       referrerPolicy: "no-referrer"
@@ -32341,8 +32356,8 @@ const o4 = ({ onBack: S, settings: j }) => {
                   /* @__PURE__ */ h.jsx("div", { className: "absolute bottom-0 right-0 w-4 h-4 bg-emerald-400 rounded-full border-2 border-[var(--card-bg)]" })
                 ] }),
                 /* @__PURE__ */ h.jsxs("div", { className: "cursor-pointer group relative z-10 flex flex-col items-center", onClick: () => M(!0), children: [
-                  /* @__PURE__ */ h.jsx("h2", { className: "text-xl text-[var(--text-primary)] font-light tracking-widest mb-1 group-hover:text-[var(--accent-color)] transition-colors", children: F.userName }),
-                  /* @__PURE__ */ h.jsx("div", { className: "text-xs border border-[var(--wireframe)] px-2 py-1 text-[var(--accent-color)] rounded-sm group-hover:border-[var(--accent-color)] transition-colors", children: F.tag })
+                  /* @__PURE__ */ h.jsx("h2", { className: "text-xl text-[var(--text-primary)] font-light tracking-widest mb-1 group-hover:text-[var(--accent-color)] transition-colors", children: I.userName }),
+                  /* @__PURE__ */ h.jsx("div", { className: "text-xs border border-[var(--wireframe)] px-2 py-1 text-[var(--accent-color)] rounded-sm group-hover:border-[var(--accent-color)] transition-colors", children: I.tag })
                 ] })
               ] }),
               /* @__PURE__ */ h.jsxs(
@@ -32351,7 +32366,7 @@ const o4 = ({ onBack: S, settings: j }) => {
                   onClick: () => q("即达", "购物消费与物资运输网络"),
                   className: "glass-card w-full h-32 md:flex-1 flex flex-col items-center justify-center gap-2 group hover:bg-[var(--bubble-bg)] transition-all clip-corner-br shrink-0 relative overflow-hidden",
                   children: [
-                    F.moduleBgs.即达 && /* @__PURE__ */ h.jsx("img", { src: F.moduleBgs.即达, alt: "bg", className: "absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500 mix-blend-luminosity", referrerPolicy: "no-referrer" }),
+                    I.moduleBgs.即达 && /* @__PURE__ */ h.jsx("img", { src: I.moduleBgs.即达, alt: "bg", className: "absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500 mix-blend-luminosity", referrerPolicy: "no-referrer" }),
                     /* @__PURE__ */ h.jsxs("div", { className: "relative z-10 flex flex-col items-center justify-center gap-2", children: [
                       /* @__PURE__ */ h.jsx(pT, { className: "text-[var(--accent-color)]", size: 24 }),
                       /* @__PURE__ */ h.jsx("span", { className: "text-2xl text-[var(--text-primary)] tracking-widest font-light text-glow mt-2", children: "即达" })
@@ -32367,10 +32382,10 @@ const o4 = ({ onBack: S, settings: j }) => {
                   onClick: () => q("星网回路", "跨星系加密量子通讯网络"),
                   className: "glass-card w-full h-48 md:flex-1 relative overflow-hidden group clip-corner shrink-0",
                   children: [
-                    F.moduleBgs.星网回路 && /* @__PURE__ */ h.jsx(
+                    I.moduleBgs.星网回路 && /* @__PURE__ */ h.jsx(
                       "img",
                       {
-                        src: F.moduleBgs.星网回路,
+                        src: I.moduleBgs.星网回路,
                         alt: "Communication",
                         className: "absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500 mix-blend-luminosity",
                         referrerPolicy: "no-referrer"
@@ -32391,7 +32406,7 @@ const o4 = ({ onBack: S, settings: j }) => {
                     onClick: () => q("轨迹管理", "日常任务与行程安排规划"),
                     className: "glass-card flex items-center justify-center gap-3 group hover:bg-[var(--bubble-bg)] clip-corner-br relative overflow-hidden",
                     children: [
-                      F.moduleBgs.轨迹管理 && /* @__PURE__ */ h.jsx("img", { src: F.moduleBgs.轨迹管理, alt: "bg", className: "absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500 mix-blend-luminosity", referrerPolicy: "no-referrer" }),
+                      I.moduleBgs.轨迹管理 && /* @__PURE__ */ h.jsx("img", { src: I.moduleBgs.轨迹管理, alt: "bg", className: "absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500 mix-blend-luminosity", referrerPolicy: "no-referrer" }),
                       /* @__PURE__ */ h.jsxs("div", { className: "relative z-10 flex items-center gap-3", children: [
                         /* @__PURE__ */ h.jsx(j3, { className: "text-[var(--accent-color)] group-hover:scale-110 transition-transform", size: 20 }),
                         /* @__PURE__ */ h.jsx("span", { className: "text-lg sm:text-xl text-[var(--text-primary)] tracking-widest font-light text-glow whitespace-nowrap", children: "轨迹管理" })
@@ -32405,7 +32420,7 @@ const o4 = ({ onBack: S, settings: j }) => {
                     onClick: () => q("记忆锚点", "个人备忘录与记事簿系统"),
                     className: "glass-card flex items-center justify-center gap-3 group hover:bg-[var(--bubble-bg)] clip-corner relative overflow-hidden",
                     children: [
-                      F.moduleBgs.记忆锚点 && /* @__PURE__ */ h.jsx("img", { src: F.moduleBgs.记忆锚点, alt: "bg", className: "absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500 mix-blend-luminosity", referrerPolicy: "no-referrer" }),
+                      I.moduleBgs.记忆锚点 && /* @__PURE__ */ h.jsx("img", { src: I.moduleBgs.记忆锚点, alt: "bg", className: "absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500 mix-blend-luminosity", referrerPolicy: "no-referrer" }),
                       /* @__PURE__ */ h.jsxs("div", { className: "relative z-10 flex items-center gap-3", children: [
                         /* @__PURE__ */ h.jsx(z3, { className: "text-[var(--accent-color)] group-hover:scale-110 transition-transform", size: 20 }),
                         /* @__PURE__ */ h.jsx("span", { className: "text-lg sm:text-xl text-[var(--text-primary)] tracking-widest font-light text-glow whitespace-nowrap", children: "记忆锚点" })
@@ -32422,7 +32437,7 @@ const o4 = ({ onBack: S, settings: j }) => {
                   onClick: () => q("远程视域", "全息网络直播与沉浸式媒体"),
                   className: "glass-card col-span-2 row-span-1 flex items-center justify-between p-6 group hover:bg-[var(--bubble-bg)] clip-corner shrink-0 min-h-[100px] relative overflow-hidden",
                   children: [
-                    F.moduleBgs.远程视域 && /* @__PURE__ */ h.jsx("img", { src: F.moduleBgs.远程视域, alt: "bg", className: "absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500 mix-blend-luminosity", referrerPolicy: "no-referrer" }),
+                    I.moduleBgs.远程视域 && /* @__PURE__ */ h.jsx("img", { src: I.moduleBgs.远程视域, alt: "bg", className: "absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500 mix-blend-luminosity", referrerPolicy: "no-referrer" }),
                     /* @__PURE__ */ h.jsxs("div", { className: "relative z-10 flex items-center justify-between w-full", children: [
                       /* @__PURE__ */ h.jsx(O3, { className: "text-[var(--accent-color)]", size: 24 }),
                       /* @__PURE__ */ h.jsx("span", { className: "text-2xl text-[var(--text-primary)] tracking-widest font-light text-glow", children: "远程视域" })
@@ -32436,7 +32451,7 @@ const o4 = ({ onBack: S, settings: j }) => {
                   onClick: () => q("星网索引", "全星系浏览器与信息查询"),
                   className: "glass-card col-span-1 row-span-2 flex flex-col items-center justify-center gap-4 group hover:bg-[var(--bubble-bg)] clip-corner-br shrink-0 min-h-[160px] relative overflow-hidden",
                   children: [
-                    F.moduleBgs.星网索引 && /* @__PURE__ */ h.jsx("img", { src: F.moduleBgs.星网索引, alt: "bg", className: "absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500 mix-blend-luminosity", referrerPolicy: "no-referrer" }),
+                    I.moduleBgs.星网索引 && /* @__PURE__ */ h.jsx("img", { src: I.moduleBgs.星网索引, alt: "bg", className: "absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500 mix-blend-luminosity", referrerPolicy: "no-referrer" }),
                     /* @__PURE__ */ h.jsxs("div", { className: "relative z-10 flex flex-col items-center justify-center gap-4", children: [
                       /* @__PURE__ */ h.jsx(TS, { className: "text-[var(--accent-color)] group-hover:animate-pulse", size: 28 }),
                       /* @__PURE__ */ h.jsx("span", { className: "text-2xl text-[var(--text-primary)] tracking-widest font-light text-glow", style: { writingMode: "vertical-rl" }, children: "星网索引" })
@@ -32450,10 +32465,10 @@ const o4 = ({ onBack: S, settings: j }) => {
                   onClick: () => q("星途", "星际地图导航与交通出行"),
                   className: "glass-card col-span-1 row-span-2 relative overflow-hidden group clip-corner shrink-0 min-h-[160px]",
                   children: [
-                    F.moduleBgs.星途 && /* @__PURE__ */ h.jsx(
+                    I.moduleBgs.星途 && /* @__PURE__ */ h.jsx(
                       "img",
                       {
-                        src: F.moduleBgs.星途,
+                        src: I.moduleBgs.星途,
                         alt: "Navigation",
                         className: "absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500 mix-blend-luminosity",
                         referrerPolicy: "no-referrer"
@@ -32474,7 +32489,7 @@ const o4 = ({ onBack: S, settings: j }) => {
           nb,
           {
             isOpen: !0,
-            onClose: () => I(null),
+            onClose: () => F(null),
             title: E.title,
             children: /* @__PURE__ */ h.jsxs("div", { className: "flex flex-col items-center justify-center py-16 text-center", children: [
               /* @__PURE__ */ h.jsx("div", { className: "w-16 h-16 rounded-full border border-[var(--wireframe)] flex items-center justify-center mb-6 animate-pulse", children: /* @__PURE__ */ h.jsx("div", { className: "w-8 h-8 bg-[var(--accent-color)] rounded-full opacity-50" }) }),
@@ -32503,12 +32518,12 @@ const o4 = ({ onBack: S, settings: j }) => {
                 /* @__PURE__ */ h.jsx("h4", { className: "text-sm font-bold tracking-widest border-b border-[var(--wireframe)] pb-2", children: "外观设置" }),
                 /* @__PURE__ */ h.jsxs("div", { children: [
                   /* @__PURE__ */ h.jsx("label", { className: "block text-xs text-[var(--text-secondary)] mb-1", children: "自定义字体 URL (TTF/WOFF)" }),
-                  /* @__PURE__ */ h.jsx("input", { type: "text", value: F.customFontUrl, onChange: (X) => Ye({ ...F, customFontUrl: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]", placeholder: "留空使用默认字体" })
+                  /* @__PURE__ */ h.jsx("input", { type: "text", value: I.customFontUrl, onChange: (X) => Ye({ ...I, customFontUrl: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]", placeholder: "留空使用默认字体" })
                 ] }),
                 /* @__PURE__ */ h.jsxs("div", { children: [
                   /* @__PURE__ */ h.jsxs("label", { className: "block text-xs text-[var(--text-secondary)] mb-1", children: [
                     "全局字体大小缩放 (",
-                    F.fontSizeScale,
+                    I.fontSizeScale,
                     "x)"
                   ] }),
                   /* @__PURE__ */ h.jsx(
@@ -32518,8 +32533,8 @@ const o4 = ({ onBack: S, settings: j }) => {
                       min: "0.8",
                       max: "1.5",
                       step: "0.05",
-                      value: F.fontSizeScale,
-                      onChange: (X) => Ye({ ...F, fontSizeScale: parseFloat(X.target.value) }),
+                      value: I.fontSizeScale,
+                      onChange: (X) => Ye({ ...I, fontSizeScale: parseFloat(X.target.value) }),
                       className: "w-full accent-[var(--accent-color)]"
                     }
                   )
@@ -32527,16 +32542,16 @@ const o4 = ({ onBack: S, settings: j }) => {
               ] }),
               /* @__PURE__ */ h.jsxs("div", { className: "space-y-4", children: [
                 /* @__PURE__ */ h.jsx("h4", { className: "text-sm font-bold tracking-widest border-b border-[var(--wireframe)] pb-2", children: "模块背景图 (URL)" }),
-                Object.keys(F.moduleBgs).map((X) => /* @__PURE__ */ h.jsxs("div", { children: [
+                Object.keys(I.moduleBgs).map((X) => /* @__PURE__ */ h.jsxs("div", { children: [
                   /* @__PURE__ */ h.jsx("label", { className: "block text-xs text-[var(--text-secondary)] mb-1", children: X }),
                   /* @__PURE__ */ h.jsx(
                     "input",
                     {
                       type: "text",
-                      value: F.moduleBgs[X],
+                      value: I.moduleBgs[X],
                       onChange: (je) => Ye({
-                        ...F,
-                        moduleBgs: { ...F.moduleBgs, [X]: je.target.value }
+                        ...I,
+                        moduleBgs: { ...I.moduleBgs, [X]: je.target.value }
                       }),
                       className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]",
                       placeholder: "留空则无背景"
@@ -32556,27 +32571,27 @@ const o4 = ({ onBack: S, settings: j }) => {
             children: /* @__PURE__ */ h.jsx("div", { className: "flex flex-col gap-6 py-4 text-[var(--text-primary)] max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar", children: /* @__PURE__ */ h.jsxs("div", { className: "space-y-4", children: [
               /* @__PURE__ */ h.jsxs("div", { children: [
                 /* @__PURE__ */ h.jsx("label", { className: "block text-xs text-[var(--text-secondary)] mb-1", children: "名称" }),
-                /* @__PURE__ */ h.jsx("input", { type: "text", value: F.userName, onChange: (X) => Ye({ ...F, userName: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]" })
+                /* @__PURE__ */ h.jsx("input", { type: "text", value: I.userName, onChange: (X) => Ye({ ...I, userName: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]" })
               ] }),
               /* @__PURE__ */ h.jsxs("div", { children: [
                 /* @__PURE__ */ h.jsx("label", { className: "block text-xs text-[var(--text-secondary)] mb-1", children: "标签" }),
-                /* @__PURE__ */ h.jsx("input", { type: "text", value: F.tag, onChange: (X) => Ye({ ...F, tag: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]" })
+                /* @__PURE__ */ h.jsx("input", { type: "text", value: I.tag, onChange: (X) => Ye({ ...I, tag: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]" })
               ] }),
               /* @__PURE__ */ h.jsxs("div", { children: [
                 /* @__PURE__ */ h.jsx("label", { className: "block text-xs text-[var(--text-secondary)] mb-1", children: "头像 URL" }),
-                /* @__PURE__ */ h.jsx("input", { type: "text", value: F.avatarUrl, onChange: (X) => Ye({ ...F, avatarUrl: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]" })
+                /* @__PURE__ */ h.jsx("input", { type: "text", value: I.avatarUrl, onChange: (X) => Ye({ ...I, avatarUrl: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]" })
               ] }),
               /* @__PURE__ */ h.jsxs("div", { children: [
                 /* @__PURE__ */ h.jsx("label", { className: "block text-xs text-[var(--text-secondary)] mb-1", children: "头像背景图 URL" }),
-                /* @__PURE__ */ h.jsx("input", { type: "text", value: F.profileBgUrl, onChange: (X) => Ye({ ...F, profileBgUrl: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]", placeholder: "留空则无背景" })
+                /* @__PURE__ */ h.jsx("input", { type: "text", value: I.profileBgUrl, onChange: (X) => Ye({ ...I, profileBgUrl: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]", placeholder: "留空则无背景" })
               ] }),
               /* @__PURE__ */ h.jsxs("div", { children: [
                 /* @__PURE__ */ h.jsx("label", { className: "block text-xs text-[var(--text-secondary)] mb-1", children: "详细人设 (User Persona)" }),
                 /* @__PURE__ */ h.jsx(
                   "textarea",
                   {
-                    value: F.userPersona || "",
-                    onChange: (X) => Ye({ ...F, userPersona: X.target.value }),
+                    value: I.userPersona || "",
+                    onChange: (X) => Ye({ ...I, userPersona: X.target.value }),
                     className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)] min-h-[100px] resize-y",
                     placeholder: "描述你的身份、性格、背景等，AI将根据此设定与你交互..."
                   }
@@ -32595,47 +32610,47 @@ const o4 = ({ onBack: S, settings: j }) => {
               /* @__PURE__ */ h.jsx("h4", { className: "text-sm font-bold tracking-widest border-b border-[var(--wireframe)] pb-2", children: "API 连接" }),
               /* @__PURE__ */ h.jsxs("div", { className: "flex gap-4", children: [
                 /* @__PURE__ */ h.jsxs("label", { className: "flex items-center gap-2 cursor-pointer", children: [
-                  /* @__PURE__ */ h.jsx("input", { type: "radio", name: "apiMode", value: "gemini", checked: F.apiMode === "gemini", onChange: (X) => Ye({ ...F, apiMode: X.target.value }), className: "accent-[var(--accent-color)]" }),
+                  /* @__PURE__ */ h.jsx("input", { type: "radio", name: "apiMode", value: "gemini", checked: I.apiMode === "gemini", onChange: (X) => Ye({ ...I, apiMode: X.target.value }), className: "accent-[var(--accent-color)]" }),
                   /* @__PURE__ */ h.jsx("span", { className: "text-sm", children: "使用当前API (Gemini)" })
                 ] }),
                 /* @__PURE__ */ h.jsxs("label", { className: "flex items-center gap-2 cursor-pointer", children: [
-                  /* @__PURE__ */ h.jsx("input", { type: "radio", name: "apiMode", value: "custom", checked: F.apiMode === "custom", onChange: (X) => Ye({ ...F, apiMode: X.target.value }), className: "accent-[var(--accent-color)]" }),
+                  /* @__PURE__ */ h.jsx("input", { type: "radio", name: "apiMode", value: "custom", checked: I.apiMode === "custom", onChange: (X) => Ye({ ...I, apiMode: X.target.value }), className: "accent-[var(--accent-color)]" }),
                   /* @__PURE__ */ h.jsx("span", { className: "text-sm", children: "自定义API" })
                 ] })
               ] }),
-              F.apiMode === "custom" && /* @__PURE__ */ h.jsxs("div", { className: "space-y-3 pl-4 border-l-2 border-[var(--wireframe)]", children: [
-                F.apiPresets && F.apiPresets.length > 0 && /* @__PURE__ */ h.jsxs("div", { className: "mb-4", children: [
+              I.apiMode === "custom" && /* @__PURE__ */ h.jsxs("div", { className: "space-y-3 pl-4 border-l-2 border-[var(--wireframe)]", children: [
+                I.apiPresets && I.apiPresets.length > 0 && /* @__PURE__ */ h.jsxs("div", { className: "mb-4", children: [
                   /* @__PURE__ */ h.jsx("label", { className: "block text-xs text-[var(--text-secondary)] mb-1", children: "预设配置" }),
                   /* @__PURE__ */ h.jsxs(
                     "select",
                     {
                       onChange: (X) => {
                         var ve;
-                        const je = (ve = F.apiPresets) == null ? void 0 : ve.find((qe) => qe.id === X.target.value);
-                        je && Ye({ ...F, customApiUrl: je.url, customApiKey: je.key });
+                        const je = (ve = I.apiPresets) == null ? void 0 : ve.find((qe) => qe.id === X.target.value);
+                        je && Ye({ ...I, customApiUrl: je.url, customApiKey: je.key });
                       },
                       className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]",
                       children: [
                         /* @__PURE__ */ h.jsx("option", { value: "", children: "选择预设..." }),
-                        F.apiPresets.map((X) => /* @__PURE__ */ h.jsx("option", { value: X.id, children: X.name }, X.id))
+                        I.apiPresets.map((X) => /* @__PURE__ */ h.jsx("option", { value: X.id, children: X.name }, X.id))
                       ]
                     }
                   )
                 ] }),
                 /* @__PURE__ */ h.jsxs("div", { children: [
                   /* @__PURE__ */ h.jsx("label", { className: "block text-xs text-[var(--text-secondary)] mb-1", children: "API 地址" }),
-                  /* @__PURE__ */ h.jsx("input", { type: "text", value: F.customApiUrl, onChange: (X) => Ye({ ...F, customApiUrl: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]", placeholder: "例如: https://api.openai.com/v1" })
+                  /* @__PURE__ */ h.jsx("input", { type: "text", value: I.customApiUrl, onChange: (X) => Ye({ ...I, customApiUrl: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]", placeholder: "例如: https://api.openai.com/v1" })
                 ] }),
                 /* @__PURE__ */ h.jsxs("div", { children: [
                   /* @__PURE__ */ h.jsx("label", { className: "block text-xs text-[var(--text-secondary)] mb-1", children: "API Key" }),
-                  /* @__PURE__ */ h.jsx("input", { type: "password", value: F.customApiKey, onChange: (X) => Ye({ ...F, customApiKey: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]" })
+                  /* @__PURE__ */ h.jsx("input", { type: "password", value: I.customApiKey, onChange: (X) => Ye({ ...I, customApiKey: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]" })
                 ] }),
                 /* @__PURE__ */ h.jsxs("div", { className: "flex gap-2 mt-2", children: [
                   /* @__PURE__ */ h.jsx(
                     "button",
                     {
                       onClick: Me,
-                      disabled: ue === "testing" || !F.customApiUrl || !F.customApiKey,
+                      disabled: ue === "testing" || !I.customApiUrl || !I.customApiKey,
                       className: "flex-1 flex items-center justify-center gap-2 bg-[var(--bubble-bg)] border border-[var(--wireframe)] hover:border-[var(--accent-color)] rounded px-3 py-1.5 text-xs transition-colors disabled:opacity-50",
                       children: ue === "testing" ? /* @__PURE__ */ h.jsx(q1, { size: 14, className: "animate-spin" }) : "测试连接"
                     }
@@ -32645,21 +32660,21 @@ const o4 = ({ onBack: S, settings: j }) => {
                     {
                       onClick: () => {
                         var je;
-                        const X = prompt("请输入预设名称:", ((je = F.customApiUrl) == null ? void 0 : je.substring(0, 15)) || "New Preset");
+                        const X = prompt("请输入预设名称:", ((je = I.customApiUrl) == null ? void 0 : je.substring(0, 15)) || "New Preset");
                         if (X) {
                           const ve = {
                             id: Date.now().toString(),
                             name: X,
-                            url: F.customApiUrl || "",
-                            key: F.customApiKey || ""
+                            url: I.customApiUrl || "",
+                            key: I.customApiKey || ""
                           };
                           Ye({
-                            ...F,
-                            apiPresets: [...F.apiPresets || [], ve]
+                            ...I,
+                            apiPresets: [...I.apiPresets || [], ve]
                           });
                         }
                       },
-                      disabled: !F.customApiUrl,
+                      disabled: !I.customApiUrl,
                       className: "flex-1 bg-[var(--bubble-bg)] border border-[var(--wireframe)] hover:border-[var(--accent-color)] rounded px-3 py-1.5 text-xs transition-colors disabled:opacity-50",
                       children: "保存为预设"
                     }
@@ -32676,20 +32691,20 @@ const o4 = ({ onBack: S, settings: j }) => {
                 /* @__PURE__ */ h.jsxs("div", { className: "pt-2 border-t border-[var(--wireframe)]", children: [
                   /* @__PURE__ */ h.jsxs("div", { className: "flex justify-between items-center mb-1", children: [
                     /* @__PURE__ */ h.jsx("label", { className: "block text-xs text-[var(--text-secondary)]", children: "模型名称" }),
-                    /* @__PURE__ */ h.jsx("button", { onClick: Ge, disabled: De || !F.customApiUrl, className: "text-xs text-[var(--accent-color)] hover:underline disabled:opacity-50", children: De ? "拉取中..." : "拉取模型列表" })
+                    /* @__PURE__ */ h.jsx("button", { onClick: Ge, disabled: De || !I.customApiUrl, className: "text-xs text-[var(--accent-color)] hover:underline disabled:opacity-50", children: De ? "拉取中..." : "拉取模型列表" })
                   ] }),
                   Be.length > 0 ? /* @__PURE__ */ h.jsxs(
                     "select",
                     {
-                      value: F.customApiModel,
-                      onChange: (X) => Ye({ ...F, customApiModel: X.target.value }),
+                      value: I.customApiModel,
+                      onChange: (X) => Ye({ ...I, customApiModel: X.target.value }),
                       className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]",
                       children: [
                         /* @__PURE__ */ h.jsx("option", { value: "", children: "选择模型..." }),
                         Be.map((X) => /* @__PURE__ */ h.jsx("option", { value: X, children: X }, X))
                       ]
                     }
-                  ) : /* @__PURE__ */ h.jsx("input", { type: "text", value: F.customApiModel, onChange: (X) => Ye({ ...F, customApiModel: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]", placeholder: "手动输入模型名称" })
+                  ) : /* @__PURE__ */ h.jsx("input", { type: "text", value: I.customApiModel, onChange: (X) => Ye({ ...I, customApiModel: X.target.value }), className: "w-full bg-[var(--bubble-bg)] border border-[var(--wireframe)] rounded px-3 py-2 text-sm outline-none focus:border-[var(--accent-color)]", placeholder: "手动输入模型名称" })
                 ] })
               ] })
             ] }) })
@@ -32699,18 +32714,18 @@ const o4 = ({ onBack: S, settings: j }) => {
     }
   );
 };
-function s4() {
-  const [S, j] = de.useState(!1), [J, E] = de.useState(!0);
+function d4() {
+  const [S, j] = de.useState(!1), [k, E] = de.useState(!0);
   de.useEffect(() => {
-    J ? (document.documentElement.classList.add("dark"), document.documentElement.setAttribute("data-theme", "dark")) : (document.documentElement.classList.remove("dark"), document.documentElement.removeAttribute("data-theme"));
-  }, [J]);
-  const I = () => E(!J);
+    k ? (document.documentElement.classList.add("dark"), document.documentElement.setAttribute("data-theme", "dark")) : (document.documentElement.classList.remove("dark"), document.documentElement.removeAttribute("data-theme"));
+  }, [k]);
+  const F = () => E(!k);
   return /* @__PURE__ */ h.jsx("div", { className: "min-h-screen w-full font-sans selection:bg-[var(--accent-color)] selection:text-white", children: S ? /* @__PURE__ */ h.jsx(
-    r4,
+    f4,
     {
       onLock: () => j(!1),
-      toggleTheme: I,
-      isDarkMode: J
+      toggleTheme: F,
+      isDarkMode: k
     }
   ) : /* @__PURE__ */ h.jsx(QT, { onUnlock: () => j(!0) }) });
 }
@@ -32725,7 +32740,7 @@ Dv.style.cssText = `
 `;
 document.body.appendChild(Dv);
 o3.createRoot(Dv).render(
-  /* @__PURE__ */ h.jsx(PE.StrictMode, { children: /* @__PURE__ */ h.jsx(s4, {}) })
+  /* @__PURE__ */ h.jsx(PE.StrictMode, { children: /* @__PURE__ */ h.jsx(d4, {}) })
 );
 const wn = document.createElement("button");
 wn.id = "st-terminal-btn";
