@@ -1,4 +1,3 @@
-import "@google/genai";
 function hS(S) {
   return S && S.__esModule && Object.prototype.hasOwnProperty.call(S, "default") ? S.default : S;
 }
@@ -30204,7 +30203,7 @@ async function Mv(S) {
   var J, E, I;
   const j = Je.getGlobalSettings();
   if (j.apiMode === "gemini")
-    throw new Error("GEMINI_API_KEY is not set");
+    throw new Error("Gemini 模式在酒馆扩展中不可用，请在设置中切换为自定义 API");
   if (j.apiMode === "custom" && j.customApiUrl) {
     const re = await fetch(`${j.customApiUrl}/chat/completions`, {
       method: "POST",
@@ -30225,10 +30224,10 @@ async function Mv(S) {
       })
     });
     if (!re.ok)
-      throw new Error(`Custom API error: ${re.statusText}`);
+      throw new Error(`API 错误: ${re.statusText}`);
     return ((I = (E = (J = (await re.json()).choices) == null ? void 0 : J[0]) == null ? void 0 : E.message) == null ? void 0 : I.content) || "";
   } else
-    throw new Error("API mode not supported or missing configuration");
+    throw new Error("请先在设置中配置 API");
 }
 const $T = ({ contact: S, onClose: j, onUpdateContact: J }) => {
   const [E, I] = de.useState(Je.getChatPrompt()), [re, pe] = de.useState(S.chatAiSettings || {
