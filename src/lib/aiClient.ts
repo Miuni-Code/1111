@@ -1,4 +1,3 @@
-import { GoogleGenAI } from '@google/genai';
 import { dataStore } from './dataStore';
 
 interface AiCallConfig {
@@ -8,46 +7,13 @@ interface AiCallConfig {
     content: string;
   }[];
   userInput: string;
-  customApi?: {
-    apiurl: string;
-    key: string;
-    model: string;
-  };
 }
 
 export async function callAI(config: AiCallConfig): Promise<string> {
   const settings = dataStore.getGlobalSettings();
   
   if (settings.apiMode === 'gemini') {
-    const apiKey = '';
-    if (!apiKey) {
-      throw new Error('GEMINI_API_KEY is not set');
-    }
-    
-    const ai = new GoogleGenAI({ apiKey });
-    
-    let contents: any[] = [];
-    if (config.chatHistory && config.chatHistory.length > 0) {
-      contents = config.chatHistory.map(msg => ({
-        role: msg.role === 'assistant' ? 'model' : 'user',
-        parts: [{ text: msg.content }]
-      }));
-    }
-    
-    contents.push({
-      role: 'user',
-      parts: [{ text: config.userInput }]
-    });
-
-    const response = await ai.models.generateContent({
-      model: 'gemini-3-flash-preview',
-      contents: contents,
-      config: {
-        systemInstruction: config.systemPrompt,
-      }
-    });
-    
-    return response.text || '';
+    throw new Error('Gemini 模式在酒馆扩展中不可用，请在设置中切换为自定义 API');
   } else if (settings.apiMode === 'custom' && settings.customApiUrl) {
     const response = await fetch(`${settings.customApiUrl}/chat/completions`, {
       method: 'POST',
@@ -69,12 +35,12 @@ export async function callAI(config: AiCallConfig): Promise<string> {
     });
     
     if (!response.ok) {
-      throw new Error(`Custom API error: ${response.statusText}`);
+      throw new Error(`API 错误: ${response.statusText}`);
     }
     
     const data = await response.json();
     return data.choices?.[0]?.message?.content || '';
   } else {
-    throw new Error('API mode not supported or missing configuration');
+    throw new Error('请先在设置中配置 API');
   }
 }
