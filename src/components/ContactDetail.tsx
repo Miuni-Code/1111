@@ -34,7 +34,7 @@ export const ContactDetail: React.FC<ContactDetailProps> = ({ contact, onClose, 
 
         <div className="flex flex-col items-center gap-4 py-4">
           <div className="w-24 h-24 rounded-full border-2 border-[var(--wireframe)] p-1 bg-[var(--card-bg)] relative">
-            <img src={(isEditing ? avatar || contact.avatar : contact.avatar) || undefined} alt={name} className="w-full h-full rounded-full object-cover" referrerPolicy="no-referrer" />
+            <img src={isEditing ? avatar || contact.avatar : contact.avatar} alt={name} className="w-full h-full rounded-full object-cover" referrerPolicy="no-referrer" />
           </div>
 
           {isEditing ? (

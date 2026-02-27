@@ -126,10 +126,10 @@ export const StarNetworkMoments: React.FC<StarNetworkMomentsProps> = ({ actionTy
         characterDescription: randomContact.description || '',
       });
       
-      const content = await callAI([
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: userInput }
-      ]);
+      const content = await callAI({
+        systemPrompt,
+        userInput
+      });
       
       if (content) {
         const newMoment: Moment = {
@@ -186,7 +186,7 @@ export const StarNetworkMoments: React.FC<StarNetworkMomentsProps> = ({ actionTy
           <span className="text-white text-lg font-medium mr-4 drop-shadow-md tracking-widest">{settings.userName}</span>
           <div className="w-20 h-20 rounded-xl border-2 border-[var(--bg-base)] bg-[var(--card-bg)] overflow-hidden shadow-lg">
             <img 
-              src={settings.avatarUrl || undefined} 
+              src={settings.avatarUrl} 
               alt="My Avatar" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
@@ -205,7 +205,7 @@ export const StarNetworkMoments: React.FC<StarNetworkMomentsProps> = ({ actionTy
           <div key={moment.id} className="flex gap-3 border-b border-[var(--wireframe)] pb-6 last:border-0">
             {/* Avatar */}
             <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-[var(--wireframe)]">
-              <img src={moment.avatar || undefined} alt={moment.author} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <img src={moment.avatar} alt={moment.author} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
             </div>
 
             {/* Content */}
@@ -215,7 +215,7 @@ export const StarNetworkMoments: React.FC<StarNetworkMomentsProps> = ({ actionTy
               
               {moment.image && (
                 <div className="mb-3 rounded-lg overflow-hidden border border-[var(--wireframe)] max-w-[80%]">
-                  <img src={moment.image || undefined} alt="Moment attachment" className="w-full h-auto object-cover" referrerPolicy="no-referrer" />
+                  <img src={moment.image} alt="Moment attachment" className="w-full h-auto object-cover" referrerPolicy="no-referrer" />
                 </div>
               )}
 

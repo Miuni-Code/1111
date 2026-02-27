@@ -8,7 +8,6 @@ export interface Contact {
   avatar: string;
   online: boolean;
   description?: string; // Character card description
-  stCharacter?: any; // Reference to SillyTavern character object
   chatAiSettings?: {
     systemPrompt: string;
     userPromptPrefix: string;

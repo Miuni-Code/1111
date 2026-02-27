@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { LockScreen } from './components/LockScreen';
 import { MainInterface } from './components/MainInterface';
 
@@ -9,18 +9,19 @@ export default function App() {
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
   return (
-    <div className={`w-full h-full font-sans selection:bg-[var(--accent-color)] selection:text-white relative overflow-hidden ${isDarkMode ? 'dark' : ''}`} data-theme={isDarkMode ? 'dark' : 'light'}>
-      <div className="absolute inset-0 bg-[var(--bg-base)] text-[var(--text-primary)] transition-colors duration-400">
-        {!isUnlocked ? (
-          <LockScreen onUnlock={() => setIsUnlocked(true)} />
-        ) : (
-          <MainInterface 
-            onLock={() => setIsUnlocked(false)} 
-            toggleTheme={toggleTheme}
-            isDarkMode={isDarkMode}
-          />
-        )}
-      </div>
+    <div 
+      className="min-h-screen w-full font-sans selection:bg-[var(--accent-color)] selection:text-white"
+      data-theme={isDarkMode ? 'dark' : 'light'}
+    >
+      {!isUnlocked ? (
+        <LockScreen onUnlock={() => setIsUnlocked(true)} />
+      ) : (
+        <MainInterface 
+          onLock={() => setIsUnlocked(false)} 
+          toggleTheme={toggleTheme}
+          isDarkMode={isDarkMode}
+        />
+      )}
     </div>
   );
 }

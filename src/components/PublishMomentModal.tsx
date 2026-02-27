@@ -81,10 +81,10 @@ export const PublishMomentModal: React.FC<PublishMomentModalProps> = ({ onClose,
         userInput = '请生成动态。';
       }
 
-      const result = await callAI([
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: userInput }
-      ]);
+      const result = await callAI({
+        systemPrompt,
+        userInput
+      });
 
       setAiGeneratedContent(result);
     } catch (error) {
